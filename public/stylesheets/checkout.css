@@ -1,0 +1,1195 @@
+/* Các khai báo font-face giữ nguyên */
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: auto;
+}
+
+.check-out {
+  background-color: #fffdf8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.overlap-wrapper {
+  background-color: #ffebeb;
+  width: 100%;
+}
+
+.overlap {
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: column; /* Sắp xếp theo chiều dọc */
+  height: auto;
+  background-color: #fffdf8;
+  position: relative; /* Để các phần tử con absolute có thể tham chiếu đến nó */
+}
+
+/* Loại bỏ position: absolute và điều chỉnh các thuộc tính để đảm bảo hiển thị */
+.heading {
+  width: 100%;
+  height: 150px;
+  background-color: #ffebeb;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #000000;
+  position: relative; /* Để có thể dùng top/left bên trong */
+}
+
+.headingtext {
+  position: absolute;
+  height: 78px;
+  top: 30px;
+  left: 36%;
+  font-family: "NEWSREADERTEXT-REGULAR", serif;
+  font-weight: 400;
+  color: #374375;
+  font-size: 60px;
+  text-align: center;
+  letter-spacing: -1.30px;
+  line-height: 78.0px;
+  white-space: nowrap;
+}
+
+.footer {
+  width: 100%;
+  height: auto; /* Cho footer tự động mở rộng theo nội dung */
+  background-color: #ffebeb;
+  border-top: 1px solid #000000; /* Đường viền trên màu đen, 1px, solid */
+  border-bottom: 1px solid #000000; /* Đường viền dưới màu đen, 1px, solid */
+  position: relative; /* Để có thể dùng top/left bên trong */
+  min-height: 210px;
+}
+
+.logo2 {
+  position: absolute;
+  top: 53px;
+  left: 102px;
+  font-family: 'DFVN TAN - WALTZING MATHILDE', serif;
+  font-weight: 400;
+  color: #374375;
+  font-size: 50px;
+  letter-spacing: -0.50px;
+  line-height: 50px;
+  white-space: nowrap;
+  border: none;
+  background: none;
+}
+
+.infor1 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  position: absolute;
+  top: 20px;
+  left: 700px;
+}
+
+.flexcontainer {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  position: relative;
+}
+
+.text {
+  position: relative;
+  align-self: stretch;
+  font-family: "NEWSREADERTEXT-MEDIUM", serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: -0.25px;
+  line-height: 25px;
+  margin: 8px;
+}
+
+.hotline_location {
+  font-weight: 500;
+  letter-spacing: -0.06px;
+}
+
+.detail {
+  font-family: "NEWSREADERTEXT-REGULAR", serif;
+  font-size: 20px;
+  letter-spacing: -0.04px;
+  line-height: 20px;
+}
+
+.infor2 {
+  position: absolute;
+  width: 144px;
+  height: 160px;
+  top: 19px;
+  left: 1194px;
+}
+
+.aboutus2 {
+  position: absolute;
+  top: 11px;
+  left: 37px;
+  font-family: "NEWSREADERTEXT-REGULAR", serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.20px;
+  line-height: 20px;
+  text-decoration: underline;
+  white-space: nowrap;
+  border: none;
+  background: none;
+}
+
+.spham2 {
+  position: absolute;
+  top: 66px;
+  left: 44px;
+  font-family: "NEWSREADERTEXT-REGULAR", serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.20px;
+  line-height: 20px;
+  text-decoration: underline;
+  white-space: nowrap;
+  border: none;
+  background: none;
+}
+
+.giohang2 {
+  position: absolute;
+  top: 121px;
+  left: 49px;
+  font-family: "NEWSREADERTEXT-REGULAR", serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.20px;
+  line-height: 20px;
+  text-decoration: underline;
+  white-space: nowrap;
+  border: none;
+  background: none;
+}
+
+.copyright {
+  position: absolute;
+  top: 105px;
+  left: 96px;
+  font-family: "NEWSREADERTEXT-REGULAR", serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: -0.25px;
+  line-height: 25px;
+  white-space: nowrap;
+}
+
+.header-user {
+  width: 100%;
+  height: 95px;
+  position: relative; /* Để có thể dùng top/left bên trong */
+}
+
+.logo {
+    position: absolute;
+    width: 178px;
+    top: 31px;
+    left: 102px;
+    font-family: 'DFVN TAN - WALTZING MATHILDE', serif;
+    font-weight: 400;
+    color: #374375;
+    font-size: 35px;
+    letter-spacing: -0.35px;
+    line-height: 35px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .spham {
+    position: absolute;
+    width: 73px;
+    height: 23px;
+    top: 37px;
+    right: 382px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .aboutus {
+    position: absolute;
+    height: 23px;
+    top: 37px;
+    right: 515px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .giohang1 {
+    width: 69px;
+    height: 23px;
+    top: 37px;
+    right: 250px;
+    position: absolute;
+    border: none;
+    background: none;
+  }
+  
+  .giohang_text {
+    position: absolute;
+    width: 67px;
+    height: 19px;
+    top: 0;
+    left: 0;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+  }
+  
+  .icon_profile {
+    width: 55px;
+    height: 55px;
+    top: 20px;
+    right: 96px;
+    background-color: #ffebeb;
+    border-radius: 27.5px;
+    background-image: url(../image/User_icon.png);
+    background-size: 100% 100%;
+    position: absolute;
+    border: none;
+  }
+  
+  .cirle_giohang {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 22px;
+    right: 220px;
+    background-color: #ffebeb;
+    border-radius: 13px;
+  }
+  
+  .soluong_giohang {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    top: 3px;
+    left: 8px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 18.2px;
+    white-space: nowrap;
+  }
+
+.nav-container {
+  position: relative;
+  width: 1200px;
+  /* top: 20px;  Remove top if you don't want to offset from the header*/
+  left: 40px;
+  border-radius: 20px;
+  display: flex;
+  gap: 0; /* Loại bỏ khoảng cách giữa các phần tử */
+  letter-spacing: -0.32px;
+  font-family: "NEWSREADERTEXT-REGULAR", serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 20px; /* Add margin here to space out navigation from heading */
+}
+
+.nav-primary,
+.nav-secondary,
+.cart-link {
+    position: absolute; /* Đè chồng lên nhau */
+    border-radius: 20px;
+    padding: 4px 32px;
+    border: 1px solid rgba(55, 67, 117, 1);
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.nav-primary {
+  border-radius: 20px;
+  background-color: rgba(255, 253, 248, 1);
+  white-space: nowrap;
+  padding: 4px 32px;
+  border: 1px solid rgba(55, 67, 117, 1);
+  z-index: 3;
+  color: #374375;
+
+}
+.nav-secondary {
+    border-radius: 20px;
+    background-color: rgba(255, 235, 235, 1);
+    padding: 4px 37px;
+    border: 1px solid rgba(55, 67, 117, 1);
+    z-index: 2;
+    left: 100px;
+    color: #374375;
+}
+.cart-link {
+  border-radius: 20px;
+  background-color: rgba(55, 67, 117, 1);
+  color: #FFFDF8;
+  padding: 4px 37px;
+  border: 1px solid rgba(55, 67, 117, 1);
+  z-index: 1;
+  left: 220px;
+}
+
+.summary-container {
+  position: relative;
+  width: 1250px;
+  margin: 80px auto;
+  background: #FAFAF5;
+  border: 2px solid #E6E6E6;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1;
+}
+/*... (Phần CSS còn lại giữ nguyên) ...*/
+.summary-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+    .header-details {
+      text-align: center;
+    }
+    
+    .header-title {
+      margin: 0;
+      color: #000000;
+      font-family: 'DFVN TAN - WALTZING MATHILDE', serif;
+      font-size: 35px;
+      font-weight: 300;
+      margin-bottom: -10px;
+    }
+    
+    .order-id {
+      font-size: 20px;
+      color: #000000;
+    }
+    
+    .summary-main {
+      padding: 40px;
+    }
+    
+    .main-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 150px;
+    }
+    
+    .customer-section {
+      margin-bottom: 30px;
+      gap: 250px;
+    }
+    
+    .section-heading {
+      margin-top: -25px;
+      font-size: 20px;
+      margin-bottom: 18px;
+      color: #444;
+    }
+    
+    .customer-form .input-group {
+      margin-bottom: 16px;
+      width: 600px;
+    }
+    
+    .input-group label {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .payment-section {
+      margin-top: 16px;
+    }
+    
+    .payment-heading {
+      font-size: 20px;
+      margin-bottom: 25px;
+      color: #444;
+    }
+    
+    .payment-options {
+      display: flex;
+      width: 350px;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .payment-icon {
+      width: 55px;
+      display: block; /* Thêm display: block để icon chiếm toàn bộ chiều rộng */
+      margin: 0 auto;
+    }
+
+    .discount-badge {
+      position: absolute; /* Định vị tuyệt đối so với button */
+      margin-top: -20px;
+      margin-left: 120px;
+      width: 25px; /* Đường kính hình tròn */
+      height: 25px;
+      border-radius: 50%; /* Tạo hình tròn */
+      background-color: #374375; /* Màu nền hình tròn */
+      color: white; /* Màu chữ */
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .payment-btn {
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column; /* Hiển thị các phần tử theo cột */
+      align-items: center; /* Căn giữa theo chiều ngang */
+      align-items: center;
+      gap: 3px;
+      padding: 6px 10px;
+      background-color: none;
+      color: #374375;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 130px; 
+      height: 90px; 
+      flex-shrink: 0; /*ngăn chặn nút bị thu hẹp lại*/
+    }
+    
+    .payment-btn.active {
+      background-color: #FFE5E5;
+    }
+    
+    .order-section {
+      margin-top: -25px;
+    }
+    
+    .item-list {
+      margin-top: 10px;
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-height: 360px; /* Đặt chiều rộng tối đa */
+      overflow-y: auto;
+      scrollbar-width: thin; /* Firefox, các trình duyệt khác */
+      scrollbar-color: #374375 transparent; 
+    }
+  
+    .item-heading {
+      margin-top: -3px;
+      font-family: "NEWSREADERTEXT-REGULAR", serif;
+      font-size: 20px;
+      color: #444;
+      margin-bottom: 5px;
+    }
+  
+    .price::after{
+      content: '    ';
+      display: inline-block;
+      width: 10px; /* Độ rộng khoảng cách bạn muốn */
+  }
+  
+    .item-list::-webkit-scrollbar {
+      width: 8px; /* Giữ lại chiều rộng của thanh cuộn nhưng không hiển thị */
+      height: 8px;
+      background-color: transparent; /* ẩn track*/
+      margin-left: auto; /* căn lề thumb qua bên phải */
+    }
+    
+    .item-list::-webkit-scrollbar-thumb {
+      background: #374375; /* Màu của thumb (phần có thể kéo) */
+      border-radius: 20px;
+      border: none;
+      margin-left: 30px;
+    }
+    
+    .item-list::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    
+    
+    .item-card {
+      display: flex;
+      flex-direction: column; /* Thay đổi thành column */
+      padding: 0px 0px;
+      border: none;
+      border-radius: 4px;
+      background-color: none;
+    }
+    
+    .item-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .item-name {
+      font-weight: bold;
+    }
+    
+    .item-img {
+      width: 85px;
+      height: 85px;
+      border-radius: 4px;
+      object-fit: cover;
+      margin-top: 10px;
+    }
+    
+    .price {
+      font-size: 1rem;
+      color: #444;
+    }
+    
+    .accessory-section {
+      margin-top: 16px;
+    }
+    
+    .toggle-accessory {
+      width: 39%;
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      gap: 10px;
+      background-color: #FFFDF8;
+      border: 2px solid #e2e2e2;
+      border-radius: 24px;
+      color: #374375;
+    }
+  
+    .toggle-icon {
+      margin-left: 5px;
+      width: 20px;
+      height: 20px;
+    }
+    
+    .accessory-item {
+      font-family: "Inter", sans-serif;
+      background-color: #FFFDF8;
+      border: 2px solid #e2e2e2;
+      border-radius: 18px;
+      display: flex;
+      margin-top: 10px;
+      flex-direction: column;
+      width: 400px;
+    }
+    
+    .accessory-info {
+      margin-top: -10px;
+      padding: 0px 50px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .accessory-name {
+      font-size: 18px;
+      flex: 1; /* Cho tên sản phẩm chiếm phần lớn không gian */
+      margin-right: 10px; /* Khoảng cách với nút tăng giảm */
+    }
+    
+    .accessory-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 36px;
+      padding: 0px 10px;
+      margin-bottom: 15px;
+      margin-top: -5px;
+    }
+  
+    .control-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px; /* tuỳ chỉnh padding */
+      display: flex;
+       align-items: center; /* căn giữa chiều dọc */
+      
+    }
+    
+    .control-button img {
+        width: 20px; /* tuỳ chỉnh kích thước icon */
+        height: 15px; /* tuỳ chỉnh kích thước icon */
+    }
+  
+    .accessory-img {
+      margin-left: -35px;
+      width: 100px;
+      height: 100px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+  
+    .price-quantity-wrapper {
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+      display: flex;
+      gap: 14px;
+      flex-direction: column; /* Xếp price và quantity theo cột */
+      justify-content: center; /* Căn giữa theo chiều dọc (tùy chọn) */
+  }
+    
+    .quantity-wrapper {
+      display: flex;
+      gap: 8px;
+      margin-left: auto; /* Đẩy nút + - về bên phải */
+    }
+    
+    .quantity-decrease,
+    .quantity-increase {
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      width: 32px;
+      height: 32px;
+      background-color: transparent;
+      color: #374375;
+      border: none;
+      cursor: pointer;
+      display: flex;        /* Sử dụng flexbox */
+      align-items: center;  /* Căn giữa theo chiều dọc */
+      justify-content: center; /* Căn giữa theo chiều ngang */
+    }
+    
+    .quantity-display {
+      font-size: 17px;
+      color: #374375;
+      font-weight: 500;
+      text-align: center;
+    }
+    
+    .price-display {
+      font-size: 20px;
+      color: #374375;
+    }
+    
+    .accessory-order{
+      width: 100%;
+      margin-top: 30px;
+  }
+  .accessories-section {
+      display: flex; /* Make this container a flex container */
+      align-items: center; /* Align items vertically */
+      gap: 40px; /* Add space between the frame and the list */
+      width: 100%;
+  }
+
+  .frame-accessory {
+      width: 13.5%;
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      gap: 10px;
+      background-color: #FFFDF8;
+      border: 2px solid #e2e2e2;
+      border-radius: 24px;
+      color: #374375;
+  }
+  
+  .accessories-list {
+    display: flex; /* Make the list a flex container */
+    flex-wrap: wrap; /* Allow list items to wrap to the next line*/
+    gap: 20px; /* Add space between list items */
+    max-width: 900px;
+  }
+
+  .accessory-icon {
+      margin-left: 5px;
+      width: 20px;
+      height: 20px;
+    }
+  
+  .accessories-item {
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+      background-color: #D8DCEB;
+      border-radius: 18px;
+      padding: 8px 16px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+  }
+  
+  .quantity-text {
+    margin-right: 5px;
+    font-weight: bold;
+    color: #374375;
+  }
+  
+  .product-name {
+    color: #000;
+  }
+
+.total-section{
+    margin-top: 15px;
+    padding: 8px;
+    flex-direction: column;
+}
+
+.total-container {
+  display: flex;
+  flex-direction: column; /* Sắp xếp các dòng total theo chiều dọc */
+  gap: 8px; /* Khoảng cách giữa các dòng total */
+  width: fit-content; /* Đảm bảo container chỉ rộng vừa đủ nội dung bên trong */
+  margin: 0 auto;
+  padding-bottom: 25px;
+
+}
+
+.total {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+  gap: 250px; /* Khoảng cách giữa total-small và total-number */
+}
+
+.total-small {
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  min-width: 120px;
+  max-width: 120px;
+}
+
+.total-number {
+  gap: 20px;
+  font-size: 18px;
+  color: #374375; 
+  font-weight: bold;
+  display: flex; 
+  display: inline-flex; /* Sử dụng inline-flex để amount và currency cạnh nhau */
+  white-space: nowrap; /* Ngăn không cho text xuống dòng */
+  align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+  gap: 5px; /* Khoảng cách giữa amount và currency */
+}
+
+.total-wrapper {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 250px;
+}
+
+.total-label {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.total-price {
+  gap: 20px;
+  font-size: 25px;
+  color: #374375; 
+  font-weight: bold;
+  display: inline-flex; 
+  white-space: nowrap; 
+}
+
+.order-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px;
+}
+
+.order-button {
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    background-color: #374375;
+    color: #FFFDF8;
+}
+
+.order-button:disabled { 
+  background-color: #e0e0e0;
+  color: #000000;
+}
+
+.order-button.active {
+
+  background-color: #374375;
+  color: #FFFDF8;
+}
+.order-button .arrow {
+    font-size: 1.5em; 
+    position: absolute;
+    right: 24px;
+}
+
+.popup-banking {
+  display: none;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 999; 
+}
+
+.frame {
+  width: 25%;
+  height: 60%;
+  background-color: #FAFAF5; /* Màu nền */
+  border-radius: 15px; /* Bo góc */
+  border: 1px solid #000000; /* Viền 1px màu đen */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Căn giữa màn hình */
+  z-index: 1000;
+  overflow: hidden;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.banking-logo {
+  height: 30px;
+  align-self: center; /* Căn giữa logo theo chiều dọc */
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  background-color: #374375;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #374375;
+}
+.confirm {
+    background-color: #FFE5E5;
+    color: #374375;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin:20px;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.qr-code {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.qr-code img {
+  width: 160px;
+}
+
+.merchant-info {
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+.merchant-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.banking-number {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+.note {
+  margin-top: -12px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.popup-momo {
+  display: none;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 999; 
+}
+
+.frame {
+  width: 25%;
+  height: fit-content;
+  background-color: #FAFAF5; /* Màu nền */
+  border-radius: 15px; /* Bo góc */
+  border: 1px solid #000000; /* Viền 1px màu đen */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Căn giữa màn hình */
+  z-index: 1000;
+  overflow: hidden;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.momo-logo {
+  margin-top: -15px;
+  height: 70px;
+  align-self: center; /* Căn giữa logo theo chiều dọc */
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  background-color: #374375;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #374375;
+}
+
+.title-momo {
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.momo-code {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.momo-code img {
+  width: 160px;
+}
+
+.note {
+  font-weight: bold;
+  margin-top: 12px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.scan-icon {
+  width: 30px; /* Kích thước icon */
+  height: 30px; /* Kích thước icon */
+  vertical-align: middle; /* Căn giữa icon theo chiều dọc so với dòng chữ */
+  margin: 0 -2px; /* Tạo khoảng cách hai bên icon */
+}
+
+.popup-dathang-thanhcong {
+    display: none;
+}
+
+.confirmation-container {
+    position: fixed; /* Hoặc absolute nếu popup nằm trong một phần tử đã được định vị */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-card {
+    border-radius: 40px;
+    background-color: rgba(255, 235, 235, 1);
+    display: flex;
+    width: 100%;
+    max-width: 1134px;
+    flex-direction: column;
+    padding: 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Thêm dòng này */
+}
+
+.message-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-size: 33px;
+    line-height: 45px;
+    justify-content: start;
+}
+
+.success-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 130px;
+    align-self: center;
+    max-width: 100%;
+}
+
+.success-message {
+    margin-top: 22px;
+    text-align: center;
+}
+
+.signature-block {
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 25px;
+    line-height: 1.3;
+    justify-content: start;
+    margin: 24px 141px 0 0;
+}
+
+.signature-from {
+    align-self: stretch;
+    width: 56px;
+    margin: auto 0;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+}
+
+.signature-brand {
+    color: rgba(55, 67, 117, 1);
+    align-self: stretch;
+    width: 182px;
+    margin: auto 0;
+    font-size: 35px;
+    font-family: "DFVN TAN - WALTZING MATHILDE", serif;
+}
+
+.signature-love {
+    align-self: stretch;
+    width: 94px;
+    margin: auto 0;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+}
+
+.close-btn-2 {
+    position: absolute; /* Thêm dòng này */
+    top: 30px;
+    right: 30px;
+    background-color: #374375;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}

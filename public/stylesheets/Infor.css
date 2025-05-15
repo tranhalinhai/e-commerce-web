@@ -1,0 +1,708 @@
+@font-face {
+  font-family: 'NEWSREADERTEXT-REGULAR';
+  src: url('../fonts/NEWSREADERTEXT-REGULAR.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEWSREADERTEXT-MEDIUM';
+  src: url('../fonts/NEWSREADERTEXT-MEDIUM.TTF') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEWSREADERTEXT-ITALIC';
+  src: url('../fonts/NEWSREADERTEXT-ITALIC.TTF') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NEWSREADERTEXT-LIGHTITALIC';
+  src: url('../fonts/NEWSREADERTEXT-LIGHTITALIC.TTF') format('truetype');
+  font-weight: light;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NEWSREADERTEXT-SEMIBOLD';
+  src: url('../fonts/NEWSREADERTEXT-SEMIBOLD.TTF') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DFVN TAN - WALTZING MATHILDE';
+  src: url('./fonts/DFVN-TAN-WALTZING-MATHILDE.otf') format('truetype');
+}
+
+.thng-tin-ti-khon {
+    background-color: #fffdf8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top : 0px;
+  }
+  
+  .thng-tin-ti-khon .overlap-wrapper {
+    position: absolute;
+    background-color: #ffebeb;
+    width: 100%;
+    height: 1024px;
+  } 
+  
+  .thng-tin-ti-khon .overlap {
+    position: relative;
+    height: 1126px;
+    top : 0px;
+    background-color: #fffdf8;
+  } 
+  
+  .thng-tin-ti-khon .heading {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top: 95px;
+    left: 0;
+    background-color: #ffebeb;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #000000;
+  }
+  
+  .thng-tin-ti-khon .headingtext {
+    position: absolute;
+    height: 78px;
+    top: 30px;
+    left: 36%;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #374375;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: -1.30px;
+    line-height: 78.0px;
+    white-space: nowrap;
+  }
+  
+  .thng-tin-ti-khon .footer {
+    position: absolute;
+    width: 100%;
+    height: 210px;
+    top: 976px;
+    left: 0;
+    background-color: #ffebeb;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #000000;
+  }
+  
+  .thng-tin-ti-khon .logo2 {
+    position: absolute;
+    top: 53px;
+    left: 102px;
+    font-family: 'DFVN TAN - WALTZING MATHILDE', serif;
+    font-weight: 400;
+    color: #374375;
+    font-size: 50px;
+    letter-spacing: -0.50px;
+    line-height: 50px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .thng-tin-ti-khon .infor1 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    position: absolute;
+    top: 20px;
+    left: 700px;
+  }
+  
+  .thng-tin-ti-khon .flexcontainer {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    position: relative;
+  }
+  
+  .thng-tin-ti-khon .text {
+    position: relative;
+    align-self: stretch;
+    font-family: "NEWSREADERTEXT-MEDIUM", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 25px;
+    letter-spacing: -0.25px;
+    line-height: 25px;
+    margin: 8px;
+  }
+  
+  .thng-tin-ti-khon .hotline_location {
+    font-weight: 500;
+    letter-spacing: -0.06px;
+  }
+  
+  .thng-tin-ti-khon .detail {
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-size: 20px;
+    letter-spacing: -0.04px;
+    line-height: 20px;
+  }
+  
+  .thng-tin-ti-khon .infor2 {
+    position: absolute;
+    width: 144px;
+    height: 160px;
+    top: 19px;
+    left: 1194px;
+  }
+  
+  .thng-tin-ti-khon .aboutus2 {
+    position: absolute;
+    top: 11px;
+    left: 37px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.20px;
+    line-height: 20px;
+    text-decoration: underline;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .thng-tin-ti-khon .spham2 {
+    position: absolute;
+    top: 66px;
+    left: 44px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.20px;
+    line-height: 20px;
+    text-decoration: underline;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .thng-tin-ti-khon .giohang2 {
+    position: absolute;
+    top: 121px;
+    left: 49px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.20px;
+    line-height: 20px;
+    text-decoration: underline;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .thng-tin-ti-khon .copyright {
+    position: absolute;
+    top: 105px;
+    left: 96px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 25px;
+    letter-spacing: -0.25px;
+    line-height: 25px;
+    white-space: nowrap;
+  }
+  
+  .thng-tin-ti-khon .header-user {
+    position: absolute;
+    width: 1440px;
+    height: 95px;
+    top: 0;
+    left: 0;
+  }
+  
+  .thng-tin-ti-khon .logo {
+    position: absolute;
+    width: 178px;
+    top: 31px;
+    left: 102px;
+    font-family: 'DFVN TAN - WALTZING MATHILDE', serif;
+    font-weight: 400;
+    color: #374375;
+    font-size: 35px;
+    letter-spacing: -0.35px;
+    line-height: 35px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .thng-tin-ti-khon .spham {
+    position: absolute;
+    width: 73px;
+    height: 23px;
+    top: 37px;
+    right: 305.5px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .thng-tin-ti-khon .aboutus {
+    position: absolute;
+    height: 23px;
+    top: 37px;
+    right: 438px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .thng-tin-ti-khon .giohang1 {
+    width: 69px;
+    height: 23px;
+    top: 36px;
+    right: 171px;
+    position: absolute;
+    border: none;
+    background: none;
+  }
+  
+  .thng-tin-ti-khon .giohang_text {
+    position: absolute;
+    width: 67px;
+    height: 19px;
+    top: 0;
+    left: 0;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+  }
+  
+  .thng-tin-ti-khon .icon_profile {
+    width: 55px;
+    height: 55px;
+    top: 20px;
+    right: 17px;
+    background-color: #ffebeb;
+    border-radius: 27.5px;
+    background-image: url(../image/User_icon.png);
+    background-size: 100% 100%;
+    position: absolute;
+    border: none;
+  }
+  
+  .thng-tin-ti-khon .cirle_giohang {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 22px;
+    right: 141px;
+    background-color: #ffebeb;
+    border-radius: 13px;
+  }
+  
+  .thng-tin-ti-khon .soluong_giohang {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    top: 3px;
+    left: 8px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 18.2px;
+    white-space: nowrap;
+  }
+  
+  .thng-tin-ti-khon .right {
+    position: absolute;
+    width: 928px;
+    height: 605px;
+    top: 297px;
+    right: 8.5%;
+    background-color: #ffebeb;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .thng-tin-ti-khon .title_infor {
+    position: absolute;
+    height: 36px;
+    top: 28px;
+    left: 309px;
+    font-family: "NEWSREADERTEXT-MEDIUM", serif;
+    font-weight: 500;
+    color: #374375;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: -0.60px;
+    line-height: 36.0px;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+  
+  .thng-tin-ti-khon .name {
+    position: absolute;
+    width: 848px;
+    height: 95px;
+    top: 94px;
+    left: 39px;
+  }
+  
+  .thng-tin-ti-khon .title {
+    position: absolute;
+    height: 30px;
+    top: -1px;
+    left: 0;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #3c3c3c;
+    font-size: 25px;
+    letter-spacing: -0.50px;
+    line-height: 30.0px;
+    white-space: nowrap;
+  }
+  
+  .thng-tin-ti-khon .khung {
+    position: absolute;
+    width: 848px;
+    height: 55px;
+    top: 40px;
+    left: 0;
+    background-color: #fff7f7;
+    border-radius: 10px;
+  }
+  
+  .thng-tin-ti-khon .text_infor {
+    position: absolute;
+    height: 30px;
+    top: 12px;
+    left: 20px;
+    font-family: "NEWSREADERTEXT-MEDIUM", serif;
+    font-weight: 500;
+    color: #374375;
+    font-size: 25px;
+    letter-spacing: -0.50px;
+    line-height: 30.0px;
+    white-space: nowrap;
+  }
+  
+  .thng-tin-ti-khon .phone {
+    position: absolute;
+    width: 848px;
+    height: 95px;
+    top: 214px;
+    left: 39px;
+  }
+  
+  .thng-tin-ti-khon .address {
+    position: absolute;
+    width: 848px;
+    height: 95px;
+    top: 334px;
+    left: 39px;
+  }
+  
+  .btn-edit {
+    width: 120px; /* Chiều rộng */
+    height: 40px; /* Chiều cao */
+    margin-top: 500px;
+    margin-left: 400px;
+    background-color: #374375; /* Màu nền */
+    border: 1px solid #000000; /* Viền */
+    border-radius: 8px; /* Bo góc */
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-size: 20px; /* Kích thước chữ */
+    color: #FFFFFF; /* Màu chữ */
+    cursor: pointer; /* Hiệu ứng trỏ chuột */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển đổi */
+  }
+
+  .thng-tin-ti-khon .left {
+    position: absolute;
+    width: 288px;
+    height: 430px;
+    top: 297px;
+    left: 8.5%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .thng-tin-ti-khon .overlap-2 {
+    position: relative;
+    height: 542px;
+    background-color: #ffebeb;
+    border-radius: 15px;
+  }
+
+.thng-tin-ti-khon .name_user {
+    position: absolute;
+    height: 36px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "NEWSREADERTEXT-SEMIBOLD", serif;
+    font-weight: 600;
+    color: #374375;
+    font-size: 30px;
+    letter-spacing: -0.60px;
+    line-height: 36.0px;
+    white-space: nowrap;
+    text-align: center;
+}
+  
+  .thng-tin-ti-khon .hello {
+    position: absolute;
+    height: 42px;
+    top: 29px;
+    left: 109px;
+    font-family: "NEWSREADERTEXT-ITALIC", serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #374375;
+    font-size: 35px;
+    letter-spacing: -0.70px;
+    line-height: 42.0px;
+    white-space: nowrap;
+  }
+  
+  .thng-tin-ti-khon .profile {
+    position: absolute;
+    width: 288px;
+    height: 60px;
+    top: 148px;
+    left: 0;
+    background-color: #ffdfdf;
+    border: none;
+  }
+  
+  .thng-tin-ti-khon .img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    left: 15px;
+  }
+  
+  .thng-tin-ti-khon .name_func {
+    position: absolute;
+    height: 28px;
+    top: 16px;
+    left: 65px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 23px;
+    letter-spacing: -0.46px;
+    line-height: 27.6px;
+    white-space: nowrap;
+  }
+  
+  .thng-tin-ti-khon .order {
+    position: absolute;
+    width: 288px;
+    height: 60px;
+    top: 208px;
+    left: 0;
+    border: none;
+    background: none;
+  }
+  
+  .thng-tin-ti-khon .logout {
+    position: absolute;
+    width: 288px;
+    height: 60px;
+    top: 268px;
+    left: 0;
+    border: none;
+    background: none;
+  }
+  
+  .thng-tin-ti-khon .logout-stroke {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 18px;
+    left: 15px;
+  }
+
+  .popup {
+    display: none;
+  }
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 999; 
+  }
+  
+  .frame {
+    width: 60%;
+    height: 70%;
+    background-color: #ffebeb; /* Màu nền */
+    border-radius: 15px; /* Bo góc */
+    border: 1px solid #000000; /* Viền 1px màu đen */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa màn hình */
+    z-index: 1000;
+    overflow: hidden;
+    padding: 30px 40px;
+  }
+  
+  .thng-tin-ti-khon .name2 {
+    position: absolute;
+    width: 848px;
+    height: 95px;
+    top: 30px;
+    left: 70px;
+  }
+  
+  .thng-tin-ti-khon .title2 {
+    position: absolute;
+    height: 30px;
+    top: -1px;
+    left: 0;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #3c3c3c;
+    font-size: 25px;
+    letter-spacing: -0.50px;
+    line-height: 30.0px;
+    white-space: nowrap;
+  }
+  
+  .thng-tin-ti-khon .khung2 {
+    position: absolute;
+    width: 848px;
+    height: 55px;
+    top: 40px;
+    left: 0;
+    background-color: #fff7f7;
+    border-radius: 10px;
+  }
+  
+  .thng-tin-ti-khon .text_infor2 {
+    position: absolute;
+    height: 30px;
+    top: 12px;
+    left: 20px;
+    font-family: "NEWSREADERTEXT-MEDIUM", serif;
+    font-weight: 500;
+    color: #374375;
+    font-size: 25px;
+    letter-spacing: -0.50px;
+    line-height: 30.0px;
+    white-space: nowrap;
+    border:none;
+    background:none;
+  }
+  
+  .thng-tin-ti-khon .phone2 {
+    position: absolute;
+    width: 848px;
+    height: 95px;
+    top: 140px;
+    left: 70px;
+  }
+  
+  .thng-tin-ti-khon .address2 {
+    position: absolute;
+    width: 848px;
+    height: 95px;
+    top: 250px;
+    left: 70px;
+  }
+  
+  .thng-tin-ti-khon .pass {
+    position: absolute;
+    width: 848px;
+    height: 95px;
+    top: 360px;
+    left: 70px;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa các nút */
+    justify-content: center; /* Căn giữa trên cùng một dòng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 450px;
+}
+
+.btn-save {
+    width: 110px;
+    height: 40px;
+    background-color: #374375; /* Màu nền */
+    color: #ffffff; /* Màu chữ */
+    border: 1px solid #000000; /* Viền */
+    border-radius: 40px; /* Bo góc */
+    font-size: 20px; /* Cỡ chữ */
+    cursor: pointer; /* Con trỏ chuột */
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+}
+
+.btn-cancel {
+    width: 110px;
+    height: 40px;
+    background-color: #FFE5E5; /* Màu nền */
+    color: #000000; /* Màu chữ */
+    border: 1px solid #000000; /* Viền */
+    border-radius: 40px; /* Bo góc */
+    font-size: 20px; /* Cỡ chữ */
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    cursor: pointer; /* Con trỏ chuột */
+}
+  

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="/stylesheets/admin-spham.css">
+</head>
+<body>
+  <div class="admin-panel">
+    <div class="main-section">
+      <header class="top-header">
+        <button class="admin-badge">ADMIN</button>
+      </header>
+
+      <div class="content-wrapper">
+        <div class="layout-container">
+
+          <nav class="sidebar">
+            <div class="navigation-bar">
+              <div class="brand-logo">Jeunesse.</div>
+
+              <div class="function">
+              <button class="nav-item active">
+                <img src="/image/icon_product.png" class="nav-icon" alt="Products icon" />
+                <span class="nav-text">Sản phẩm</span>
+              </button>
+
+              <button class="nav-item" id="ordersmanagement" onclick="location.href='/admin/orders'">
+                <img src="/image/icon_order.png" class="nav-icon" alt="Orders icon" />
+                <span class="nav-text">Đơn hàng</span>
+              </button>
+
+              <button class="nav-item" onclick="location.href='/admin/client'">
+                <img src="/image/icon_customer.png" class="nav-icon" alt="Customers icon" />
+                <span class="nav-text">Khách hàng</span>
+              </button>
+
+              <button class="nav-item" onclick="location.href='/admin/user'">
+                <img src="image/icon_user.png" class="nav-icon" alt="Customers icon" />
+                <span class="nav-text">Người dùng</span>
+              </button>
+
+              <button class="nav-item" id="logout">
+                <img src="/image/icon_logout.png" class="nav-icon" alt="Logout icon" />
+                <span class="nav-text">Đăng xuất</span>
+              </button>
+
+            </div>
+            </div>
+          </nav>
+
+          <main class="main-content">
+            <section class="product-section">
+              <div class="section-header">
+                <h1 class="section-title">Sản phẩm</h1>
+                <button class="btn-add-product">Thêm sản phẩm</button>
+              </div>
+              <div class="product-grid">
+                <article class="product-card">
+                </article>
+              </div>
+            </section>
+          </main>
+
+        </div>
+      </div>
+
+      <div class="popup-edit">
+        <div class="popup-overlay">
+          <div class="frame">
+            <div class="product-content-grid">
+              <div class="product-main-content">
+                <div class="product-form">
+                  <div class="product-info-grid">
+
+                    <div class="product-info-column">
+                      <div class="product-field-group">
+                        <label for="productName" class="form-label">Tên sản phẩm</label>
+                        <input
+                          type="text"
+                          id="productName"
+                          class="form-input"
+                          aria-required="true"
+                        />
+
+                        <label for="productPrice" class="form-label">Giá sản phẩm</label>
+                        <input
+                          type="text"
+                          id="productPrice"
+                          class="form-input"
+                          aria-required="true"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="product-info-column">
+                      <div class="product-field-group">
+                        <label for="category" class="form-label">Tên phân loại</label>
+                        <div class="form-select-wrapper">
+                          <input
+                            class="form-select"
+                            aria-required="true"
+                            id="category"
+                          />
+
+
+                        </div>
+
+                        <label for="stock" class="form-label">Số lượng kho</label>
+                        <input
+                          type="number"
+                          id="stock"
+                          class="form-input"
+                          aria-required="true"
+                        />
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="product-field-group">
+                  <label for="ingredients" class="form-label">Mô tả thành phần</label>
+                  <input
+                    type="text"
+                    id="ingredients"
+                    class="form-input"
+                    aria-required="true"
+                  />
+
+                  <label for="description" class="form-label">Mô tả sản phẩm</label>
+                  <textarea
+                    class="form-textarea"
+                    id="description"
+                    aria-required="true"
+                  ></textarea>
+                </div>
+
+                  <div class="form-actions">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      aria-label="Save product details"
+                      onclick="saveProductChanges()"
+                    >Lưu</button>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      onclick="deleteProduct()"
+                      aria-label="Delete product"
+                    >Xóa</button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      aria-label="Cancel editing"
+                      onclick="closeEditPopup()"
+                    >Hủy bỏ</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-image-section">
+                <div class="image-upload-container">
+                  <div class="main-image-preview" aria-label="Main product image preview">
+                    <img
+                      src=""
+                      alt="Main product preview"
+                      class="preview-image"
+                    />
+                  </div>
+
+                  <h2 class="form-label">Hình ảnh sản phẩm</h2>
+
+                  <div
+                    class="image-upload-zone"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Click to upload product images"
+                  >
+                    <img
+                      src="/image/icon_img.png"
+                      alt="Upload icon"
+                      class="upload-icon"
+                    />
+                    <span class="upload-text">Thêm hình ảnh ở đây</span>
+                  </div>
+
+                  <div class="thumbnail-gallery" role="list" aria-label="Product image thumbnails">
+                    <img
+                      src=""
+                      alt="Product thumbnail 1"
+                      class="thumbnail-image"
+                      role="listitem"
+                    />
+                    <img
+                      src=""
+                      alt="Product thumbnail 2"
+                      class="thumbnail-image"
+                      role="listitem"
+                    />
+                    <img
+                      src=""
+                      alt="Product thumbnail 3"
+                      class="thumbnail-image"
+                      role="listitem"
+                    />
+                    <img
+                      src=""
+                      alt="Product thumbnail 4"
+                      class="thumbnail-image"
+                      role="listitem"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-add">
+        <div class="popup-overlay">
+          <div class="frame">
+            <div class="product-content-grid">
+              <div class="product-main-content">
+                <div class="product-form">
+                  <div class="product-info-grid">
+
+                    <div class="product-info-column">
+                      <div class="product-field-group">
+                        <label for="productName" class="form-label">Tên sản phẩm</label>
+                        <input
+                          type="text"
+                          id="productNameadd"
+                          class="form-input"
+                          aria-required="true"
+                        />
+
+                        <label for="productPrice" class="form-label">Giá sản phẩm</label>
+                        <input
+                          type="text"
+                          id="productPriceadd"
+                          class="form-input"
+                          aria-required="true"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="product-info-column">
+                      <div class="product-field-group">
+                        <label for="category" class="form-label">Tên phân loại</label>
+                        <div class="form-select-wrapper">
+                          <input
+                            id="categoryadd"
+                            class="form-select"
+                            aria-required="true"
+                          />
+
+                        </div>
+
+                        <label for="stock" class="form-label">Số lượng kho</label>
+                        <input
+                          type="number"
+                          id="stockadd"
+                          class="form-input"
+                          min="0"
+                          aria-required="true"
+                        />
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="product-field-group">
+                  <label for="ingredients" class="form-label">Mô tả thành phần</label>
+                  <input
+                    type="text"
+                    id="ingredientsadd"
+                    class="form-input"
+                    aria-required="true"
+                  />
+
+                  <label for="description" class="form-label">Mô tả sản phẩm</label>
+                  <textarea
+                    id="descriptionadd"
+                    class="form-textarea"
+                    aria-required="true"
+                  ></textarea>
+                </div>
+
+                  <div class="form-actions">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      aria-label="Save product details"
+                      id="saveProductButton"
+                    >Thêm</button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      aria-label="Cancel editing"
+                      onclick="closeAddPopup()"
+                    >Hủy bỏ</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-image-section">
+                <div class="image-upload-container">
+                  <div class="main-image-preview" aria-label="Main product image preview">
+                    <label for="mainImageUpload" class="form-label">Hình ảnh sản phẩm chính</label>
+
+                    <!-- Input cho phép người dùng tải lên hình ảnh -->
+                    <input
+                            type="file"
+                            id="mainImageUpload"
+                            class="form-input"
+                            name="image"
+                            accept="image/*"
+                            aria-required="true"
+                            onchange="previewImage(event)" />
+
+                    <!-- Thẻ ảnh để hiển thị hình ảnh xem trước -->
+                    <img
+                            id="imagePreview"
+                            src=""
+                            alt="Main product preview"
+                            class="preview-image"
+                            style="display:none;" />
+                  </div>
+
+
+                  <h2 class="form-label">Hình ảnh sản phẩm</h2>
+
+                  <div
+                    class="image-upload-zone"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Click to upload product images"
+                  >
+                    <img
+                      src="/image/icon_img.png"
+                      alt="Upload icon"
+                      class="upload-icon"
+                    />
+                    <span class="upload-text">Thêm hình ảnh ở đây</span>
+                  </div>
+
+                  <div class="thumbnail-gallery" role="list" aria-label="Product image thumbnails">
+                    <img
+                      src=""
+                      alt="Product thumbnail 1"
+                      class="thumbnail-image"
+                      role="listitem"
+                    />
+                    <img
+                      src=""
+                      alt="Product thumbnail 2"
+                      class="thumbnail-image"
+                      role="listitem"
+                    />
+                    <img
+                      src=""
+                      alt="Product thumbnail 3"
+                      class="thumbnail-image"
+                      role="listitem"
+                    />
+                    <img
+                      src=""
+                      alt="Product thumbnail 4"
+                      class="thumbnail-image"
+                      role="listitem"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Gọi API lấy danh sách sản phẩm
+    fetch('/products/get')
+        .then(response => response.json())
+        .then(products => {
+            const productGrid = document.querySelector('.product-grid');
+
+            // Kiểm tra nếu không có sản phẩm
+            if (products.length === 0) {
+                productGrid.innerHTML = '<p>Không có sản phẩm nào.</p>';
+                return;
+            }
+
+            // Xóa nội dung cũ trước khi render sản phẩm
+            productGrid.innerHTML = "";
+
+            // Render từng sản phẩm vào .product-card
+            products.forEach(product => {
+                const productCard = document.createElement('article');
+                productCard.classList.add('product-card');
+                // Nội dung của từng thẻ sản phẩm
+                productCard.innerHTML = `
+                    <div class="card-content">
+                        <div class="product-image-container">
+                            <img src="${product.image_url}" alt="${product.name}" class="product-image" />
+                            <div class="stock-info">Số lượng: ${product.stock || 'Không rõ'}</div>
+                        </div>
+                        <div class="product-details">
+                            <h1>${product.name}</h1>
+                            <div class="product-category">${product.category || 'Không rõ'}</div>
+                            <div class="product-price">Giá: ${product.price || 'Liên hệ'} VNĐ</div>
+                            <button class="action-icon" onclick='showEditPopup(${JSON.stringify(product)})'>
+                                <img src="/image/icon_edit.png" alt="Edit product" />
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                // Thêm thẻ sản phẩm vào grid
+                productGrid.appendChild(productCard);
+            });
+        })
+        .catch(err => {
+            console.error('Lỗi khi gọi API:', err);
+            // Hiển thị lỗi cho người dùng
+            const productGrid = document.querySelector('.product-grid');
+            productGrid.innerHTML = '<p>Đã xảy ra lỗi khi tải danh sách sản phẩm. Vui lòng thử lại sau.</p>';
+        });
+});
+// mở popup
+function showEditPopup(product) {
+      const popup = document.querySelector('.popup-edit');
+      const mainImage = popup.querySelector('.main-image-preview img');
+    popup.style.display = 'block';
+      mainImage.src = product.image_url ;
+    mainImage.alt = `Main image of ${product.name}`;
+    // Điền thông tin sản phẩm vào các trường
+    popup.querySelector('#productName').value = product.name;
+    popup.querySelector('#productPrice').value = product.price;
+    popup.querySelector('#category').value = product.category;
+    popup.querySelector('#ingredients').value = product.flavor || '';
+    popup.querySelector('#description').value = product.description || '';
+    popup.querySelector('#stock').value = product.stock;
+
+    // Lưu ID sản phẩm
+    popup.dataset.productId = product.id;
+}
+// Đóng popup
+function closeEditPopup() {
+    const popup = document.querySelector('.popup-edit');
+    popup.style.display = 'none';
+}
+  // lưu thông tin thay đổi
+ function saveProductChanges() {
+    const popup = document.querySelector('.popup-edit');
+    const productId = popup.dataset.productId;
+
+    // Kiểm tra nếu `productId` không hợp lệ
+    if (!productId) {
+        alert('Không xác định được sản phẩm để cập nhật.');
+        return;
+    }
+    const updatedProduct = {
+        name: document.querySelector('#productName').value.trim(),
+        description: document.querySelector('#description').value.trim(),
+        price: parseFloat(document.querySelector('#productPrice').value.trim()),
+        category: document.querySelector('#category').value,
+        flavor: document.querySelector('#ingredients').value.trim(),
+        stock: parseInt(document.querySelector('#stock').value.trim(), 10),
+        image_url: document.querySelector('.main-image-preview img').src, // Thêm dòng này
+    };
+
+    // Gửi yêu cầu PUT để cập nhật sản phẩm
+    fetch(`/products/update/${productId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedProduct),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message === 'Thay đổi thông tin sản phẩm thành công') {
+                alert('Cập nhật sản phẩm thành công!');
+                location.reload(); // Tải lại trang để hiển thị thay đổi
+            } else {
+                alert('Cập nhật sản phẩm thất bại!');
+            }
+        })
+        .catch(err => {
+            console.error('Lỗi khi cập nhật sản phẩm:', err);
+            alert('Đã xảy ra lỗi khi cập nhật sản phẩm!');
+        });
+
+    // Đóng popup sau khi lưu
+    closeEditPopup();
+}
+
+// xóa sản phẩm
+function deleteProduct() {
+    const popup = document.querySelector('.popup-edit');
+    const productId = popup.dataset.productId; // Lấy ID sản phẩm từ popup
+
+    // Xác nhận trước khi xóa
+    if (confirm('Bạn có chắc chắn muốn xóa sản phẩm này?')) {
+        fetch(`/products/del/${productId}`, {
+            method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message === 'Xóa sản phẩm thành công') {
+                alert('Xóa sản phẩm thành công!');
+                // Tìm và xóa phần tử sản phẩm khỏi giao diện
+                const productElement = document.querySelector(`#product-${productId}`);
+                if (productElement) {
+                    productElement.remove(); // Loại bỏ phần tử khỏi DOM
+                }
+            } else {
+                alert('Xóa sản phẩm thất bại!');
+            }
+        })
+        .catch(err => {
+            console.error('Lỗi khi xóa sản phẩm:', err);
+            alert('Đã xảy ra lỗi khi xóa sản phẩm!');
+        });
+
+        // Đóng popup sau khi xóa
+        closeEditPopup();
+    }
+}
+  // mở popup-add
+  document.querySelector('.btn-add-product').addEventListener('click', function() {
+    // Lấy popup-add và hiển thị nó
+    const popup = document.querySelector('.popup-add');
+    popup.style.display = 'block'; // Hiển thị popup
+});
+  // thêm mới sản phẩm
+document.getElementById('saveProductButton').addEventListener('click', function(event) {
+  event.preventDefault(); // Ngăn không cho form tự động submit
+
+  // Lấy giá trị từ các trường nhập liệu
+  const productName = document.getElementById('productNameadd').value;
+  const productPrice = document.getElementById('productPriceadd').value;
+  const productCategory = document.getElementById('categoryadd').value;
+  const productStock = document.getElementById('stockadd').value;
+  const productIngredients = document.getElementById('ingredientsadd').value;
+  const productDescription = document.getElementById('descriptionadd').value;
+  const productImage = document.getElementById('mainImageUpload').files[0];
+// kiểm tra đầu vào
+ if (!productName || !productPrice || !productStock || !productCategory ||!productDescription ||!productIngredients) {
+    alert("Vui lòng điền đầy đủ thông tin sản phẩm.");
+    return; // Ngừng nếu dữ liệu không hợp lệ
+  }
+  // Kiểm tra và tạo đối tượng FormData để gửi lên server
+  const formData = new FormData();
+  formData.append('name', productName);
+  formData.append('price', productPrice);
+  formData.append('category', productCategory);
+  formData.append('stock', productStock);
+  formData.append('flavor', productIngredients);
+  formData.append('description', productDescription);
+  formData.append('image', productImage);
+
+  // Gửi yêu cầu POST đến API backend
+  fetch('/products/add', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert(data.message); // Hiển thị thông báo từ server
+    // Xử lý sau khi thêm sản phẩm thành công
+    closeAddPopup();
+  })
+  .catch(err => {
+    console.error('Lỗi khi thêm sản phẩm:', err);
+    alert('Đã xảy ra lỗi khi thêm sản phẩm!');
+  });
+});
+  // đóng popup thêm sản phẩm
+  function closeAddPopup() {
+    const popup = document.querySelector('.popup-add');
+    popup.style.display = 'none';
+}
+
+   document.getElementById('logout').addEventListener('click', function() {
+    fetch('/auth/logout')
+        .then(response => {
+            if (response.ok) {
+                window.location.href = '/';  // Điều hướng về trang chủ nếu đăng xuất thành công
+            } else {
+                console.error('Đăng xuất thất bại!');
+            }
+        })
+        .catch(error => {
+            console.error('Error during logout:', error);
+        });
+});
+</script>
+</body>
+</html>

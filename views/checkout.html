@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="/stylesheets/checkout.css" />
+  </head>
+  <body style="margin-top: 0px;">
+    <div class="check-out">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+
+          <header class="header-user">
+            <button class="logo">Jeunesse.</button>
+            <button class="spham">Sản phẩm</button>
+            <button class="aboutus">Về Jeunesse</button>
+            <button class="giohang1"><div class="giohang_text">Giỏ hàng</div></button>
+            <button class="icon_profile"></button>
+            <div class="cirle_giohang"><div class="soluong_giohang">0</div></div>
+          </header>
+
+          <div class="heading"><div class="headingtext">Thông tin thanh toán</div></div>
+
+          <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            
+              <a href="/" class="nav-primary" >Jeunesse</a>
+              <a href="/products/banhle" class="nav-secondary" >Sản phẩm</a>
+              <a href="/cart" class="cart-link" >Giỏ hàng</a>
+          </nav>
+
+          <div class="summary-container">
+            <div class="summary-header">
+              <div class="header-details">
+                <h1 class="header-title">Chi tiết hóa đơn</h1>
+                <p class="order-id">Mã Đơn Hàng: <span id="order-id-value"></span></p>
+              </div>
+            </div>
+        
+            <div class="summary-main">
+              <div class="main-wrapper">
+
+                <section class="customer-section">
+                  <h2 class="section-heading">Thông tin khách hàng</h2>
+        
+                  <form class="customer-form">
+
+                    <div class="input-group">
+                      <label for="customerName">Họ và tên</label>
+                      <input 
+                        type="text"
+                        id="customerName"
+                        class="form-control"
+                        placeholder="Nhập họ và tên của bạn..."
+                        value=""
+                      />
+                    </div>
+        
+                    <div class="input-group">
+                      <label for="customerPhone">Số điện thoại</label>
+                      <input
+                        type="tel" 
+                        id="customerPhone"
+                        class="form-control"
+                        placeholder="Nhập số điện thoại của bạn..."
+                        value=""
+                      />
+                    </div>
+        
+                    <div class="input-group">
+                      <label for="customerAddress">Địa chỉ nhận hàng</label>
+                      <input
+                        type="text"
+                        id="customerAddress" 
+                        class="form-control"
+                        placeholder="Nhập địa chỉ của bạn..."
+                        value=""
+                      />
+                    </div>
+        
+                    <div class="payment-section">
+                      <h3 class="payment-heading">Phương thức thanh toán</h3>
+                      <div class="payment-options">
+                        <button class="payment-btn" id="cash">
+                          <img
+                            src="/image/cash 1.png"
+                            class="payment-icon"
+                            alt=""
+                          />
+                          Tiền mặt
+                        </button>
+
+                        <button class="payment-btn" id="transfer">
+                          <img
+
+                            src="/image/transfer.png"
+                            class="payment-icon"
+                            alt=""
+                          />
+                          Chuyển khoản
+                          <span class="discount-badge">-5%</span>
+                        </button>
+
+                        <button class="payment-btn" id="vnpay">
+                          <img
+                            src="/image/vnpay-logo.png"
+                            class="payment-icon"
+                            alt=""
+                          />
+                          VNPay
+                          <span class="discount-badge">-5%</span>
+                        </button>
+
+                        <button class="payment-btn" id="momo">
+                          <img
+                                  src="/image/momo.png"
+                                  class="payment-icon"
+                                  alt=""
+                          />
+                          Momo
+                          <span class="discount-badge">-5%</span>
+                        </button>
+
+                      </div>
+                    </div>
+                  </form>
+                </section>
+        
+                <section class="order-section">
+                  <h2 class="item-heading">Sản phẩm</h2>
+                  <div class="item-list" id="item-list">
+                  
+
+                  </div>
+        
+                  <div class="accessory-section">
+
+                    <div class="toggle-accessory">
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f36c76f891f0861bea19b4dbf6116668c519693e7ea7d9cc10da942076a09c0?placeholderIfAbsent=true&apiKey=dafe1359c46f42f38097b469b97b3abb" alt="" class="toggle-icon" />
+                      <span>Phụ kiện đi kèm</span>
+                    </div>
+        
+                    <div class="accessory-item">
+
+                      <div class="accessory-info">
+                        <h4 class="accessory-name"></h4>
+                        <div class="quantity-wrapper">
+                          <button class="quantity-decrease" aria-label="Decrease quantity">-</button>
+                          <button class="quantity-increase" aria-label="Increase quantity">+</button>
+                        </div>
+                      </div>
+
+
+                      <div class="accessory-controls">
+                        <button class="control-button left-button">
+                          <img src="/image/arrow pre.png" alt="Previous" />
+                        </button>
+
+                        <img
+                        src=""
+                        class="accessory-img"
+                        alt=""
+                      />
+
+                      <div class="price-quantity-wrapper">
+                        <div class="price-display">
+                          <span class="price-value"></span>
+                          <span class="currency">VND</span>
+                        </div>
+
+                        <div class="quantity-display">
+                          <span class="quantity-label">Số lượng : </span>
+                          <span class="quantity-amount"></span>
+                        </div>
+                      </div>
+
+                      <button class="control-button right-button">
+                        <img src="/image/arrow next.png" alt="Next" />
+                    </button>
+                      
+                      </div>
+
+                    </div>
+                  </div>
+
+                </section>
+                  </div>
+
+                  <section class="accessory-order">
+                    <div class="accessories-section">
+                      <div class="frame-accessory">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f36c76f891f0861bea19b4dbf6116668c519693e7ea7d9cc10da942076a09c0?placeholderIfAbsent=true&apiKey=dafe1359c46f42f38097b469b97b3abb" alt="" class="accessory-icon" />
+                        <span>Phụ kiện đi kèm</span>
+                      </div>
+  
+                      <div class="accessories-list" id="accessories-list">
+
+                      </div>
+  
+                  </div>
+                  </section>
+
+                  <section class="total-section">
+                    
+                    <div class="total-container">
+                      <div class="total">
+                        <span class="total-small">Thành tiền</span>
+                        <div class="total-number">
+                          <span class="total-amount" id="subtotal-amount"></span>
+                          <span class="total-currency"> VND</span>
+                        </div>
+                      </div>
+
+                      <div class="total">
+                        <span class="total-small">Phí vận chuyển</span>
+                        <div class="total-number">
+                            <span class="total-amount" id="shipping-fee-amount"></span>
+                            <span class="total-currency"> VND</span>
+                          </div>
+                      </div>
+
+                        <div class="total">
+                        <span class="total-small">Giảm giá (-5%)</span>
+                        <div class="total-number">
+                            <span class="total-amount" id="discount-amount"></span>
+                            <span class="total-currency"> VND</span>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="total-wrapper">
+                        <span class="total-label">Tổng</span>
+                        <div class="total-price">
+                            <span class="total-amount" id="total-amount"></span>
+                            <span class="total-currency"> VND</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="order-buttons">
+                  <button class="order-button" id="confirm-payment-button" disabled>
+                      <span>Thanh toán</span>
+                      <span class="arrow">→</span>
+                  </button>
+              </div>
+
+                </div>
+              </div>
+
+              <div class="popup-banking" id="popup-banking">
+                  <div class="popup-overlay">
+                    <div class="frame">
+
+                      <div class="popup-header">
+                        <button class="close-btn" id="close-banking-popup">X</button>
+                    </div>
+
+                    <img src="/image/Logo_BIDV.svg.png" alt="BIDV Logo" class="banking-logo" />
+
+                    <div class="popup-content">
+                        <h2 class="title">QUÉT MÃ ĐỂ THANH TOÁN</h2>
+
+                        <div class="qr-code">
+                            <img src="/image/qr_banking.jpg" alt="QR Code" />
+                        </div>
+                        <div class="merchant-info">
+                            <p class="merchant-name">TRAN HIEN MAI</p>
+                            <p class="banking-number">4505396643</p>
+                        </div>
+                        <p class="note">Nội dung : Tên KH + Mã Đơn Hàng</p>
+                    </div>
+                      <button class ="confirm" id="confirmtransfer"> ĐÃ THANH TOÁN </button>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="popup-momo" id="popup-vnpay">
+                <div class="popup-overlay">
+                  <div class="frame">
+
+                    <div class="popup-header">
+                      <button class="close-btn" id="close-vn-popup">X</button>
+                  </div>
+
+                  <img src="/image/vnpay-logo.png" alt="momo Logo" class="momo-logo" />
+
+                  <div class="popup-content">
+                      <h2 class="title-momo">QUÉT MÃ ĐỂ THANH TOÁN</h2>
+
+                      <div class="momo-code">
+                          <img src=" " alt="momo code" />
+                      </div>
+
+                      <p class="note">Trong VNPay, chọn biểu tượng
+                        <img src="/image/scan_icon.png" class="scan-icon" /> và quét mã QR để thanh toán</p>
+                      <button class ="confirm" id="confirmvnpay"> ĐÃ THANH TOÁN </button>
+                  </div>   
+                  </div>
+                </div>
+            </div>
+          <div class="popup-momo" id="popup-momo">
+            <div class="popup-overlay">
+              <div class="frame">
+
+                <div class="popup-header">
+                  <button class="close-btn">X</button>
+                </div>
+
+                <img src="/image/momo_icon.png" alt="momo Logo" class="momo-logo" />
+
+                <div class="popup-content">
+                  <h2 class="title-momo">QUÉT MÃ ĐỂ THANH TOÁN</h2>
+
+                  <div class="momo-code">
+                    <img src=" " alt="momo code" />
+                  </div>
+
+                  <p class="note">Trong MoMo, chọn biểu tượng <img src="/img/scan_icon.png" class="scan-icon" /> và quét mã QR để thanh toán</p>
+                  <button class ="confirm" id="confirmomo"> ĐÃ THANH TOÁN </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="popup-dathang-thanhcong" id="popup-dathang-thanhcong">
+            <div class="popup-overlay">
+              <div class="confirmation-container">
+                <div class="confirmation-card">
+                  <div class="popup-header-2">
+                    <button class="close-btn-2">X</button>
+                  </div>
+                  <div class="message-wrapper">
+                    <img
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/a1636b65f73599549b0e684619ae16746d8796f97045a0b75523702e52037ef9?apiKey=f5eb2649c8cf42ad939f95bc550b1a0f&"
+                            class="success-icon"
+                            alt="Order confirmation success icon"
+                    />
+                    <div class="success-message">
+                      Bạn đã đặt hàng thành công!
+                      <br />
+                      Nhân viên của Jeunesse sẽ liên hệ và xác nhận hóa đơn với bạn trong ít phút
+                      <br />
+                      Cảm ơn bạn đã tin tưởng và lựa chọn chúng mình!
+                    </div>
+                  </div>
+                  <div class="signature-block">
+                    <div class="signature-from">From</div>
+                    <div class="signature-brand">Jeunesse.</div>
+                    <div class="signature-love">with love</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <footer class="footer">
+              <button class="logo2">Jeunesse.</button>
+  
+              <div class="infor1">
+                <div class="flexcontainer">
+                  <p class="text">
+                    <span class="hotline_location">Hotline<br /></span>
+                  </p>
+                  <p class="text"><span class="detail">(+84) 824048293</span></p>
+                </div>
+                <div class="flexcontainer">
+                  <p class="text">
+                    <span class="hotline_location">Location<br /></span>
+                  </p>
+                  <p class="text"><span class="detail">166 Cầu Giấy, Hà Nội </span></p>
+                </div>
+              </div> 
+  
+              <div class="infor2">
+                <button class="aboutus2">Về Jeunesse</button>
+                <button class="spham2">Sản phẩm</button>
+                <button class="giohang2">Giỏ hàng</button>
+              </div>
+              <p class="copyright">© 2024 Jeunesse All Rights Reserved.</p>
+            </footer>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let cart = [];
+    let allAccessories = [];
+  let currentAccessoryIndex = 0;
+  let selectedPaymentMethod = 'cash'; // Mặc định là tiền mặt
+  let orderId = generateOrderId();
+
+  // Lấy thông tin thanh toán từ server khi trang được tải
+  document.addEventListener('DOMContentLoaded', () => {
+      fetchPaymentDetails();
+      fetchAllAccessories();
+      setupPaymentMethodSelection();
+
+      const buttons = document.querySelectorAll('button');
+       // Định nghĩa đường dẫn tương ứng cho từng button
+     const buttonRoutes = {
+       'Jeunesse.': '/',
+       'Sản phẩm': '/products/banhle',
+       'Về Jeunesse': '/about',
+       'Giỏ hàng': '/cart',
+     };
+
+     // Thêm sự kiện click cho từng button
+     buttons.forEach(button => {
+       button.addEventListener('click', function() {
+         const buttonText = button.textContent.trim();
+         if (buttonRoutes[buttonText]) {
+           window.location.href = buttonRoutes[buttonText];
+         }
+       });
+     });
+
+  });
+
+  // Gán sự kiện cho nút thanh toán
+  document.getElementById('confirm-payment-button').addEventListener('click', handlePayment);
+
+  // Hàm tạo mã đơn hàng
+  function generateOrderId() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    // Lấy số thứ tự (cần lưu số này ở server hoặc local storage để đảm bảo tính duy nhất)
+    let orderCounter = localStorage.getItem('orderCounter') || 0;
+    orderCounter++;
+    localStorage.setItem('orderCounter', orderCounter);
+
+    const formattedCounter = String(orderCounter).padStart(4, '0'); // Giả sử số thứ tự có 4 chữ số
+
+    return `${year}${month}${day}${hours}${minutes}${seconds}${formattedCounter}`;
+  }
+
+  // Hàm lấy thông tin thanh toán
+  function fetchPaymentDetails() {
+    fetch('/payment/details')
+      .then((response) => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then((data) => {
+        cart = data.cart;
+        populatePaymentDetails(data);
+        //fetchAllAccessories();
+      })
+      .catch((error) => console.error('Error fetching payment details:', error));
+  }
+
+  // Lấy danh sách phụ kiện
+    function fetchAllAccessories() {
+        fetch('/products/api/phukien')
+            .then((response) => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then((accessories) => {
+                allAccessories = accessories;
+                displayAccessory();
+            })
+            .catch((error) => console.error('Error fetching accessories:', error));
+    }
+
+  // Hàm điền thông tin vào các trường
+  function populatePaymentDetails(data) {
+    document.getElementById('customerName').value = data.user.name || '';
+    document.getElementById('customerPhone').value = data.user.username || '';
+    document.getElementById('customerAddress').value = data.user.address || '';
+    document.getElementById('order-id-value').textContent = orderId;
+
+    populateCartItems(data.cart);
+    updateTotals();
+    displayAccessory();
+    setupAccessoryNavigation();
+    setupAccessoryQuantityHandlers();
+  }
+
+  // Hàm hiển thị danh sách sản phẩm và phụ kiện
+  function populateCartItems(cart) {
+    const itemList = document.getElementById('item-list');
+    const accessoriesList = document.getElementById('accessories-list');
+    itemList.innerHTML = '';
+    accessoriesList.innerHTML = '';
+
+    cart.forEach((product) => {
+      if (product.category !== 'phukien') {
+        const itemHTML = `
+          <article class="item-card">
+            <div class="item-info">
+              <div class="quantity">
+                <span>${product.quantity}</span>
+                <span>x</span>
+                <span class="item-name">${product.name}</span>
+              </div>
+              <div class="price">
+                <span>${product.price}</span>
+              </div>
+            </div>
+            <img src="${product.image_url}" class="item-img" alt="${product.name}" />
+          </article>
+        `;
+        itemList.innerHTML += itemHTML;
+      } else {
+        const accessoryHTML = `
+          <div class="accessories-item">
+            <span class="quantity-text">${product.quantity} x</span>
+            <span class="product-name">${product.name}</span>
+          </div>
+        `;
+        accessoriesList.innerHTML += accessoryHTML;
+      }
+    });
+displayAccessory();
+  }
+
+  // Hàm hiển thị phụ kiện
+  function displayAccessory() {
+
+  console.log("allAccessories:", allAccessories);
+    if (allAccessories.length > 0) {
+      document.querySelector('.accessory-item').style.display = 'block';
+      // Lấy phụ kiện dựa trên currentAccessoryIndex
+      const currentAccessory = allAccessories[currentAccessoryIndex];
+      console.log("currentAccessory:", currentAccessory);
+      const existingCartItem = cart.find(item => item.id === currentAccessory.id);
+      // Cập nhật thông tin phụ kiện
+      document.querySelector('.accessory-name').textContent = currentAccessory.name;
+      document.querySelector('.accessory-img').src = currentAccessory.image_url;
+      document.querySelector('.accessory-img').alt = currentAccessory.name;
+      document.querySelector('.price-value').textContent = currentAccessory.price;
+      document.querySelector('.quantity-amount').textContent = existingCartItem ? existingCartItem.quantity : 0;
+
+    } else {
+      document.querySelector('.accessory-item').style.display = 'none';
+    }
+  }
+// cập nhật danh sách phụ kiện
+
+  // Hàm cập nhật tổng tiền
+  function updateTotals() {
+    let subtotal = 0;
+    cart.forEach((item) => {
+      subtotal += item.price * item.quantity *1000;
+    });
+
+    let shippingFee = 30000;
+    let discount = (selectedPaymentMethod === 'transfer' || selectedPaymentMethod === 'momo' || selectedPaymentMethod === 'vnpay') ? subtotal * 0.05 : 0;
+    let grandTotal = subtotal + shippingFee - discount;
+
+    document.getElementById('subtotal-amount').textContent = formatCurrency(subtotal);
+    document.getElementById('shipping-fee-amount').textContent = formatCurrency(shippingFee);
+    document.getElementById('discount-amount').textContent = formatCurrency(discount);
+    document.getElementById('total-amount').textContent = formatCurrency(grandTotal);
+  }
+
+  // Hàm định dạng số tiền sang VND
+  function formatCurrency(amount) {
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+  }
+
+  // Hàm cập nhật số lượng phụ kiện
+  function updateAccessoryQuantity(accessoryId, newQuantity) {
+    fetch('/cart/update-cart-quantity', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ id: accessoryId, quantity: newQuantity }),
+    })
+    .then((response) => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data.message);
+      fetchPaymentDetails(); // Cập nhật lại giỏ hàng và hiển thị
+    })
+    .catch((error) => console.error('Error updating quantity:', error));
+  }
+
+  // Hàm gán sự kiện cho các nút mũi tên
+   function setupAccessoryNavigation() {
+      document.querySelector('.control-button.left-button').onclick = () => {
+          if (allAccessories.length > 1) {
+              currentAccessoryIndex = (currentAccessoryIndex - 1 + allAccessories.length) % allAccessories.length;
+              displayAccessory();
+          }
+      };
+
+      document.querySelector('.control-button.right-button').onclick = () => {
+          if (allAccessories.length > 1) {
+              currentAccessoryIndex = (currentAccessoryIndex + 1) % allAccessories.length;
+              displayAccessory();
+          }
+      };
+  }
+  // Hàm gán sự kiện cho các nút tăng/giảm số lượng phụ kiện
+   function setupAccessoryQuantityHandlers() {
+    document.querySelector('.quantity-decrease').onclick = () => {
+      if (allAccessories.length > 0) {
+        const currentAccessory = allAccessories[currentAccessoryIndex];
+        const existingCartItem = cart.find(item => item.id === currentAccessory.id);
+        const currentQuantity = existingCartItem ? existingCartItem.quantity : 0;
+        if (currentQuantity > 0) {
+          updateAccessoryQuantity(currentAccessory.id, currentQuantity - 1);
+        }
+      }
+    };
+
+    document.querySelector('.quantity-increase').onclick = () => {
+      if (allAccessories.length > 0) {
+        const currentAccessory = allAccessories[currentAccessoryIndex];
+        const existingCartItem = cart.find(item => item.id === currentAccessory.id);
+        const currentQuantity = existingCartItem ? existingCartItem.quantity : 0;
+        updateAccessoryQuantity(currentAccessory.id, currentQuantity + 1);
+      }
+    };
+  }
+
+function enablePaymentButton() {
+    document.getElementById('confirm-payment-button').disabled = false;
+}
+  // Hàm gán sự kiện cho các nút thanh toán
+  function setupPaymentMethodSelection() {
+    document.querySelectorAll('.payment-btn').forEach((button) => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+        selectedPaymentMethod = this.id;
+        document.querySelectorAll('.payment-btn').forEach((btn) => btn.classList.remove('selected'));
+        this.classList.add('selected');
+        updateTotals();
+        enablePaymentButton();
+      });
+    });
+  }
+
+  // Hàm xử lý thanh toán
+  function handlePayment() {
+  const paymentButton = document.getElementById('confirm-payment-button');
+  const paymentMethod = selectedPaymentMethod;
+
+  // Kiểm tra xem nút thanh toán có bị disabled không
+  if (paymentButton.disabled) {
+    alert('Vui lòng chọn phương thức thanh toán.');
+    return;
+  }
+
+  // Xử lý hiển thị popup dựa trên phương thức thanh toán
+  if (paymentMethod === 'cash') {
+    completePayment();
+    showSuccessPopup();
+  } else if (paymentMethod === 'transfer') {
+    // Thanh toán bằng chuyển khoản: Hiển thị popup-banking
+    showBankingPopup();
+  } else if (paymentMethod === 'momo') {
+    // Thanh toán bằng chuyển khoản: Hiển thị popup-banking
+    showMomoPopup();
+  } else if (paymentMethod === 'vnpay') {
+    //showVnpayPopup();
+    initiateVnpayPayment();
+  } else {
+    alert('Vui lòng chọn phương thức thanh toán.');
+  }
+}
+
+function initiateVnpayPayment() {
+
+     const amount = parseFloat(document.getElementById('total-amount').textContent.replace(/[^\d.-]/g, '')) ; // Extract numerical value from total
+
+      fetch('/vnpay/create_payment_url', { // Use your new VNPAY payment route
+          method: 'POST',
+          headers: {
+             'Content-Type': 'application/json',
+          },
+         body: JSON.stringify({ amount: amount , bankCode: null, language: 'vn'}) // Customize the payment data for VNPAY
+      })
+      .then((response) => {
+            if (!response.ok) {
+                throw new Error('Failed to initiate VNPAY payment');
+            }
+            return response.json(); // Trả về JSON
+        })
+        .then((data) => {
+            console.log('Received payment URL:', data.paymentUrl); // Log URL trả về từ API
+            if (data.paymentUrl) {
+                window.location.href = data.paymentUrl; // Chuyển hướng tới URL thanh toán
+            } else {
+                throw new Error('Payment URL not found');
+            }
+        })
+        .catch((error) => {
+            console.error('Error initiating VNPAY payment:', error);
+            alert('Lỗi khi khởi tạo thanh toán VNPay'); // Thông báo lỗi
+        });
+   }
+
+function checkVnpayPaymentStatus() {
+     const urlParams = new URLSearchParams(window.location.search);
+    const vnp_ResponseCode = urlParams.get('vnp_ResponseCode');
+
+     // Gọi backend để xác thực kết quả thanh toán
+    fetch('/vnpay_return', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        // Truyền tham số URL của VNPAY
+        body: JSON.stringify({ vnp_ResponseCode }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        const responseCode = data.code;
+
+        if (responseCode === '00') {
+            // Thanh toán thành công
+            showSuccessPopup();  // Hiển thị popup thành công
+        }
+    })
+    .catch(error => {
+        console.error('Lỗi khi xác thực thanh toán:', error);
+        alert('Đã có lỗi xảy ra khi kiểm tra thanh toán.');
+    });
+}
+
+// thanh toán
+ function completePayment() {
+     return fetch('/payment', {
+         method: 'POST',
+         headers: {
+             'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({ paymentMethod: selectedPaymentMethod, orderId: orderId }),
+     }).then(response => {
+       if (!response.ok) throw new Error('Payment failed');
+       return response.json();
+     })
+ }
+    function showSuccessPopup() {
+  const popup = document.getElementById('popup-dathang-thanhcong');
+  popup.style.display = 'block';
+}
+ // Hàm hiển thị popup chuyển khoản ngân hàng
+  function showBankingPopup() {
+    document.getElementById('popup-banking').style.display = 'block';
+  }
+
+  // Hàm hiển thị popup Momo
+  function showMomoPopup() {
+    //document.getElementById('popup-momo').style.display = 'block';
+     const userId = 2 // lấy user id, để cứng cho dễ test
+        fetch(`/api/momo-payment/${userId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("MoMo QR code:", data.qrUrl)
+            document.getElementById('popup-momo').style.display = 'block';
+             document.querySelector('.momo-code img').src = data.qrUrl; // Hiển thị mã QR code
+             // Kiểm tra nếu có payUrl và chuyển hướng đến trang thanh toán
+
+        })
+        .catch(error => {
+            console.error('Error generating MoMo QR code:', error);
+            alert('Lỗi khi tạo mã QR MoMo.');
+        });
+  }
+
+
+ function showVnpayPopup() {
+    document.getElementById('popup-vnpay').style.display = 'block';
+  }
+  // Hàm đóng popup và chuyển hướng về trang chủ
+  function closePopupAndRedirect() {
+    document.getElementById('popup-dathang-thanhcong').style.display = 'none';
+    document.getElementById('popup-banking').style.display = 'none';
+    document.getElementById('popup-vnpay').style.display = 'none';
+    window.location.href = '/';
+  }
+   function closePopup(){
+    document.getElementById('popup-banking').style.display = 'none';
+    document.getElementById('popup-vnpay').style.display = 'none';
+    document.getElementById('popup-momo').style.display = 'none';
+}
+  // Gán sự kiện click cho nút "X" của popup thanh toán thành công
+  document.querySelector('#popup-dathang-thanhcong .close-btn-2').addEventListener('click', closePopupAndRedirect);
+
+  // Gán sự kiện click cho nút "X" của popup chuyển khoản ngân hàng
+  document.querySelector('#popup-banking .close-btn').addEventListener('click', closePopup);
+
+  // Gán sự kiện click cho nút "X" của popup Momo
+  document.querySelector('#popup-momo .close-btn').addEventListener('click', closePopup);
+  document.getElementById('close-vn-popup').addEventListener('click', closePopup);
+  // gán sự kiện thanh toán cho nút "đã thanh toán" trong popup
+    document.getElementById('confirmvnpay').addEventListener('click', vnpaypayment);
+    document.getElementById('confirmtransfer').addEventListener('click', transferpayment);
+     //document.getElementById('confirmmomo').addEventListener('click', momopayment);
+  function vnpaypayment(){
+        completePayment();
+        closePopup();
+        showSuccessPopup();
+    }
+
+    function momopayment(){
+        completePayment();
+        closePopup();
+        showSuccessPopup();
+    }
+
+    function transferpayment(){
+        completePayment();
+        closePopup();
+        showSuccessPopup();
+    }
+// đổi màu nút thanh toán
+    function setupPaymentMethodSelection() {
+    const paymentButtons = document.querySelectorAll('.payment-btn');
+
+    paymentButtons.forEach((button) => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            selectedPaymentMethod = this.id;
+
+            // Bỏ class "active" khỏi tất cả các nút
+            paymentButtons.forEach((btn) => btn.classList.remove('active'));
+
+            // Thêm class "active" vào nút được chọn
+            this.classList.add('active');
+
+            updateTotals();
+            enablePaymentButton();
+        });
+    });
+
+  // Chọn phương thức thanh toán mặc định khi trang tải xong
+    const defaultPaymentMethod = document.getElementById('cash'); // Hoặc ID của phương thức bạn muốn chọn mặc định
+    if (defaultPaymentMethod) {
+        defaultPaymentMethod.classList.add('active'); // Thêm class 'active' cho nút mặc định
+        selectedPaymentMethod = defaultPaymentMethod.id
+    }
+}
+
+    window.onload = function() {
+            // Lấy tham số từ URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const responseCode = urlParams.get('vnp_ResponseCode');
+
+            // Kiểm tra mã phản hồi và gọi các hàm tương ứng
+            if (responseCode === '00') {
+                completePayment();  // Hoàn tất thanh toán
+                showSuccessPopup(); // Hiển thị popup thành công
+            } else {
+
+            }
+        };
+  </script>
+  </body>
+</html>

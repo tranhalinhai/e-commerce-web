@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Order Details</title>
+  <link rel="stylesheet" href="/stylesheets/admin-chitietdonhang.css">
+</head>
+<body>
+  <div class="admin-panel">
+    <div class="main-section">
+      <header class="top-header">
+        <div class="admin-badge">ADMIN</div>
+      </header>
+
+      <div class="content-wrapper">
+        <div class="layout-container">
+
+          <nav class="sidebar">
+            <div class="navigation-bar">
+              <div class="brand-logo">Jeunesse.</div>
+
+              <div class="function">
+              <button class="nav-item" onclick="location.href='/admin'">
+                <img src="/image/icon_product.png" class="nav-icon" alt="Products icon" />
+                <span class="nav-text">Sản phẩm</span>
+              </button>
+
+              <button class="nav-item active" onclick="location.href='/admin/orders'">
+                <img src="/image/icon_order.png" class="nav-icon" alt="Orders icon" />
+                <span class="nav-text">Đơn hàng</span>
+              </button>
+
+              <button class="nav-item" onclick="location.href='/admin/client'">
+                <img src="/image/icon_customer.png" class="nav-icon" alt="Customers icon" />
+                <span class="nav-text">Khách hàng</span>
+              </button>
+
+              <button class="nav-item" onclick="location.href='/admin/user'">
+                <img src="/image/icon_user.png" class="nav-icon" alt="Customers icon" />
+                <span class="nav-text">Người dùng</span>
+              </button>
+
+              <button class="nav-item" id="logout">
+                <img src="/image/icon_logout.png" class="nav-icon" alt="Logout icon" />
+                <span class="nav-text">Đăng xuất</span>
+              </button>
+
+            </div>
+            </div>
+          </nav>
+
+          <main class="main-content">
+            <div class="order-details">
+            <section class="product-section">
+              <div class="section-header">
+                <a class="back" href="/admin/orders">Đơn hàng</a>
+                <h1 class="section-title"> > Chi tiết đơn hàng</h1>
+              </div>
+              
+              <div class="order-container">
+                <div class="order-wrapper">
+                  <div class="header-section">
+                    <div class="order-status-wrapper">
+                      <div class="status-container">
+
+                        <div class="order-info">
+                          <div class="order-details-header">
+
+                            <div class="order-number">
+                              Mã đơn hàng: <span id="order-id">#0001</span>
+                          </div>
+
+                            <div class="status-change-text">Đổi trạng thái đơn hàng</div>
+
+                            <div class="status-selector">
+                              <select 
+                                id="orderstatus"
+                                class="order-status"
+                                aria-required="true"
+                              >
+                                <option value="1">Chờ thanh toán</option>
+                                <option value="2">Đã thanh toán</option>
+                                <option value="3">Đã xác nhận</option>
+                                <option value="4">Đang giao hàng</option>
+                                <option value="5">Đã giao hàng</option>
+                                <option value="6">Đã hủy</option>
+                              </select>
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="status-display">
+                          <div class="status-badge"></div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <button class="save-button">Save</button>
+                  </div>
+
+                  <div class="info-section">
+                   <div class="info-card">
+        <div class="customer-info">
+          <div class="card-title">Khách hàng</div>
+          <div class="info-text">Họ và tên : <span id="name"></span></div>
+          <div class="info-text">Số điện thoại : <span id="phone"></span></div>
+          <div class="info-text">Mật khẩu : <span id="password"></span></div>
+        </div>
+      </div>
+
+                   <div class="info-card">
+        <div class="customer-info">
+          <div class="card-title">Thông tin đơn hàng</div>
+          <div class="info-text">Đơn vị vận chuyển : <span id="delivery-unit">Jeunesse</span></div>
+          <div class="info-text">Phương thức thanh toán : <span id="payment-method"></span></div>
+          <div class="info-text">Trạng thái : <span id="status"></span></div>
+        </div>
+      </div>
+
+                   <div class="info-card">
+        <div class="customer-info">
+          <div class="card-title">Giao hàng đến</div>
+          <div class="info-text">Địa chỉ : <span id="address"></span></div>
+        </div>
+      </div>
+    </div>
+
+                </div>
+                
+                <div class="order-table">
+                  <div class="table-header">
+                    <div class="table-row">
+                      <div class="table-cell">Tên sản phẩm</div>
+                      <div class="table-cell">Giá tiền</div>
+                      <div class="table-cell">Số lượng</div>
+                      <div class="table-cell">Hình ảnh</div>
+                      <div class="table-cell">Tổng giá</div>
+                    </div>
+                  </div>
+
+                  <div class="table-product">
+                    <div class="table-row">
+                      <div class="table-cell"></div>
+                      <div class="table-cell"></div>
+                      <div class="table-cell"></div>
+                      <div class="table-cell"></div>
+                      <div class="table-cell"></div>
+                    </div>
+                  </div>
+
+                  <div class="order-total">
+                    <div style="font-size: 30px;">Phí vận chuyển: 30.000 VND</div>
+                    <div style="font-size: 20px;">Giảm giá (5%) đối với Thanh toán online</div>
+                    <div class="total-label"></div><div class="total-amount"></div>
+
+                  </div>
+                </div>
+
+              </div>
+
+          
+
+            </section>
+          </div>
+          </main>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+<script>
+  const orderId = window.location.pathname.split('/').pop();
+    let allOrderStatuses = [];
+    let currentOrderStatusId;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchOrderDetails(orderId);
+        fetchAllOrderStatuses();
+
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function () {
+                document.querySelectorAll('.nav-item').forEach(navItem => navItem.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+
+
+
+    function formatCurrency(amount) {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(amount);
+    }
+
+
+    // Gọi API để lấy chi tiết đơn hàng
+    function fetchOrderDetails(orderId) {
+        fetch(`/orders/${orderId}`)
+            .then(response => response.json())
+            .then(order => {
+                displayOrderDetails(order);
+                currentOrderStatusId = order.status_id;
+                selectOrderStatusInDropdown(currentOrderStatusId);
+            })
+            .catch(error => {
+                console.error('Error fetching order details:', error);
+                alert('Lỗi khi lấy thông tin đơn hàng. Vui lòng thử lại sau.');
+            });
+    }
+
+    function selectOrderStatusInDropdown(status_id) {
+        const statusDropdown = document.getElementById('orderstatus');
+
+        for (let i = 0; i < statusDropdown.options.length; i++) {
+            if (statusDropdown.options[i].value == status_id) {
+                statusDropdown.selectedIndex = i;
+                break;
+            }
+        }
+    }
+
+
+
+    function displayOrderDetails(order) {
+        document.getElementById('order-id').textContent = '#' + order.order_id;
+        document.getElementById('name').textContent = order.customer_name;
+        document.getElementById('phone').textContent = order.customer_phone;
+        document.getElementById('password').textContent = order.customer_password;
+        document.getElementById('payment-method').textContent = order.payment_method;
+        document.getElementById('status').textContent = order.status_name;
+        document.getElementById('address').textContent = order.customer_address;
+        // hiển thị status name lên status-badge
+        const statusBadge = document.querySelector('.status-badge');
+        statusBadge.textContent = order.status_name;
+        const orderStatusDropdown = document.getElementById('orderstatus');
+        // hiển thị ngày đặt hàng
+        const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
+        const orderDateElement = document.getElementById('order-date'); // lấy element trước
+    if (orderDateElement) {
+        orderDateElement.textContent = new Date(order.order_date).toLocaleDateString('vi-VN', dateOptions);
+    }
+
+    populateOrderItemsTable(order.items);
+    updateOrderTotal(order.total_price);
+  }
+
+    function populateOrderItemsTable(items) {
+        const tableBody = document.querySelector('.table-product');
+        tableBody.innerHTML = '';
+        items.forEach(item => {
+            const row = document.createElement('div');
+            row.classList.add('table-row');
+
+            // format lại price
+            const formatter = new Intl.NumberFormat('vi-VN', {
+                style: 'currency',
+                currency: 'VND'
+            });
+
+            const formattedPrice = formatter.format(item.price);
+            const rowHTML = `
+                <div class="table-cell">${item.product_name}</div>
+                <div class="table-cell">${item.price}</div>
+                <div class="table-cell">${item.quantity}</div>
+                <div class="table-cell"><img src="${item.image_url}" alt="ảnh sản phẩm" class="product-image"></div>
+                <div class="table-cell">${formatCurrency(item.quantity * item.price * 1000)}</div>
+            `;
+            row.innerHTML = rowHTML;
+            tableBody.appendChild(row);
+        })
+    }
+
+    function updateOrderTotal(total) {
+        const totalLabel = document.querySelector('.total-label')
+        const totalAmount = document.querySelector('.total-amount')
+        const subtotalAmount = document.querySelector('.sub-total')
+        totalLabel.textContent = "Thành tiền"
+        totalAmount.textContent = formatCurrency(total)
+
+    }
+
+    const saveButton = document.querySelector('.save-button');
+        saveButton.addEventListener('click', updateOrderStatus);
+
+
+        function updateOrderStatus() {
+        const newStatusId = document.getElementById('orderstatus').value;
+
+        fetch(`/orders/${orderId}/status`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ statusId: newStatusId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Cập nhật giao diện sau khi thay đổi trạng thái thành công
+                fetchOrderDetails(orderId); // Lấy lại thông tin đơn hàng và cập nhật giao diện
+            } else {
+                alert('Cập nhật trạng thái đơn hàng thất bại.');
+            }
+        })
+        .catch(error => {
+            console.error('Error updating order status:', error);
+            alert('Cập nhật trạng thái đơn hàng thất bại.');
+        });
+    }
+
+   document.getElementById('logout').addEventListener('click', function() {
+    fetch('/auth/logout')
+        .then(response => {
+            if (response.ok) {
+                window.location.href = '/';  // Điều hướng về trang chủ nếu đăng xuất thành công
+            } else {
+                console.error('Đăng xuất thất bại!');
+            }
+        })
+        .catch(error => {
+            console.error('Error during logout:', error);
+        });
+});
+</script>
+</body>
+</html>

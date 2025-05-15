@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="/stylesheets/chi tiet don hang.css" />
+  </head>
+  <body style="margin-top: 0px;">
+    <div class="thng-tin-ti-khon">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+
+          <div class="heading"><div class="headingtext">Tài khoản của bạn</div></div>
+
+          <div class="header-user">
+            <button class="logo">Jeunesse.</button>
+            <button class="spham">Sản phẩm</button>
+            <button class="aboutus">Về Jeunesse</button>
+            <button class="giohang1"><div class="giohang_text">Giỏ hàng</div></button>
+            <button class="icon_profile"></button>
+            <div class="cirle_giohang"><div class="soluong_giohang">0</div></div>
+          </div>
+
+
+          <div class="middle">
+            <div class="right">
+              <div class="header">
+                    <button class="back-button" tabindex="0">Quay lại</button>
+                    <h1 class="page-title">CHI TIẾT ĐƠN HÀNG</h1>
+              </div>
+
+              <div class="state-giohangtrong">
+                <img
+                  loading="lazy"
+                  src="\asset\image\shoppingbag.png"
+                  class="status-icon"
+                  alt="Order status indicator"
+                />
+                <p class="status-message">
+                  Bạn đang chưa có đơn hàng nào!
+                  <br />
+                  Quay trở lại và hoàn tất đặt hàng nhé!
+                </p>
+              </div>
+
+              <div class="order-status-container" role="region" aria-label="Order Status Information">
+                <div class="order-info">
+                  <div class="order-label">Mã đơn hàng :</div>
+                  <div class="order-number" aria-label="Order number">#0001</div>
+                </div>
+                <div class="order-status" aria-label="Order status" id="status"></div>
+              </div>
+ 
+              <div class="hanhtrinhdonhang">
+                <div class="progress-bar-wrapper">
+                  <div class="progress-line-1"></div>
+                  <div class="progress-line-2"></div>
+                  <div class="progress-line-3"></div>
+                  <div class="progress-line-4"></div>
+                </div>
+                <div class="tracking-steps">
+                  <div class="step-container">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/2b6021006e5493887dde29e4964c115bee8176a26562095b312a5a32e2812928?apiKey=f5eb2649c8cf42ad939f95bc550b1a0f&" alt="Pending payment status icon" class="step-icon" />
+                    <div class="step-content">
+                      <div class="step-title">Chờ thanh toán</div>
+                      <div class="status-date"></div>
+                    </div>
+                  </div>
+                  <div class="step-container">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/183c8aaa2403ebe185450c64dfb3598fcbf8330aac1cbeb1ae099c85d43629fb?apiKey=f5eb2649c8cf42ad939f95bc550b1a0f&" alt="Payment completed status icon" class="step-icon" />
+                    <div class="step-content">
+                      <div class="step-title">Đã thanh toán</div>
+                      <div class="step-time"></div>
+                    </div>
+                  </div>
+                  <div class="step-container">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/5725a48428335ed71bc1add0171c9e660a1eca4f780cf738cf34afac142a573c?apiKey=f5eb2649c8cf42ad939f95bc550b1a0f&" alt="Order confirmed status icon" class="step-icon" />
+                    <div class="step-content">
+                      <div class="step-title">Đã xác nhận</div>
+                      <div class="step-time"></div>
+                    </div>
+                  </div>
+                  <div class="step-container">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/27a76b11a4c811861851498f9871d381f202e1b403c8fffcdbb1e0c6d44e0e51?apiKey=f5eb2649c8cf42ad939f95bc550b1a0f&" alt="In delivery status icon" class="step-icon" />
+                    <div class="step-content">
+                      <div class="step-title">Đang giao hàng</div>
+                      <div class="step-time"></div>
+                    </div>
+                  </div>
+                  <div class="step-container">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/6ee696e094ba8f2593f996389ca0a4d35be62682aea32a119657a5fc812907f8?apiKey=f5eb2649c8cf42ad939f95bc550b1a0f&" alt="Delivered status icon" class="step-icon" />
+                    <div class="step-content">
+                      <div class="step-title">Đã giao hàng</div>
+                      <div class="step-time"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chitietdonhang">Chi tiết đơn hàng</div>   
+              
+              <div class="product-container">
+                <section class="cake-section">
+                  <h2 class="section-title">BÁNH</h2>
+                  <div class="product-wrapper">
+                    <img
+                      loading="lazy"
+                      src=""
+                      class="product-image"
+                      alt="Heart To Heart cake product"
+                    />
+                    <div class="product-details">
+                      <div class="product-info">
+                        <h3 class="product-name"></h3>
+                        <p class="product-price"></p>
+                      </div>
+                      <div class="quantity-wrapper">
+                        <label for="cake-quantity" class="quantity-label">Số lượng :</label>
+                        <span id="cake-quantity" class="quantity" tabindex="0"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </section>
+
+                <section class="accessory-section">
+                  <h2 class="section-title">PHỤ KIỆN</h2>
+                  <div class="product-wrapper">
+                    <img
+                      loading="lazy"
+                      src=""
+                      class="product-image"
+                      alt="Heart To Heart accessory product"
+                    />
+                    <div class="product-details">
+                      <div class="product-info">
+                        <h3 class="product-name"></h3>
+                        <p class="product-price"></p>
+                      </div>
+                      <div class="quantity-wrapper">
+                        <label for="accessory-quantity" class="quantity-label">Số lượng :</label>
+                        <span id="accessory-quantity" class="quantity" tabindex="0"></span>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div class="order-summary">
+                <div class="order-container">
+                  <div class="recipient-info-column">
+                    <div class="recipient-details">
+                      <div class="recipient-header">Thông tin người nhận</div>
+                      <div class="recipient-content">
+                        <div class="info-row">
+                          <div class="info-label">Phương thức thanh toán:</div>
+                          <div class="info-value" id="payment-method"></div>
+                        </div>
+                        <div class="info-row">
+                          <div class="info-label">Họ và tên:</div>
+                          <div class="info-value" id="name"></div>
+                        </div>
+                        <div class="info-row">
+                          <div class="info-label">Số điện thoại:</div>
+                          <div class="info-value" id="phone"></div>
+                        </div>
+                        <div class="info-row">
+                          <div class="info-label">Địa chỉ:</div>
+                          <div class="address-value" id="address"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-summary-column">
+                    <div class="price-details">
+                      <div class="price-row">
+                        <div class="price-label">Tổng tiền hàng:</div>
+                        <div class="price-value" id="subtotal"></div>
+                      </div>
+                      <div class="price-row">
+                        <div class="price-label">Phí vận chuyển:</div>
+                        <div class="price-value">30.000 VND</div>
+                      </div>
+                      <div class="price-row">
+                        <div class="price-label">Tổng:</div>
+                        <div class="total-value"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                      
+            </div>
+
+              <div class="left">
+                <div class="overlap-2">
+                  <div class="name_user" id="u"></div>
+                  <div class="hello">Hello</div>
+                  <button class="profile" onclick="location.href='/profile'">
+                    <img class="img" src="/image/icon user.png" />
+                    <div class="name_func">Thông tin cá nhân</div>
+                  </button>
+                  <button class="order" onclick="location.href='/tracking'">
+                    <img class="img" src="/image/icon shopping.png" />
+                    <div class="name_func">Lịch sử đơn hàng</div>
+                  </button>
+                  <button class="logout">
+                    <img class="logout-stroke" src="/image/log out icon.png" />
+                    <div class="name_func">Đăng xuất</div>
+                  </button>
+                </div>
+              </div>
+
+              <div class="footer">
+                <button class="logo2">Jeunesse.</button>
+    
+                <div class="infor1">
+                  <div class="flexcontainer">
+                    <p class="text">
+                      <span class="hotline_location">Hotline<br /></span>
+                    </p>
+                    <p class="text"><span class="detail">(+84) 824048293</span></p>
+                  </div>
+                  <div class="flexcontainer">
+                    <p class="text">
+                      <span class="hotline_location">Location<br /></span>
+                    </p>
+                    <p class="text"><span class="detail">166 Cầu Giấy, Hà Nội </span></p>
+                  </div>
+                </div>
+    
+                <div class="infor2">
+                  <button class="aboutus2">Về Jeunesse</button>
+                  <button class="spham2">Sản phẩm</button>
+                  <button class="giohang2">Giỏ hàng</button>
+                </div>
+                <p class="copyright">© 2024 Jeunesse All Rights Reserved.</p>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+             // Lấy tất cả các button trên trang
+             const buttons = document.querySelectorAll('button');
+
+             // Định nghĩa đường dẫn tương ứng cho từng button
+             const buttonRoutes = {
+             'Jeunesse.': '/',
+             'Sản phẩm': '/products/banhle',
+             'Về Jeunesse': '/about',
+             'Giỏ hàng': '/cart'
+             };
+
+             // Thêm sự kiện click cho từng button
+             buttons.forEach(button => {
+             button.addEventListener('click', function() {
+             const buttonText = button.textContent.trim();
+             if (buttonRoutes[buttonText]) {
+             window.location.href = buttonRoutes[buttonText];
+             }
+             });
+             });
+             });
+               const fetchCart = () => {
+               return new Promise((resolve, reject) => {
+                 fetch('/cart/get-cart')
+                   .then(response => {
+                     if (!response.ok) {
+                       throw new Error('Network response was not ok');
+                     }
+                     return response.json();
+                   })
+                   .then(cart => {
+                     resolve(cart);
+                   })
+                   .catch(error => {
+                     console.error('Error fetching cart:', error);
+                     reject(error);
+                   });
+             });
+           };
+
+             // Hàm cập nhật số lượng sản phẩm trong giỏ hàng
+             const updateCartCount = (cart) => {
+               const cartCountElement = document.querySelector('.number-count'); // number-count trong cart.html
+               const profileCartCountElement = document.querySelector('.soluong_giohang');
+
+               let totalQuantity = 0;
+               cart.forEach(product => {
+                 totalQuantity += product.quantity;
+               });
+
+               // Cập nhật cả hai phần tử nếu chúng tồn tại
+               if (cartCountElement) {
+                 cartCountElement.textContent = totalQuantity;
+               }
+               if (profileCartCountElement) {
+                 profileCartCountElement.textContent = totalQuantity;
+               }
+             };
+
+             // Hàm khởi tạo trang chủ
+             const initprofile = async () => {
+               try {
+                 const cart = await fetchCart();
+                 updateCartCount(cart);
+               } catch (error) {
+                 console.error('Error initializing profile:', error);
+               }
+             };
+
+             // Gọi hàm khởi tạo khi trang tải xong
+             initprofile();
+
+               document.querySelector('.logout').addEventListener('click', function() {
+                  fetch('/auth/logout')
+                      .then(response => {
+                          if (response.ok) {
+                              window.location.href = '/';  // Điều hướng về trang chủ nếu đăng xuất thành công
+                          } else {
+                              console.error('Đăng xuất thất bại!');
+                          }
+                      })
+                      .catch(error => {
+                          console.error('Error during logout:', error);
+                      });
+              });
+         // lấy thông tin
+          fetch('/auth/profile')
+             .then(response => response.json())
+             .then(data => {
+               document.getElementById('u').textContent = data.name;
+             })
+             .catch(error => {
+               console.error('Error loading user profile:', error);
+             });
+
+  const orderId = window.location.pathname.split('/').pop();
+    let allOrderStatuses = [];
+    let currentOrderStatusId;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchOrderDetails(orderId);
+    });
+
+    function formatCurrency(amount) {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(amount);
+    }
+
+
+
+    // Gọi API để lấy chi tiết đơn hàng
+    function fetchOrderDetails(orderId) {
+      fetch(`/orders/${orderId}`)
+          .then(response => response.json())
+          .then(order => {
+              console.log("Thông tin đơn hàng:", order);
+              displayOrderDetails(order);
+              setupEventListeners(order);
+          })
+          .catch(error => {
+              console.error('Error fetching order details:', error);
+              alert('Lỗi khi lấy thông tin đơn hàng. Vui lòng thử lại sau.');
+          });
+  }
+
+
+
+   function displayOrderDetails(order) {
+       document.querySelector('.order-number').textContent = '#' + order.order_id;
+       document.getElementById('name').textContent = order.customer_name;
+       document.getElementById('phone').textContent = order.customer_phone;
+       document.getElementById('payment-method').textContent = order.payment_method;
+       document.getElementById('status').textContent = order.status_name;
+       document.getElementById('address').textContent = order.customer_address;
+
+       // hiển thị ngày đặt hàng
+        const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
+        document.querySelector('.status-date').textContent = new Date(order.order_date).toLocaleDateString('vi-VN', dateOptions);
+
+
+       populateOrderItemsTable(order.items);
+       updateOrderTotal(order.total_price);
+       updateOrderSummary(order);
+
+    }
+
+        function updateOrderSummary(order) {
+      // Tính tổng tiền hàng (subtotal)
+      let subtotal = 0;
+      if(order.items && order.items.length > 0)
+        {
+            order.items.forEach(item => {
+            subtotal += item.price * item.quantity *1000;
+            });
+        }
+        document.getElementById('subtotal').textContent = formatCurrency(subtotal);
+        }
+
+
+  function populateOrderItemsTable(items) {
+  const cakeSection = document.querySelector('.cake-section .product-wrapper');
+    const accessorySection = document.querySelector('.accessory-section .product-wrapper');
+
+
+    // reset
+    cakeSection.innerHTML = '';
+    accessorySection.innerHTML = '';
+
+    if (!items || items.length === 0) {
+        const noItems = '<div class="table-row"><div class="table-cell" colspan="5">Không có sản phẩm nào trong đơn hàng.</div></div>'
+        cakeSection.innerHTML = noItems;
+        accessorySection.innerHTML = noItems;
+        return;
+    }
+
+
+    items.forEach(item => {
+         const formattedPrice = formatCurrency(item.price *1000);
+          const productWrapper = document.createElement('div');
+           productWrapper.classList.add('product-wrapper');
+          const productDetailsHTML = `
+                <img src="${item.image_url}" class="product-image" alt="${item.product_name}">
+                  <div class="product-details">
+                      <div class="product-info">
+                        <h3 class="product-name">${item.product_name}</h3>
+                        <p class="product-price">${formattedPrice}</p>
+                    </div>
+                    <div class="quantity-wrapper">
+                        <label for="cake-quantity" class="quantity-label">Số lượng :</label>
+                        <span class="quantity" tabindex="0">${item.quantity}</span>
+                    </div>
+                  </div>
+
+            `;
+
+        if (item.category !== 'phukien') {
+             productWrapper.innerHTML = productDetailsHTML
+            cakeSection.appendChild(productWrapper);
+
+        } else if (item.category === 'phukien') {
+                productWrapper.innerHTML = productDetailsHTML
+            accessorySection.appendChild(productWrapper);
+        }
+    });
+
+
+    }
+
+
+
+    function updateOrderTotal(total) {
+        const totalAmount = document.querySelector('.total-value')
+        totalAmount.textContent = formatCurrency(total)
+
+    }
+
+
+  function setupEventListeners(order) {
+
+    // Xử lý khi người dùng click vào nút "Quay lại"
+    const backButton = document.querySelector('.back-button');
+    if (backButton) {
+        backButton.addEventListener('click', () => {
+            window.location.href = '/tracking';
+        });
+    }
+
+
+        // Xử lý khi người dùng thay đổi trạng thái và ấn nút "Save"
+          const saveButton = document.querySelector('.save-button');
+            if (saveButton) {
+                saveButton.addEventListener('click', () => {
+                    const newStatusId = document.getElementById('orderstatus').value;
+                     updateOrderStatus(order.order_id, newStatusId);
+                });
+            }
+
+    }
+
+
+//Hàm cập nhật trạng thái đơn hàng
+    function updateOrderStatus(orderId, newStatusId) {
+        fetch(`/orders/${orderId}/status`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ statusId: newStatusId })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+              alert('Cập nhật trạng thái đơn hàng thành công!');
+              // Cập nhật lại giao diện
+              fetchOrderDetails(orderId)
+            } else {
+                alert('Cập nhật trạng thái đơn hàng thất bại.');
+            }
+        })
+        .catch(error => {
+            console.error('Error updating order status:', error);
+            alert('Cập nhật trạng thái đơn hàng thất bại. Vui lòng thử lại sau.');
+        });
+    }
+
+    </script>
+  </body>
+</html>

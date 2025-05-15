@@ -1,0 +1,325 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\21CDP1-TMDT\\Jeunesse\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\routes\\vnpay.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:routes\\vnpay.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\routes\\payment.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:routes\\payment.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\config\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:config\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DAD753-ED47-44A2-A9A3-152118D13AD6}|Jeunesse.njsproj|D:\\21CDP1-TMDT\\Jeunesse\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{28DAD753-ED47-44A2-A9A3-152118D13AD6}|Jeunesse.njsproj|solutionrelative:app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\routes\\orders.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:routes\\orders.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DAD753-ED47-44A2-A9A3-152118D13AD6}|Jeunesse.njsproj|D:\\21CDP1-TMDT\\Jeunesse\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{28DAD753-ED47-44A2-A9A3-152118D13AD6}|Jeunesse.njsproj|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\routes\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:routes\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-donhang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\stylesheets\\admin-donhang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\routes\\products.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:routes\\products.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\Infor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\stylesheets\\Infor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\routes\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:routes\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-user.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\stylesheets\\admin-user.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-spham.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\stylesheets\\admin-spham.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\Donhang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\stylesheets\\Donhang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28DAD753-ED47-44A2-A9A3-152118D13AD6}|Jeunesse.njsproj|D:\\21CDP1-TMDT\\Jeunesse\\routes\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{28DAD753-ED47-44A2-A9A3-152118D13AD6}|Jeunesse.njsproj|solutionrelative:routes\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\chi tiet don hang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\stylesheets\\chi tiet don hang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-client.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\stylesheets\\admin-client.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-chitietdonhang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\stylesheets\\admin-chitietdonhang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\ChiTietBerryFruit.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\stylesheets\\ChiTietBerryFruit.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 124,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 202,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "default.json",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\config\\default.json",
+              "RelativeDocumentMoniker": "config\\default.json",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\config\\default.json",
+              "RelativeToolTip": "config\\default.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-31T15:11:24.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "vnpay.js",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\vnpay.js",
+              "RelativeDocumentMoniker": "routes\\vnpay.js",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\vnpay.js",
+              "RelativeToolTip": "routes\\vnpay.js",
+              "ViewState": "AQIAAOYAAAAAAAAAAAAkwPIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-31T05:49:47.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "chi tiet don hang.css",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\chi tiet don hang.css",
+              "RelativeDocumentMoniker": "public\\stylesheets\\chi tiet don hang.css",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\chi tiet don hang.css",
+              "RelativeToolTip": "public\\stylesheets\\chi tiet don hang.css",
+              "ViewState": "AQIAAO4BAAAAAAAAAAArwPoBAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-28T09:10:00.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "admin-user.css",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-user.css",
+              "RelativeDocumentMoniker": "public\\stylesheets\\admin-user.css",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-user.css",
+              "RelativeToolTip": "public\\stylesheets\\admin-user.css",
+              "ViewState": "AQIAAMUBAAAAAAAAAAAAAOEBAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-26T02:15:52.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "admin-client.css",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-client.css",
+              "RelativeDocumentMoniker": "public\\stylesheets\\admin-client.css",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-client.css",
+              "RelativeToolTip": "public\\stylesheets\\admin-client.css",
+              "ViewState": "AQIAAIUAAAAAAAAAAAArwCQBAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-26T02:15:50.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "admin-donhang.css",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-donhang.css",
+              "RelativeDocumentMoniker": "public\\stylesheets\\admin-donhang.css",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-donhang.css",
+              "RelativeToolTip": "public\\stylesheets\\admin-donhang.css",
+              "ViewState": "AQIAAM0AAAAAAAAAAAArwOEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-25T08:56:08.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "admin-chitietdonhang.css",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-chitietdonhang.css",
+              "RelativeDocumentMoniker": "public\\stylesheets\\admin-chitietdonhang.css",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-chitietdonhang.css",
+              "RelativeToolTip": "public\\stylesheets\\admin-chitietdonhang.css",
+              "ViewState": "AQIAAOcAAAAAAAAAAAArwFMBAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-23T15:47:17.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "orders.js",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\orders.js",
+              "RelativeDocumentMoniker": "routes\\orders.js",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\orders.js",
+              "RelativeToolTip": "routes\\orders.js",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACsAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-23T10:26:11.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Donhang.css",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\Donhang.css",
+              "RelativeDocumentMoniker": "public\\stylesheets\\Donhang.css",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\Donhang.css",
+              "RelativeToolTip": "public\\stylesheets\\Donhang.css",
+              "ViewState": "AQIAAIUBAAAAAAAAAAArwJUBAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-21T13:28:50.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "products.js",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\products.js",
+              "RelativeDocumentMoniker": "routes\\products.js",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\products.js",
+              "RelativeToolTip": "routes\\products.js",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAAC8AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-18T09:44:04.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "payment.js",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\payment.js",
+              "RelativeDocumentMoniker": "routes\\payment.js",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\payment.js",
+              "RelativeToolTip": "routes\\payment.js",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAABcAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-17T07:24:44.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "cart.js",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\cart.js",
+              "RelativeDocumentMoniker": "routes\\cart.js",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\cart.js",
+              "RelativeToolTip": "routes\\cart.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJkAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-17T07:13:46.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "auth.js",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\auth.js",
+              "RelativeDocumentMoniker": "routes\\auth.js",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\auth.js",
+              "RelativeToolTip": "routes\\auth.js",
+              "ViewState": "AQIAAOYAAAAAAAAAAAAAwCsAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-12T02:15:24.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ChiTietBerryFruit.css",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\ChiTietBerryFruit.css",
+              "RelativeDocumentMoniker": "public\\stylesheets\\ChiTietBerryFruit.css",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\ChiTietBerryFruit.css",
+              "RelativeToolTip": "public\\stylesheets\\ChiTietBerryFruit.css",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAWwIIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-09T02:38:32.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "admin-spham.css",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-spham.css",
+              "RelativeDocumentMoniker": "public\\stylesheets\\admin-spham.css",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\admin-spham.css",
+              "RelativeToolTip": "public\\stylesheets\\admin-spham.css",
+              "ViewState": "AQIAAPcAAAAAAAAAAAAAABIBAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-07T09:54:26.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Infor.css",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\Infor.css",
+              "RelativeDocumentMoniker": "public\\stylesheets\\Infor.css",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\public\\stylesheets\\Infor.css",
+              "RelativeToolTip": "public\\stylesheets\\Infor.css",
+              "ViewState": "AQIAAI8CAAAAAAAAAAArwK4CAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-08T02:02:23.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "users.js",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\users.js",
+              "RelativeDocumentMoniker": "routes\\users.js",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\routes\\users.js",
+              "RelativeToolTip": "routes\\users.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-02T08:55:02.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "package.json",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\package.json",
+              "RelativeDocumentMoniker": "package.json",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\package.json",
+              "RelativeToolTip": "package.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-01T03:28:40.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "app.js",
+              "DocumentMoniker": "D:\\21CDP1-TMDT\\Jeunesse\\app.js",
+              "RelativeDocumentMoniker": "app.js",
+              "ToolTip": "D:\\21CDP1-TMDT\\Jeunesse\\app.js",
+              "RelativeToolTip": "app.js",
+              "ViewState": "AQIAABUAAAAAAAAAAAAQwBIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-27T14:34:10.22Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

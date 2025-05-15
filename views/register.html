@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="stylesheets/dangki.css" />
+  </head>
+  <body style="margin: 0px;">
+    <div class="ng-k">
+          <div class="main-section"></div>
+          <div class="figma-frame">
+            <img class="heart-do" src="\image\3D Education Shapes School Enrolment Poster (1) 1.png" />
+            <img class="heart-hong" src="\image\3D Education Shapes School Enrolment Poster 1.png" />
+            <div class="rectangle"></div>
+            <div class="rectangle-2">
+              <!-- Đặt chữ "Đăng Ký" ở trên -->
+              <div class="NG-k">ĐĂNG&nbsp;&nbsp;KÝ</div>
+              
+              <!-- Các phần tử form -->
+              <form class="form-content" id="register-form">
+                <!-- Họ và Tên -->
+                <div class="form-group">
+                  <label for="name">Họ và Tên</label>
+                  <input type="text" id="name" placeholder="Nhập tên đăng nhập của bạn..." />
+                </div>
+
+                <!-- Số điện thoại -->
+                <div class="form-group">
+                  <label for="username">Số điện thoại (Tên Đăng Nhập)</label>
+                  <input type="text" id="username" placeholder="Nhập tên đăng nhập của bạn..." />
+                </div>
+
+                <!-- Mật khẩu -->
+                <div class="form-group">
+                  <label for="password">Mật khẩu</label>
+                  <input type="password" id="password" placeholder="Nhập tên đăng nhập của bạn..." />
+                </div>
+
+                <!-- Địa chỉ -->
+                <div class="form-group">
+                  <label for="address">Địa chỉ</label>
+                  <input type="text" id="address" placeholder="Nhập địa chỉ của bạn..." />
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+          <div class="footer-group">
+            <button class="footer-jeunesse" onclick="window.location.href='/'">Jeunesse.</button>
+            <p class="div">© 2024 Jeunesse All Rights Reserved.</p>
+            <div class="frame">
+              <button class="footer-aboutus" onclick="window.location.href='/about'">Về Jeunesse</button>
+              <button class="footer-sanpham" onclick="window.location.href='/products'">Sản phẩm</button>
+              <button class="footer-giohang" onclick="window.location.href='/cart'">Giỏ hàng</button>
+            </div>
+            <div class="frame-2">
+              <div class="flexcontainer">
+                <p class="text-i">
+                  <span class="span">Hotline<br /></span>
+                </p>
+                <p class="text-i"><span class="text-wrapper-5">(+84) 824048293</span></p>
+              </div>
+              <div class="flexcontainer">
+                <p class="text-i">
+                  <span class="span">Location<br /></span>
+                </p>
+                <p class="text-i"><span class="text-wrapper-5">166 Cầu Giấy, Hà Nội </span></p>
+              </div>
+            </div>
+          </div>
+          <div class="pink-banner">
+          <p class="crafted-with-passion">
+            <span class="text-wrapper-6">Crafted with </span>
+            <span class="text-wrapper-7">Passion<br /></span>
+            <span class="text-wrapper-6">Baked with </span>
+            <span class="text-wrapper-7">Love</span>
+          </p>
+          </div>
+        <button class="button-taotaikhoan" id="register-button">
+            <div class="text-wrapper-8">Tạo tài khoản</div></button>
+          <div class="header-group">
+              <button class="header-jeunesse">Jeunesse.</button>
+              <button class="bluebutton-dangnhap">
+                <div class="header-dangnhap">Đăng nhập</div>
+              </button>
+              <button class="header-sanpham">Sản phẩm</button>
+              <button class="header-aboutus">Về Jeunesse</button>
+              <button class="header-giohang">Giỏ hàng</button>
+          </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // Lấy tất cả các button trên trang
+        const buttons = document.querySelectorAll('button');
+
+        // Định nghĩa đường dẫn tương ứng cho từng button
+        const buttonRoutes = {
+          'Jeunesse.': '/',
+          'Sản phẩm': '/products',
+          'Về Jeunesse': '/about',
+          'Giỏ hàng': '/cart'
+        };
+
+        // Thêm sự kiện click cho từng button
+        buttons.forEach(button => {
+          button.addEventListener('click', function() {
+            const buttonText = button.textContent.trim();
+            if (buttonRoutes[buttonText]) {
+              window.location.href = buttonRoutes[buttonText];
+            }
+          });
+        });
+      });
+        document.getElementById('register-button').addEventListener('click', function (event) {
+          event.preventDefault(); // Prevent the traditional form submission
+
+          const name = document.getElementById('name').value;
+          const username = document.getElementById('username').value; // Match backend parameter
+          const password = document.getElementById('password').value;
+          const address = document.getElementById('address').value;
+
+          if (!name || !username || !password || !address) {
+            alert('Vui lòng nhập đầy đủ thông tin!');
+            return;
+          }
+
+          fetch('/auth/register', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ name, username, password, address }),
+})
+  .then((response) => {
+    // Check if the response is OK
+    if (!response.ok) {
+      throw new Error('Đăng ký thất bại');
+    }
+    return response.json(); // Parse the JSON response
+  })
+  .then((data) => {
+    // Handle the successful response
+    alert('Đăng ký thành công!');
+    window.location.href = '/login'; // Redirect to login page
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    alert('Có lỗi xảy ra, vui lòng thử lại.');
+  });
+        });
+    </script>
+
+  </body>
+</html>

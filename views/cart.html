@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/stylesheets/Giohang.css" />
+  </head>
+  <body style="margin: 0px;">
+    <div class="gi">
+      <div class="fullscreen">
+
+
+          <div class="header">
+            <button class="button-logo">Jeunesse.</button>
+            <button class="header-sp">Sản phẩm</button>
+            <button class="header-abtus">Về Jeunesse</button>
+            <button class="header-dangnhap">Đăng nhập</button>
+            <div class="group-button-giohang">
+              <button class="header-giohang">
+                <div class="text-giohang">Giỏ hàng</div>
+              </button>
+              <div class="giohang-count">
+                <div class="number-count">0</div>
+              </div>
+            </div>
+            <a href="/profile" class="header-user" src="/image/Mask group.png"></a>
+          </div>
+
+          <div class="pink-banner">
+              <div class="banner-text">Giỏ hàng</div>
+          </div>
+
+          <div class="group-rectangle">
+              <div class="group-1">
+                <button class="rect-1"><div class="text-1">Giỏ hàng</div></button>
+              </div>
+              <div class="group-2">
+                <button class="rect-2"><div class="text-2">Sản phẩm</div></button>
+              </div>
+              <a href="/" class="group-3">
+                <button class="rect-3"><div class="text-3">Jeunesse</div></button>
+              </a>
+          </div>
+
+
+          <div class="frame-giohangtrong-dadangnhap" id="frameGioHangTrongDaDangNhap">
+            <div class="summary">
+              <div class="text-dondathang">Đơn đặt hàng</div>
+              <div class="frame-total">
+                <div class="text-tong">Tổng</div>
+                <div class="text-so">0</div>
+                <div class="text-vnd">VND</div>
+              </div>
+              <button class="button-dathang">
+                <div class="text-dathang">Thanh toán</div>
+              </button>
+              <div class="line-horizontal"></div>
+            </div>
+            <div class="group-img-bag" id="groupImgBag">
+              <img class="shopping-bag" src="/image/shoppingbag.png" />
+              <p class="text-wrapper-20">Không có sản phẩm nào trong giỏ hàng của bạn</p>
+            </div>
+          </div>
+
+
+          <div class="frame-giohang-chuadangnhap" id="frameGioHangChuaDangNhap">
+            <div class="text-bancandnhap">Bạn cần đăng nhập để sử dụng chức năng này.</div>
+            <a href="/login" class="butt-dangnhap">
+              <div class="text-dangnhap">Đăng nhập</div>
+            </a>
+          </div>
+
+
+          <div class="frame-giohang-cospham" id="frameGioHangCoSanPham">
+            <div class="product-card">
+
+            </div>
+            <div class="summary-2">
+              <div class="order-details-container">
+                <h2 class="order-title">Đơn đặt hàng</h2>
+                <div class="divider" role="separator"></div>
+                <div class="order-items">
+
+                </div>
+              </div>
+              <div class="total-section">
+                <div>Tổng</div>
+                <div class="total-amount">
+                  <div class="total-value">0</div>
+                  <div>VND</div>
+                </div>
+              </div>
+              <button class="order-button" tabindex="0" id="payment-button">
+                <span class="button-text">Thanh toán</span>
+                <img src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/a536b795c1994c1225141e60c41d73674c9f437f3171b3b3c022db66c52d8385?apiKey=c1ddbed3e7734f949179dfe9d854e524&" alt="" class="button-icon" />
+              </button>
+            </div>
+
+
+          </div>
+
+          <div class="footer-group">
+            <button class="footer-jeunesse">Jeunesse.</button>
+            <div class="frame-2">
+              <div class="flexcontainer">
+                <p class="text-i">
+                  <span class="span">Hotline<br /></span>
+                </p>
+                <p class="text-i"><span class="text-wrapper-5">(+84) 824048293</span></p>
+              </div>
+              <div class="flexcontainer">
+                <p class="text-i">
+                  <span class="span">Location<br /></span>
+                </p>
+                <p class="text-i"><span class="text-wrapper-5">166 Cầu Giấy, Hà Nội </span></p>
+              </div>
+            </div>
+            <div class="div">
+              <a href="/about" class="footer-aboutus">Về Jeunesse</a>
+              <a href="/products/banhle" class="footer-sanpham">Sản phẩm</a>
+              <a href="/cart" class="footer-giohang">Giỏ hàng</a>
+            </div>
+            <p class="p">© 2024 Jeunesse All Rights Reserved.</p>
+          </div>
+
+
+      </div>
+    </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+     // Lấy tất cả các button trên trang
+     const buttons = document.querySelectorAll('button');
+const frameGioHangChuaDangNhap = document.getElementById('frameGioHangChuaDangNhap');
+const frameGioHangTrongDaDangNhap = document.getElementById('frameGioHangTrongDaDangNhap');
+const frameGioHangCoSanPham = document.getElementById('frameGioHangCoSanPham');
+const groupImgBag = document.getElementById('groupImgBag');
+const orderItemsContainer = document.querySelector('.order-items');
+const productCardContainer = document.querySelector('.product-card');
+const totalValueElement = document.querySelector('.total-value');
+     // Định nghĩa đường dẫn tương ứng cho từng button
+     const buttonRoutes = {
+       'Jeunesse.': '/',
+       'Sản phẩm': '/products/banhle',
+       'Về Jeunesse': '/about',
+       'Giỏ hàng': '/cart',
+     };
+
+     // Thêm sự kiện click cho từng button
+     buttons.forEach(button => {
+       button.addEventListener('click', function() {
+         const buttonText = button.textContent.trim();
+         if (buttonRoutes[buttonText]) {
+           window.location.href = buttonRoutes[buttonText];
+         }
+       });
+     });
+   });
+
+
+// Hàm lấy thông tin giỏ hàng từ server (sử dụng Promise)
+const fetchCart = () => {
+  return new Promise((resolve, reject) => {
+    fetch('/cart/get-cart')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(cart => {
+        resolve(cart);
+        updateCartCount(cart);
+      })
+      .catch(error => {
+        console.error('Error fetching cart:', error);
+        reject(error);
+      });
+  });
+};
+
+// Hàm kiểm tra trạng thái đăng nhập
+const checkLoginStatus = () => {
+  fetch('/auth/check-login')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data.loggedIn) {
+        // Đã đăng nhập
+        frameGioHangChuaDangNhap.style.display = 'none';
+        frameGioHangTrongDaDangNhap.style.display = 'flex';
+        frameGioHangCoSanPham.style.display = 'none'; // Ẩn sẵn frameGioHangCoSanPham
+         document.querySelector('.header-user').style.display = 'block';
+         document.querySelector('.header-dangnhap').style.display = 'none';
+        // Tải giỏ hàng và xử lý hiển thị
+        fetchCart().then(cart => {
+          renderCart(cart);
+        });
+      } else {
+        // Chưa đăng nhập
+        document.querySelector('.header-user').style.display = 'none';
+        document.querySelector('.header-dangnhap').style.display = 'block';
+        frameGioHangChuaDangNhap.style.display = 'flex';
+        frameGioHangTrongDaDangNhap.style.display = 'none';
+        frameGioHangCoSanPham.style.display = 'none';
+      }
+    })
+    .catch(error => {
+      console.error('Error checking login status:', error);
+    });
+};
+
+// Hàm render sản phẩm
+const renderProduct = (product) => {
+  const productItem = document.createElement('div');
+  productItem.classList.add('product-item');
+  productItem.innerHTML = `
+    <div class="product-container">
+      <div class="product-content">
+        <div class="product-info">
+          <div class="product-details">
+            <h2 class="product-title">${product.name}</h2>
+            <p class="product-description">${product.flavor}</p>
+            <div class="price-container">
+              <span class="currency">VND</span>
+              <span>${product.price}</span>
+            </div>
+          </div>
+        </div>
+        <div class="image-section">
+          <div class="image-wrapper">
+            <div class="image-content">
+              <div class="product-image-container">
+                <img loading="lazy" src="${product.image_url}" class="product-image" alt="${product.name}" />
+              </div>
+              <div class="quantity-section">
+                <div class="quantity-control" role="group" aria-label="Quantity controls">
+                  <button class="quantity-button decrease" data-product-id="${product.id}" aria-label="Decrease quantity">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/a553a97011096fe51c5e143afb9630611fc9e5e411ac78bec04824fd15c7157b?apiKey=c1ddbed3e7734f949179dfe9d854e524&" alt="" class="quantity-icon" />
+                  </button>
+                  <input type="number" class="quantity-input"  value="${product.quantity}" data-product-id="${product.id}" aria-label="Product quantity" min="0" />
+                  <button class="quantity-button increase" data-product-id="${product.id}" aria-label="Increase quantity">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/56545ff9f53c1e3bca78c2439e4689031ed1ffa7c88f7f21cf63f0e2e13d8ee4?apiKey=c1ddbed3e7734f949179dfe9d854e524&" alt="" class="quantity-icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="delete-section" data-product-id="${product.id}" aria-label="Remove item">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/b4a2b39ea66c0f816c824df5418590728f964313cc46caf9485eafa1c0513b48?apiKey=c1ddbed3e7734f949179dfe9d854e524&" alt="" class="delete-icon" />
+      <span class="delete-text">Xóa</span>
+    </button>
+  `;
+
+  // Thêm sự kiện click cho nút xóa
+  productItem.querySelector('.delete-section').addEventListener('click', () => {
+    removeFromCart(product.id);
+  });
+  // Thêm sự kiện click cho nút tăng/giảm số lượng
+   productItem.querySelector(`.quantity-button.decrease[data-product-id="${product.id}"]`).addEventListener('click', () => {
+    updateQuantity(product.id, -1);
+  });
+
+  productItem.querySelector(`.quantity-button.increase[data-product-id="${product.id}"]`).addEventListener('click', () => {
+    updateQuantity(product.id, 1);
+  });
+
+  return productItem;
+};
+
+// Hàm render item vào danh sách
+const renderOrderItem = (product) => {
+  const orderItem = document.createElement('div');
+  orderItem.classList.add('order-item');
+  orderItem.innerHTML = `
+    <div>${product.name}</div>
+    <div class="price-wrapper">
+      <div>${product.price} VND</div>
+
+      <div class="itemquantity">
+      <div>Số lượng: ${product.quantity}</div>
+      </div>
+</div>
+  `;
+  return orderItem;
+};
+
+// Hàm xóa sản phẩm khỏi giỏ hàng
+const removeFromCart = (productId) => {
+  fetch('/cart/remove-from-cart', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ id: productId }),
+  })
+  .then(response => {
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data.message);
+    fetchCart().then(cart => renderCart(cart)); // Tải lại giỏ hàng sau khi xóa
+    updateCartCount(cart);
+  })
+  .catch(error => {
+    console.error('Error removing item from cart:', error);
+  });
+};
+
+// Hàm cập nhật số lượng sản phẩm
+const updateQuantity = (productId, change) => {
+  const productItem = document.querySelector(`.product-item [data-product-id="${productId}"]`).closest('.product-item');
+  const quantityInput = productItem.querySelector('.quantity-input');
+  let currentQuantity = parseInt(quantityInput.value);
+  let newQuantity = currentQuantity + change;
+
+  if (newQuantity < 1) {
+      removeFromCart(productId);
+      return;
+  }
+
+  quantityInput.value = newQuantity;
+// cập nhật số lượng
+  fetch('/cart/update-cart-quantity', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ id: productId, quantity: newQuantity }),
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data.message);
+    fetchCart().then(cart => renderCart(cart));
+     updateCartCount(cart);// Tải lại giỏ hàng sau khi cập nhật số lượng
+  })
+  .catch(error => {
+    console.error('Error updating quantity:', error);
+  });
+};
+
+
+// Hàm render toàn bộ giỏ hàng
+const renderCart = (cart) => {
+const orderItemsContainer = document.querySelector('.order-items');
+const productCardContainer = document.querySelector('.product-card');
+  productCardContainer.innerHTML = '';
+orderItemsContainer.innerHTML = '';
+  if (cart.length === 0) {
+    // Giỏ hàng trống
+    frameGioHangTrongDaDangNhap.style.display = 'flex';
+    frameGioHangCoSanPham.style.display = 'none';
+  } else {
+    // Giỏ hàng có sản phẩm
+    frameGioHangTrongDaDangNhap.style.display = 'none';
+    frameGioHangCoSanPham.style.display = 'flex';
+
+    cart.forEach(product => {
+      let orderItem = orderItemsContainer.querySelector(`.order-item[data-product-id="${product.id}"]`);
+
+      if (!orderItem) {
+        // Nếu order-item chưa tồn tại, tạo mới sử dụng hàm renderOrderItem
+        orderItem = renderOrderItem(product);
+        orderItemsContainer.appendChild(orderItem);
+      } else {
+        // Nếu order-item đã tồn tại, cập nhật số lượng
+        orderItem.querySelector('.itemquanity').textContent = `${product.quantity}`;
+      }
+      let productItem = productCardContainer.querySelector(`.product-item[data-product-id="${product.id}"]`);
+      if (!productItem) {
+          productItem = renderProduct(product);
+          productCardContainer.appendChild(productItem);
+      } else {
+          // Cập nhật số lượng nếu product-item đã tồn tại
+          const quantityInput = productItem.querySelector(`.quantity-input[data-product-id="${product.id}"]`);
+          quantityInput.value = product.quantity;
+      }
+    });
+    updateCartCount(cart);
+    calculateTotal(cart);
+  }
+};
+//cập nhật số lượng giỏ hàng
+ const updateCartCount = (cart) => {
+    const cartCountElement = document.querySelector('.number-count');
+    let totalQuantity = 0;
+    cart.forEach(product => {
+      totalQuantity += product.quantity;
+    });
+    cartCountElement.textContent = totalQuantity;
+  };
+
+// Hàm tính tổng giá trị giỏ hàng
+const calculateTotal = (cart) => {
+const totalValueElement = document.querySelector('.total-value');
+  let total = 0;
+  cart.forEach(product => {
+    total += product.price * product.quantity * 1000;
+  });
+  totalValueElement.textContent = total;
+};
+// Gọi hàm kiểm tra trạng thái đăng nhập khi trang được tải
+document.addEventListener('DOMContentLoaded', checkLoginStatus);
+
+    // Thêm sự kiện click cho nút thanh toán
+document.addEventListener('DOMContentLoaded', () => {
+  checkLoginStatus(); // Gọi hàm này khi DOMContentLoaded
+
+  const paymentButton = document.getElementById('payment-button');
+  if (paymentButton) {
+    paymentButton.addEventListener('click', () => {
+      window.location.href = '/payment'; // Chuyển hướng đến trang thanh toán
+    });
+  }
+});
+  </script>
+  </body>
+</html>

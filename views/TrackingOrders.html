@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="/stylesheets/Donhang.css" />
+  </head>
+  <body style="margin-top: 0px;">
+    <div class="thng-tin-ti-khon">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+
+          <div class="heading"><div class="headingtext">Tài khoản của bạn</div></div>
+
+          <div class="header-user">
+            <button class="logo">Jeunesse.</button>
+            <button class="spham">Sản phẩm</button>
+            <button class="aboutus">Về Jeunesse</button>
+            <button class="giohang1"><div class="giohang_text">Giỏ hàng</div></button>
+            <button class="icon_profile"></button>
+            <div class="cirle_giohang"><div class="soluong_giohang">0</div></div>
+          </div>
+          <div class="middle">
+            <div class="right">
+                    <h1 class="order-history-title">LỊCH SỬ ĐƠN HÀNG</h1>
+                    <nav class="order-status-nav" role="navigation" aria-label="Order status filters">
+                      <button class="status-item" tabindex="0">Tất cả</button>
+                      <button class="status-item" tabindex="1">Chờ thanh toán</button>
+                      <button class="status-item" tabindex="2">Đã thanh toán</button>
+                      <button class="status-item" tabindex="3">Đã xác nhận</button>
+                      <button class="status-item" tabindex="4">Đang giao hàng</button>
+                      <button class="status-item" tabindex="5">Đã giao hàng</button>
+                      <button class="status-item" tabindex="6">Đã hủy</button>
+                    </nav>
+                    <div class="empty-state">
+                        <img
+                        loading="lazy"
+                        src="\image\shoppingbag.png"
+                        class="empty-state-icon"
+                        alt="Empty order history illustration"
+                        />
+                        <p class="empty-state-message">
+                        Bạn đang chưa có đơn hàng nào!
+                        <br />
+                        Quay trở lại và hoàn tất đặt hàng nhé!
+                        </p>
+                    </div>
+
+                    <div class="order-container">
+                        <div class="order-card">
+                          <div class="order-header">
+                            <div class="order-id-wrapper">
+                              <div class="order-id">Mã đơn hàng :</div>
+                              <div></div>
+                            </div> 
+                          <div class="order-status">Đã đặt hàng</div>
+                          </div>
+                          <div class="product-details">
+                            <div class="product-info">
+                              <img
+                                loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/c1ddbed3e7734f949179dfe9d854e524/2c99421157a1d36e2209f15dc97a7226c8405cbab5d7e248023a4377d0cfc344?apiKey=f5eb2649c8cf42ad939f95bc550b1a0f&"
+                                class="product-image"
+                                alt="Heart To Heart product image"
+                              />
+                              <div class="product-text">
+                                <div class="product-name"></div>
+                                <div class="product-price"></div>
+                              </div>
+                            </div>
+                            <div class="quantity-wrapper">
+                              <div class="quantity-label">Số lượng :</div>
+                              <div></div>
+                            </div>
+                          </div>
+                          <div class="section-tongtien">
+                            <nav class="xemthem-btn">Xem thêm</nav>
+                            <div class="total-section">
+                              <div class="total-label">Tổng tiền :</div>
+                              <div class="total-amount"></div>
+                            </div>
+                          </div>
+
+                          <div class="action-buttons">
+                            <button class="huy-don-btn" tabindex="0">Hủy đơn</button>
+                            <div class="button-group">
+                              <button class="contact-btn" tabindex="0">Liên hệ cửa hàng</button>
+                              <button class="review-btn" tabindex="0">Đánh giá</button>
+                              <button class="theodoi-btn" tabindex="0">Theo dõi đơn hàng</button>
+                              <button class="confirm-nhanhang-btn" tabindex="0">Đã nhận được hàng</button>
+                              <button class="mualai-btn" tabindex="0">Mua lại</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      
+            </div>
+
+              <div class="left">
+                <div class="overlap-2">
+                  <div class="name_user" id="u"></div>
+                  <div class="hello">Hello</div>
+                  <button class="profile" onclick="location.href='/profile'">
+                    <img class="img" src="/image/icon user.png" />
+                    <div class="name_func">Thông tin cá nhân</div>
+                  </button>
+                  <button class="order">
+                    <img class="img" src="/image/icon shopping.png" />
+                    <div class="name_func">Lịch sử đơn hàng</div>
+                  </button>
+                  <button class="logout">
+                    <img class="logout-stroke" src="/image/log out icon.png" />
+                    <div class="name_func">Đăng xuất</div>
+                  </button>
+                </div>
+              </div>
+
+              <div class="footer">
+                <button class="logo2">Jeunesse.</button>
+    
+                <div class="infor1">
+                  <div class="flexcontainer">
+                    <p class="text">
+                      <span class="hotline_location">Hotline<br /></span>
+                    </p>
+                    <p class="text"><span class="detail">(+84) 824048293</span></p>
+                  </div>
+                  <div class="flexcontainer">
+                    <p class="text">
+                      <span class="hotline_location">Location<br /></span>
+                    </p>
+                    <p class="text"><span class="detail">166 Cầu Giấy, Hà Nội </span></p>
+                  </div>
+                </div>
+    
+                <div class="infor2">
+                  <button class="aboutus2">Về Jeunesse</button>
+                  <button class="spham2">Sản phẩm</button>
+                  <button class="giohang2">Giỏ hàng</button>
+                </div>
+                <p class="copyright">© 2024 Jeunesse All Rights Reserved.</p>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          // Lấy tất cả các button trên trang
+          const buttons = document.querySelectorAll('button');
+
+          // Định nghĩa đường dẫn tương ứng cho từng button
+          const buttonRoutes = {
+          'Jeunesse.': '/',
+          'Sản phẩm': '/products/banhle',
+          'Về Jeunesse': '/about',
+          'Giỏ hàng': '/cart'
+          };
+
+          // Thêm sự kiện click cho từng button
+          buttons.forEach(button => {
+          button.addEventListener('click', function() {
+          const buttonText = button.textContent.trim();
+          if (buttonRoutes[buttonText]) {
+          window.location.href = buttonRoutes[buttonText];
+          }
+          });
+          });
+          });
+            const fetchCart = () => {
+            return new Promise((resolve, reject) => {
+              fetch('/cart/get-cart')
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                  }
+                  return response.json();
+                })
+                .then(cart => {
+                  resolve(cart);
+                })
+                .catch(error => {
+                  console.error('Error fetching cart:', error);
+                  reject(error);
+                });
+          });
+        };
+
+          // Hàm cập nhật số lượng sản phẩm trong giỏ hàng
+          const updateCartCount = (cart) => {
+            const cartCountElement = document.querySelector('.number-count'); // number-count trong cart.html
+            const profileCartCountElement = document.querySelector('.soluong_giohang');
+
+            let totalQuantity = 0;
+            cart.forEach(product => {
+              totalQuantity += product.quantity;
+            });
+
+            // Cập nhật cả hai phần tử nếu chúng tồn tại
+            if (cartCountElement) {
+              cartCountElement.textContent = totalQuantity;
+            }
+            if (profileCartCountElement) {
+              profileCartCountElement.textContent = totalQuantity;
+            }
+          };
+
+          // Hàm khởi tạo trang chủ
+          const initprofile = async () => {
+            try {
+              const cart = await fetchCart();
+              updateCartCount(cart);
+            } catch (error) {
+              console.error('Error initializing profile:', error);
+            }
+          };
+
+          // Gọi hàm khởi tạo khi trang tải xong
+          initprofile();
+
+            document.querySelector('.logout').addEventListener('click', function() {
+               fetch('/auth/logout')
+                   .then(response => {
+                       if (response.ok) {
+                           window.location.href = '/';  // Điều hướng về trang chủ nếu đăng xuất thành công
+                       } else {
+                           console.error('Đăng xuất thất bại!');
+                       }
+                   })
+                   .catch(error => {
+                       console.error('Error during logout:', error);
+                   });
+           });
+      // lấy thông tin
+       fetch('/auth/profile')
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('u').textContent = data.name;
+          })
+          .catch(error => {
+            console.error('Error loading user profile:', error);
+          });
+
+      document.addEventListener('DOMContentLoaded', () => {
+            fetchOrders();
+            setupEventListeners();
+
+        });
+
+
+        let ordersData = []; // Biến lưu trữ toàn bộ đơn hàng
+
+        function fetchOrders(statusId = null) {
+            fetch('/orders/user') // Lấy danh sách đơn hàng của user hiện tại
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(orders => {
+                    ordersData = orders;
+                     displayOrders(statusId === null ? ordersData : ordersData.filter(order => order.status_id === statusId));
+                })
+                .catch(error => {
+                    console.error('Error fetching orders:', error);
+                    // Xử lý lỗi (ví dụ: hiển thị thông báo lỗi)
+                    const orderContainer = document.querySelector('.order-container');
+                    orderContainer.innerHTML = '<p class="error-message">Lỗi khi tải danh sách đơn hàng.</p>';
+                });
+        }
+
+
+        function displayOrders(orders) {
+            const orderContainer = document.querySelector('.order-container');
+            orderContainer.innerHTML = ''; // Xóa nội dung cũ
+
+            if (orders.length === 0) {
+                const emptyState = document.querySelector('.empty-state'); // Hiển thị empty state
+                if (emptyState) {
+                    emptyState.style.display = 'block';
+                }
+                return;
+            } else {
+                document.querySelector('.empty-state').style.display = 'none'; //ẩn empty state
+            }
+
+
+            orders.forEach(order => {
+                const orderCard = createOrderCard(order);
+                orderContainer.appendChild(orderCard);
+            });
+        }
+
+
+        function createOrderCard(order) {
+            const orderCard = document.createElement('div');
+            orderCard.classList.add('order-card');
+
+            const formattedDate = new Date(order.order_date).toLocaleDateString('vi-VN');
+            const formattedTotal = formatCurrency(order.total_price);
+            const statusText = order.status_name;
+            const order_id = order.order_id;
+
+            let productDetailsHTML = '';
+            let firstProduct = null;
+            if (order.items && order.items.length > 0) {
+                firstProduct = order.items[0];
+                const formattedPrice = formatCurrency(firstProduct.price * 1000);
+
+
+                productDetailsHTML = `
+                <div class="product-details">
+                    <div class="product-info">
+                      <img src="${firstProduct.image_url}" class="product-image" alt="${firstProduct.product_name}">
+                        <div class="product-text">
+                            <div class="product-name">${firstProduct.product_name}</div>
+                            <div class="product-price">${formattedPrice}</div>
+                        </div>
+                    </div>
+                    <div class="quantity-wrapper">
+                        <div class="quantity-label">Số lượng :</div>
+                        <div class="quantity-value">${firstProduct.quantity}</div>
+                    </div>
+                </div>
+                `;
+            }
+            const orderHTML = `
+                <div class="order-header">
+                    <div class="order-id-wrapper">
+                        <div class="order-id">Mã đơn hàng :</div>
+                        <div class="order-id-value">${order.order_id}</div>
+                    </div>
+                    <div class="order-status">${statusText}</div>
+                </div>
+
+                ${productDetailsHTML}
+
+                <div class="section-tongtien">
+                    <button class="xemthem-btn" data-order-id="${order_id}" >Xem thêm</button>
+                    <div class="total-section">
+                        <div class="total-label">Tổng tiền :</div>
+                        <div class="total-amount">${formattedTotal}</div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                  ${generateActionButtons(order)}
+                </div>
+
+            `;
+            orderCard.innerHTML = orderHTML;
+            const viewMoreButton = orderCard.querySelector('.xemthem-btn');
+            if (viewMoreButton) {
+              viewMoreButton.addEventListener('click', (event) => {
+                const orderId = event.target.dataset.orderId;
+                viewOrderDetails(orderId);
+              })
+            }
+            return orderCard;
+        }
+
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+        }
+
+        // Hàm xem chi tiết đơn hàng (chưa hoàn thiện)
+        function viewOrderDetails(orderId) {
+            window.location.href = `/order-detail/${orderId}`; // Hoặc sử dụng AJAX để lấy dữ liệu và hiển thị popup
+        }
+
+       // Hàm tạo nút dựa trên trạng thái đơn hàng
+function generateActionButtons(order) {
+    let buttonsHTML = '';
+    const status = order.status_id;
+    switch (status) {
+        case 1: // Chờ thanh toán
+            buttonsHTML = `
+                <button class="huy-don-btn" data-order-id="${order.order_id}">Hủy đơn</button>
+                <div>
+                <button class="contact-btn" >Liên hệ cửa hàng</button>
+                <button class="theodoi-btn" data-order-id="${order.order_id}" >Theo dõi đơn hàng</button>
+                </div>
+            `;
+            break;
+        case 2: // Đã thanh toán
+            buttonsHTML = `
+                <button class="huy-don-btn" data-order-id="${order.order_id}">Hủy đơn</button>
+               <div>
+                <button class="contact-btn" >Liên hệ cửa hàng</button>
+                <button class="theodoi-btn" data-order-id="${order.order_id}" >Theo dõi đơn hàng</button>
+                </div>
+            `;
+            break;
+        case 3: // Đã xác nhận
+            buttonsHTML = `
+                <button class="theodoi-btn" data-order-id="${order.order_id}" >Theo dõi đơn hàng</button>
+                <button class="contact-btn">Liên hệ cửa hàng</button>
+            `;
+            break;
+        case 4: // Đang giao hàng
+            buttonsHTML = `
+                <button class="theodoi-btn" data-order-id="${order.order_id}" >Theo dõi đơn hàng</button>
+                <div>
+                <button class="contact-btn">Liên hệ cửa hàng</button>
+                <button class="confirm-nhanhang-btn" data-order-id="${order.order_id}" >Đã nhận được hàng</button>
+                </div>
+            `;
+            break;
+
+        case 5: // Đã giao hàng
+            buttonsHTML = `
+                <button class="mualai-btn">Mua lại</button>
+                <div>
+                <button class="contact-btn">Liên hệ cửa hàng</button>
+                <button class="review-btn" >Đánh giá</button>
+                </div>
+            `;
+            break;
+
+        case 6: // Đã hủy
+            buttonsHTML = `
+                <button class="mualai-btn">Mua lại</button>
+                <button class="contact-btn">Liên hệ cửa hàng</button>
+            `;
+            break;
+        default:
+            buttonsHTML = '<p>Không có hành động nào khả dụng.</p>';
+    }
+
+
+    return buttonsHTML;
+}
+
+function setupEventListeners() {
+    // ... Xử lý nút khác
+
+    // Xử lý sự kiện click cho nút "Hủy đơn"
+    document.addEventListener('click', event => { // Gán sự kiện ở cấp document
+        if (event.target.classList.contains('huy-don-btn')) {
+            const orderId = event.target.dataset.orderId;
+            const confirmHuy = confirm('Bạn có chắc chắn muốn hủy đơn hàng này?');
+
+            if (confirmHuy) {
+                updateOrderStatus(orderId, 6) // status_id cho "Đã hủy"
+                  .then(() => {
+                    alert('Đơn hàng đã được hủy!');
+                    fetchOrders();// reload lại danh sách đơn hàng
+                })
+                .catch(err => {
+                    console.error("Error updating order status", err)
+                    alert('Hủy đơn hàng thất bại!');
+
+                });
+            }
+        }
+
+        if (event.target.classList.contains('confirm-nhanhang-btn')) {
+            const orderId = event.target.dataset.orderId;
+            const confirmHuy = confirm('Bạn đã nhận được hàng?');
+
+            if (confirmHuy) {
+                updateOrderStatus(orderId, 5) // status_id cho "Đã giao hàng"
+                .then(() => {
+                    alert('Cảm ơn bạn đã xác nhận! Jeunesse chúc bạn có một ngày thật vui vẻ!');
+                    fetchOrders();// reload lại danh sách đơn hàng
+                })
+                .catch(err => {
+                    console.error("Error updating order status", err)
+                    alert('Xác nhận thất bại!');
+                });
+            }
+        }
+
+    });
+
+        // Xử lý sự kiện click cho nút "Mua lại"
+        document.addEventListener('click', event => {
+          if (event.target.classList.contains('mualai-btn')) {
+                const orderId = event.target.dataset.orderId;
+                alert("Mua lại đơn hàng");
+                // Chưa có chức năng mua lại đơn hàng
+            }
+
+        })
+
+
+        // Xử lý sự kiện click cho nút "Liên hệ"
+        document.addEventListener('click', event => {
+          if (event.target.classList.contains('contact-btn')) {
+                const orderId = event.target.dataset.orderId;
+                alert("Liên hệ cửa hàng");
+                // Chưa có chức năng liên hệ
+            }
+
+        })
+
+        // Xử lý sự kiện click cho nút "Đánh giá"
+        document.addEventListener('click', event => {
+          if (event.target.classList.contains('review-btn')) {
+                const orderId = event.target.dataset.orderId;
+                alert("Đánh giá");
+                // Chưa có chức năng đánh giá
+            }
+
+        })
+
+          // Xử lý sự kiện click cho nút "Theo dõi đơn hàng"
+          document.addEventListener('click', event => {
+          if (event.target.classList.contains('theodoi-btn')) {
+                const orderId = event.target.dataset.orderId;
+                viewOrderDetails(orderId)
+                // Chưa có chức năng đánh giá
+            }
+
+        })
+
+const statusButtons = document.querySelectorAll('.status-item');
+     statusButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const statusId = parseInt(button.getAttribute('tabindex'), 10) || null;
+                statusButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                fetchOrders(statusId);
+            });
+        });
+}
+// Hàm cập nhật trạng thái đơn hàng
+    function updateOrderStatus(orderId, newStatusId) {
+        return fetch(`/orders/${orderId}/status`, { // return promise
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ statusId: newStatusId })
+        })
+        .then(response => {
+          if(!response.ok){
+            throw new Error('Network response was not ok')
+          }
+          return response.json()
+        })
+
+    }
+
+    </script>
+  </body>
+</html>

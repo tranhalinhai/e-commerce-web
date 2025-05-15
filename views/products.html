@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="/stylesheets/Banhle.css" />
+  </head>
+  <body>
+    <div class="bnh-l-default">
+      <div class="rlap"ove>
+
+        <div class="page-heading">
+          <div class="overlap-group">
+            <div class="Heading1">Bánh lẻ</div>
+            <div class="Heading2">Sản phẩm</div>
+            <div class="rectangle"></div>
+          </div>
+        </div>
+
+        <button class="phanloai1"><div class="text-wrapper-2">Entremet</div></button>
+        <button class="phanloai2"><div class="text-wrapper-3">Bánh lẻ</div></button>
+
+        <div class="header-user">
+          <div class="overlap-2">
+            <button class="logo">Jeunesse.</button>
+            <button class="cart-button"><div class="spham">Sản phẩm</div></button>
+            <button class="aboutus">Về Jeunesse</button>
+            <button class="text-wrapper-7">Giỏ hàng</button>
+            <button class="login">Đăng nhập</button>
+            <div class="soluonggio"><div class="text-wrapper-8">0</div></div>
+            <button class="group"></button>
+          </div>
+        </div>
+      <div class="products">
+        <div class="frame" id="product-container">
+
+        </div>
+      </div>
+        <div class="footer-ngi-dng">
+          <button class="text-wrapper-17">Jeunesse.</button>
+          <div class="frame-2">
+            <div class="flexcontainer">
+              <p class="text-i">
+                <span class="span">Hotline<br /></span>
+              </p>
+              <p class="text-i"><span class="text-wrapper-18">(+84) 824048293</span></p>
+            </div>
+            <div class="flexcontainer">
+              <p class="text-i">
+                <span class="span">Location<br /></span>
+              </p>
+              <p class="text-i"><span class="text-wrapper-18">166 Cầu Giấy, Hà Nội </span></p>
+            </div>
+          </div>
+          <div class="frame-3">
+            <button class="text-wrapper-19">Về Jeunesse</button>
+            <button class="text-wrapper-20">Sản phẩm</button>
+            <button class="text-wrapper-21">Giỏ hàng</button>
+          </div>
+          <p class="p">© 2024 Jeunesse All Rights Reserved.</p>
+        </div>
+        
+      </div>
+    </div>
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function() {
+      // Lấy tất cả các button trên trang
+      const buttons = document.querySelectorAll('button');
+
+      // Định nghĩa đường dẫn tương ứng cho từng button
+      const buttonRoutes = {
+        'Jeunesse.': '/',
+        'Sản phẩm': '/products/banhle',
+        'Về Jeunesse': '/about',
+        'Giỏ hàng': '/cart',
+        'Entremet': '/products/entremet',
+        'Bánh lẻ': '/products/banhle',
+      };
+
+      // Thêm sự kiện click cho từng button
+      buttons.forEach(button => {
+        button.addEventListener('click', function() {
+          const buttonText = button.textContent.trim();
+          if (buttonRoutes[buttonText]) {
+            window.location.href = buttonRoutes[buttonText];
+          }
+        });
+      });
+ const fetchCart = () => {
+      return new Promise((resolve, reject) => {
+        fetch('/cart/get-cart')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(cart => {
+            resolve(cart);
+          })
+          .catch(error => {
+            console.error('Error fetching cart:', error);
+            reject(error);
+          });
+    });
+  };
+// Hàm cập nhật số lượng sản phẩm trong giỏ hàng (number-count và text-wrapper-6)
+    const updateCartCount = (cart) => {
+      const cartCountElement = document.querySelector('.number-count'); // number-count trong cart.html
+      const productsCartCountElement = document.querySelector('.text-wrapper-8'); // text-wrapper-6 trong homepage.html
+
+      let totalQuantity = 0;
+      cart.forEach(product => {
+        totalQuantity += product.quantity;
+      });
+
+      // Cập nhật cả hai phần tử nếu chúng tồn tại
+      if (cartCountElement) {
+        cartCountElement.textContent = totalQuantity;
+      }
+      if (productsCartCountElement) {
+        productsCartCountElement.textContent = totalQuantity;
+      }
+    };
+
+    // Hàm khởi tạo trang chủ
+    const initProducts = async () => {
+      try {
+        const cart = await fetchCart();
+        updateCartCount(cart);
+      } catch (error) {
+        console.error('Error initializing products:', error);
+      }
+    };
+    // Gọi hàm khởi tạo khi trang tải xong
+    initProducts();
+
+      // Kiểm tra tình trạng đăng nhập
+      fetch('/auth/check-login')
+        .then(response => response.json())
+        .then(data => {
+          if (data.loggedIn) {
+            // Nếu đã đăng nhập, hiển thị nút Profile và Đăng xuất, ẩn nút Đăng nhập
+            document.querySelector('.group').style.display = 'block';
+            document.querySelector('.login').style.display = 'none';
+          } else {
+            // Nếu chưa đăng nhập, hiển thị nút Đăng nhập
+            document.querySelector('.login').style.display = 'block';
+            document.querySelector('.group').style.display = 'none';
+          }
+        })
+        .catch(error => {
+          console.error('Error checking login status:', error);
+        });
+
+      // Xử lý sự kiện khi người dùng click vào "Đăng nhập"
+      document.querySelector('.login').addEventListener('click', function() {
+        window.location.href = '/login'; // Chuyển hướng đến trang đăng nhập
+      });
+
+      // Xử lý sự kiện khi người dùng click vào "Profile"
+      document.querySelector('.group').addEventListener('click', function() {
+        window.location.href = '/profile'; // Chuyển hướng đến trang profile
+      });
+
+
+
+      // Cập nhật tiêu đề trang tùy thuộc vào category
+      const heading = document.querySelector('.Heading1');
+      if (category === 'banhle') {
+        heading.textContent = 'Bánh Lẻ'; // Cập nhật tiêu đề cho Bánh Lẻ
+      } else if (category === 'entremet') {
+        heading.textContent = 'Entremet'; // Cập nhật tiêu đề cho Entremet
+      }
+    });
+// Hàm tải sản phẩm theo loại
+
+ const category = window.location.pathname.split('/')[2]; // Lấy giá trị category từ URL
+      loadProducts(category); // Gọi hàm tải sản phẩm theo category
+
+      function loadProducts(category) {
+                fetch(`/products/api/${category}`) // Gọi API backend để lấy sản phẩm theo category
+        .then(response => response.json())
+        .then(products => {
+            console.log('Sản phẩm nhận về:', products); // Kiểm tra dữ liệu trả về
+            const container = document.getElementById("product-container");
+            container.innerHTML = "";
+            if (products.length === 0) {
+                container.innerHTML = "<p>Không có sản phẩm nào trong danh mục này.</p>";
+                return;
+            }
+
+
+            // Hiển thị từng sản phẩm
+products.forEach(product => {
+    const productElement = document.createElement("div");
+    productElement.className = "product-item";
+    productElement.innerHTML = `
+        <div class="div-2">
+        <div class="image-container">
+            <img src="${product.image_url}" alt="${product.name}" class="product-image"></img>
+            </div>
+            <div class="product-details">
+                <h3 class="product-name" >${product.name}</h3>
+                <button class="input-field-2" onclick="viewProduct(${product.id})"><div class="text-wrapper-11">Xem thêm</div></button>
+                <p class="product-price" >Giá tiền: ${product.price} VND</p>
+
+            </div>
+        </div>
+    `;
+    container.appendChild(productElement);
+});
+
+        })
+        .catch(error => {
+            console.error('Lỗi khi tải sản phẩm:', error);
+            const container = document.getElementById("product-container");
+            container.innerHTML = "<p>Đã xảy ra lỗi khi tải sản phẩm. Vui lòng thử lại sau.</p>";
+        });
+}
+      function viewProduct(productId) {
+    window.location.href = `/products/detail/${productId}`;
+}
+    </script>
+
+ </body>
+</html>

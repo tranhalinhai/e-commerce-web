@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Order</title>
+  <link rel="stylesheet" href="/stylesheets/admin-donhang.css">
+</head>
+<body>
+  <div class="admin-panel">
+    <div class="main-section">
+      <header class="top-header">
+        <div class="admin-badge">ADMIN</div>
+      </header>
+
+      <div class="content-wrapper">
+        <div class="layout-container">
+
+          <nav class="sidebar">
+            <div class="navigation-bar">
+              <div class="brand-logo">Jeunesse.</div>
+
+              <div class="function">
+              <button class="nav-item" onclick="location.href='/admin'">
+                <img src="/image/icon_product.png" class="nav-icon" alt="Products icon" />
+                <span class="nav-text">Sản phẩm</span>
+              </button>
+
+              <button class="nav-item active">
+                <img src="/image/icon_order.png" class="nav-icon" alt="Orders icon" />
+                <span class="nav-text">Đơn hàng</span>
+              </button>
+
+              <button class="nav-item" onclick="location.href='/admin/client'">
+                <img src="/image/icon_customer.png" class="nav-icon" alt="Customers icon" />
+                <span class="nav-text">Khách hàng</span>
+              </button>
+
+              <button class="nav-item" onclick="location.href='/admin/user'">
+                <img src="/image/icon_user.png" class="nav-icon" alt="Customers icon" />
+                <span class="nav-text">Người dùng</span>
+              </button>
+
+              <button class="nav-item" id="logout">
+                <img src="/image/icon_logout.png" class="nav-icon" alt="Logout icon" />
+                <span class="nav-text">Đăng xuất</span>
+              </button>
+
+            </div>
+            </div>
+          </nav>
+
+          <main class="main-content">
+            <section class="product-section">
+              <div class="section-header">
+                <h1 class="section-title">Đơn hàng</h1>
+              </div>
+              <div class="order-container">
+                <div class="order-wrapper">
+                  
+                  <div class="order-header">
+                    <div class="order-row">
+                      <div class="order-cell">Mã đơn hàng</div>
+                      <div class="order-cell">Ngày</div>
+                      <div class="order-cell">Tên khách hàng</div>
+                      <div class="order-cell">Số điện thoại</div>
+                      <div class="order-cell">Trạng thái</div>
+                      <div class="order-cell">Tổng tiền</div>
+                    </div>
+                  </div>
+                  
+                  <button class="order-item">
+                    <div class="order-row">
+                      <div class="order-cell"></div>
+                      <div class="order-cell"></div>
+                      <div class="order-cell"></div>
+                      <div class="order-cell"></div>
+                      <div class="order-cell"></div>
+                      <div class="order-cell"></div>
+                    </div>
+                  </button>
+
+                </div>
+              </div>
+            </section>
+          </main>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      fetchOrders();
+
+      document.querySelectorAll('.nav-item').forEach(item => {
+          item.addEventListener('click', function() {
+              // Loại bỏ class 'active' từ tất cả các mục
+              document.querySelectorAll('.nav-item').forEach(navItem => navItem.classList.remove('active'));
+              // Thêm class 'active' cho mục được click
+              this.classList.add('active');
+          });
+      });
+  });
+
+  async function fetchOrders() {
+    try {
+      const response = await fetch('/orders'); // Gọi API lấy danh sách đơn hàng
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const orders = await response.json();
+      displayOrders(orders);
+    } catch (error) {
+      console.error('Error fetching orders:', error);
+      // Hiển thị thông báo lỗi hoặc xử lý lỗi khác
+    }
+  }
+
+  function displayOrders(orders) {
+    const orderContainer = document.querySelector('.order-wrapper');
+    orderContainer.innerHTML = ''; // Xóa nội dung cũ
+
+      const headerRow = `
+          <div class="order-header">
+              <div class="order-row">
+                  <div class="order-cell">Mã đơn hàng</div>
+                  <div class="order-cell">Ngày</div>
+                  <div class="order-cell">Tên khách hàng</div>
+                  <div class="order-cell">Số điện thoại</div>
+                  <div class="order-cell">Trạng thái</div>
+                  <div class="order-cell">Tổng tiền</div>
+              </div>
+          </div>
+      `;
+      orderContainer.innerHTML = headerRow;
+    if (orders.length === 0) {
+      const noOrderMessage = document.createElement('p');
+      noOrderMessage.textContent = 'Không có đơn hàng nào.';
+      orderContainer.appendChild(noOrderMessage);
+      return;
+    }
+
+    orders.forEach(order => {
+      const orderItem = document.createElement('button');
+      orderItem.classList.add('order-item');
+      orderItem.dataset.orderId = order.order_id; // Lưu trữ orderId vào data attribute
+
+      const formattedDate = new Date(order.order_date).toLocaleDateString(); // Định dạng ngày tháng
+      const formattedTotal = formatCurrency(order.total_price);
+
+      const orderHTML = `
+        <div class="order-row">
+          <div class="order-cell">${order.order_id}</div>
+          <div class="order-cell">${formattedDate}</div>
+          <div class="order-cell">${order.customer_name}</div>
+          <div class="order-cell">${order.customer_phone}</div>
+          <div class="order-cell">${order.status_name}</div>
+          <div class="order-cell">${formattedTotal}</div>
+        </div>
+      `;
+
+      orderItem.innerHTML = orderHTML;
+      orderContainer.appendChild(orderItem);
+
+      // Thêm event listener để xem chi tiết đơn hàng
+      orderItem.addEventListener('click', () => {
+        viewOrderDetails(order.order_id);
+      });
+    });
+  }
+
+
+
+  // Hàm định dạng tiền tệ
+  function formatCurrency(amount) {
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+  }
+
+  // Hàm xem chi tiết đơn hàng (chưa hoàn thiện)
+  function viewOrderDetails(orderId) {
+      window.location.href = `/admin/orders/${orderId}`; // Hoặc sử dụng AJAX để lấy dữ liệu và hiển thị popup
+  }
+
+   document.getElementById('logout').addEventListener('click', function() {
+    fetch('/auth/logout')
+        .then(response => {
+            if (response.ok) {
+                window.location.href = '/';  // Điều hướng về trang chủ nếu đăng xuất thành công
+            } else {
+                console.error('Đăng xuất thất bại!');
+            }
+        })
+        .catch(error => {
+            console.error('Error during logout:', error);
+        });
+});
+</script>
+</body>
+</html>

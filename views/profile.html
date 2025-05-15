@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="/stylesheets/Infor.css" />
+  </head>
+  <body style="margin-top: 0px;">
+    <div class="thng-tin-ti-khon">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+
+          <div class="heading"><div class="headingtext">Tài khoản của bạn</div></div>
+
+          <div class="footer">
+            <button class="logo2">Jeunesse.</button>
+
+            <div class="infor1">
+              <div class="flexcontainer">
+                <p class="text">
+                  <span class="hotline_location">Hotline<br /></span>
+                </p>
+                <p class="text"><span class="detail">(+84) 824048293</span></p>
+              </div>
+              <div class="flexcontainer">
+                <p class="text">
+                  <span class="hotline_location">Location<br /></span>
+                </p>
+                <p class="text"><span class="detail">166 Cầu Giấy, Hà Nội </span></p>
+              </div>
+            </div>
+
+            <div class="infor2">
+              <button class="aboutus2">Về Jeunesse</button>
+              <button class="spham2">Sản phẩm</button>
+              <button class="giohang2">Giỏ hàng</button>
+            </div>
+            <p class="copyright">© 2024 Jeunesse All Rights Reserved.</p>
+          </div>
+
+          <div class="header-user">
+            <button class="logo">Jeunesse.</button>
+            <button class="spham">Sản phẩm</button>
+            <button class="aboutus">Về Jeunesse</button>
+            <button class="giohang1"><div class="giohang_text">Giỏ hàng</div></button>
+            <button class="icon_profile"></button>
+            <div class="cirle_giohang"><div class="soluong_giohang">0</div></div>
+          </div>
+
+          <div class="right">
+            <div class="title_infor">THÔNG TIN CÁ NHÂN</div>
+            <div class="name">
+              <div class="title">Họ và tên</div>
+              <div class="khung"><div class="text_infor" id="name"></div></div>
+            </div>
+            <div class="phone">
+              <div class="title">Số điện thoại</div>
+              <div class="khung"><div class="text_infor" id="username"></div></div>
+            </div>
+            <div class="address">
+              <div class="title">Địa chỉ</div>
+              <div class="khung">
+                <div class="text_infor" id="address"></div>
+              </div>
+            </div>
+            <button class="btn-edit">Chỉnh sửa</button>
+          </div>
+
+          <div class="left">
+            <div class="overlap-2">
+              <div class="name_user" id="u"></div>
+              <div class="hello">Hello</div>
+              <button class="profile">
+                <img class="img" src="/image/icon user.png" />
+                <div class="name_func">Thông tin cá nhân</div>
+              </button>
+              <button class="order">
+                <img class="img" src="/image/icon shopping.png" />
+                <div class="name_func">Lịch sử đơn hàng</div>
+              </button>
+              <button class="logout">
+                <img class="logout-stroke" src="/image/log out icon.png" />
+                <div class="name_func">Đăng xuất</div>
+              </button>
+            </div>
+          </div>
+
+          <div class="popup">
+            <div class="popup-overlay">
+              <div class="frame">
+
+                <div class="name2">
+                  <div class="title2">Họ và tên</div>
+                  <div class="khung2"><input type="name" class="text_infor2" id="popupname"></input></div>
+                </div>
+
+                  <div class="phone2">
+                    <div class="title2">Số điện thoại</div>
+                    <div class="khung2"><input type="username" class="text_infor2" id="popupusername"></input></div>
+                  </div>
+
+                  <div class="address2">
+                    <div class="title2">Địa chỉ</div>
+                    <div class="khung2">
+                      <input type="address" class="text_infor2" id="popupaddress"></input>
+                    </div>
+                  </div>
+
+                  <div class="pass">
+                    <div class="title2">Mật khẩu</div>
+                    <div class="khung2">
+                      <input type ="password" class="text_infor2" id="pass"></input>
+                    </div> </div>
+
+                <div class="button-group">
+                  <button class="btn-save">Lưu</button>
+                  <button class="btn-cancel">Hủy bỏ</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Lấy tất cả các button trên trang
+    const buttons = document.querySelectorAll('button');
+
+    // Định nghĩa đường dẫn tương ứng cho từng button
+    const buttonRoutes = {
+    'Jeunesse.': '/',
+    'Sản phẩm': '/products/banhle',
+    'Về Jeunesse': '/about',
+    'Giỏ hàng': '/cart'
+    };
+
+    // Thêm sự kiện click cho từng button
+    buttons.forEach(button => {
+    button.addEventListener('click', function() {
+    const buttonText = button.textContent.trim();
+    if (buttonRoutes[buttonText]) {
+    window.location.href = buttonRoutes[buttonText];
+    }
+    });
+    });
+    });
+
+    const fetchCart = () => {
+      return new Promise((resolve, reject) => {
+        fetch('/cart/get-cart')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(cart => {
+            resolve(cart);
+          })
+          .catch(error => {
+            console.error('Error fetching cart:', error);
+            reject(error);
+          });
+    });
+  };
+
+    // Hàm cập nhật số lượng sản phẩm trong giỏ hàng (number-count và text-wrapper-6)
+    const updateCartCount = (cart) => {
+      const cartCountElement = document.querySelector('.number-count'); // number-count trong cart.html
+      const profileCartCountElement = document.querySelector('.soluong_giohang'); // text-wrapper-6 trong homepage.html
+
+      let totalQuantity = 0;
+      cart.forEach(product => {
+        totalQuantity += product.quantity;
+      });
+
+      // Cập nhật cả hai phần tử nếu chúng tồn tại
+      if (cartCountElement) {
+        cartCountElement.textContent = totalQuantity;
+      }
+      if (profileCartCountElement) {
+        profileCartCountElement.textContent = totalQuantity;
+      }
+    };
+
+    // Hàm khởi tạo trang chủ
+    const initprofile = async () => {
+      try {
+        const cart = await fetchCart();
+        updateCartCount(cart);
+      } catch (error) {
+        console.error('Error initializing profile:', error);
+      }
+    };
+
+    // Gọi hàm khởi tạo khi trang tải xong
+    initprofile();
+
+       // Xử lý sự kiện khi người dùng click vào "Đăng xuất"
+       document.querySelector('.logout').addEventListener('click', function() {
+    fetch('/auth/logout')
+        .then(response => {
+            if (response.ok) {
+                window.location.href = '/';  // Điều hướng về trang chủ nếu đăng xuất thành công
+            } else {
+                console.error('Đăng xuất thất bại!');
+            }
+        })
+        .catch(error => {
+            console.error('Error during logout:', error);
+        });
+});
+        document.querySelector('.order').addEventListener('click', function() {
+        window.location.href = '/tracking';
+        });
+        // lấy thông tin cá nhân
+      fetch('/auth/profile')
+          .then(response => response.json())
+          .then(data => {
+            // Hiển thị thông tin người dùng lên các phần tử tương ứng
+            document.getElementById('name').textContent = data.name;
+            document.getElementById('username').textContent = data.username;
+            document.getElementById('address').textContent = data.address;
+            document.getElementById('u').textContent = data.name;
+          })
+          .catch(error => {
+            console.error('Error loading user profile:', error);
+          });
+
+      // thay đổi thông tin
+      document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.querySelector('.popup');
+  const btnEdit = document.querySelector('.btn-edit');
+  const btnCancel = document.querySelector('.btn-cancel');
+  const btnSave = document.querySelector('.btn-save');
+
+  // Hiển thị popup
+  btnEdit.addEventListener('click', () => {
+    popup.style.display = 'flex';
+
+    // Điền dữ liệu từ giao diện chính vào popup
+    document.getElementById('popupname').value = document.getElementById('name').textContent;
+    document.getElementById('popupusername').value = document.getElementById('username').textContent;
+    document.getElementById('popupaddress').value = document.getElementById('address').textContent;
+
+  });
+
+  // Ẩn popup khi nhấn "Hủy bỏ"
+  btnCancel.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+  // Xử lý khi nhấn "Lưu"
+  btnSave.addEventListener('click', () => {
+    const updatedName = document.getElementById('popupname').value;
+    const updatedUsername = document.getElementById('popupusername').value;
+    const updatedAddress = document.getElementById('popupaddress').value;
+    const updatedPassword = document.getElementById('pass').value;
+    // Gửi dữ liệu lên server
+    fetch('/auth/profile', {
+      method: 'PUT', // Cập nhật thông tin
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: updatedName,
+        username: updatedUsername,
+        address: updatedAddress,
+        password: updatedPassword
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.message === 'Cập nhật thông tin thành công!') {
+
+        // Cập nhật lại giao diện chính
+        document.getElementById('name').textContent = updatedName;
+        document.getElementById('username').textContent = updatedUsername;
+        document.getElementById('address').textContent = updatedAddress;
+        // Ẩn popup
+        closePopup();
+
+      } else {
+        alert('Có lỗi xảy ra: ' + data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Lỗi update profile', error);
+    });
+  });
+  function closePopup() {
+    popup.style.display = 'none';
+}
+});
+
+    </script>
+  </body>
+</html>

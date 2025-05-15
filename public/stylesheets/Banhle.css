@@ -1,0 +1,753 @@
+@font-face {
+    font-family: 'NEWSREADERTEXT-REGULAR';
+    src: url('../fonts/NEWSREADERTEXT-REGULAR.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NEWSREADERTEXT-MEDIUM';
+    src: url('../fonts/NEWSREADERTEXT-MEDIUM.TTF') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NEWSREADERTEXT-ITALIC';
+    src: url('../fonts/NEWSREADERTEXT-ITALIC.TTF') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'NEWSREADERTEXT-LIGHTITALIC';
+    src: url('../fonts/NEWSREADERTEXT-LIGHTITALIC.TTF') format('truetype');
+    font-weight: light;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'NEWSREADERTEXT-SEMIBOLD';
+    src: url('../fonts/NEWSREADERTEXT-SEMIBOLD.TTF') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'DFVN TAN - WALTZING MATHILDE';
+    src: url('./fonts/DFVN-TAN-WALTZING-MATHILDE.otf') format('truetype');
+  }
+
+.bnh-l-default {
+    background-color: #fffdf8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  } 
+  
+  .bnh-l-default .overlap {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    top: 0;
+    left: 0px;
+    background-color: #fffdf8;
+  } 
+  
+  .bnh-l-default .page-heading {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top: 95px;
+    left: 0px;
+    background-color: #ffebeb;
+    overflow: hidden;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #000000;
+  }
+  
+  .bnh-l-default .overlap-group {
+    position: relative;
+    width: 1519px;
+    height: 150px;
+    left: 3.2%;
+  } 
+  
+  .bnh-l-default .Heading1 {
+    position: absolute;
+    height: 32px;
+    top: 65px;
+    left: 52%;
+    font-family: "NEWSREADERTEXT-ITALIC", serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #374375;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 32.5px;
+    white-space: nowrap;
+  }
+  
+  .bnh-l-default .Heading2 {
+    position: absolute;
+    height: 72px;
+    top: 30px;
+    left: 36%;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #374375;
+    font-size: 60px;
+    letter-spacing: -1.20px;
+    line-height: 72.0px;
+    white-space: nowrap;
+  }
+  
+  /*.bnh-l-default .rectangle {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+  } */
+  
+  .bnh-l-default .phanloai1 {
+    left: 37%;
+    background-color: #ffebeb;
+    position: absolute;
+    width: 170px;
+    height: 50px;
+    top: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #0000000f;
+  }
+  
+  .bnh-l-default .text-wrapper-2 {
+    position: absolute;
+    top: 5px;
+    left: 22%;
+    font-family: "NEWSREADERTEXT-MEDIUM", serif;
+    font-weight: 500;
+    color: #374375;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 31.2px;
+    white-space: nowrap;
+  }
+
+    .bnh-l-default .phanloai2 {
+        right: 37%;
+        background-color: #ffebeb;
+        position: absolute;
+        width: 170px;
+        height: 50px;
+        top: 280px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 2px solid;
+        border-color: #0000000f;
+    }
+
+    .bnh-l-default .text-wrapper-3 {
+        position: absolute;
+        top: 5px;
+        left: 29%;
+        font-family: "NEWSREADERTEXT-MEDIUM", serif;
+        font-weight: 500;
+        color: #374375;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 31.2px;
+        white-space: nowrap;
+    }
+    .bnh-l-default .phanloai1.active {
+        background-color: #374375; /* Màu nền khi chọn */
+        color: white; /* Màu chữ khi chọn */
+    }
+
+    .bnh-l-default .phanloai2.active {
+        background-color: #374375; /* Màu nền khi chọn */
+        color: white; /* Màu chữ khi chọn */
+    }
+
+
+    .bnh-l-default .phanloai2.active {
+        background-color: #ff6347; /* Màu nền khi chọn */
+        color: white; /* Màu chữ khi chọn */
+    }
+  .bnh-l-default .header-user {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0px;
+    margin: 0;
+  }
+  
+  /*.bnh-l-default .overlap-2 {
+    position: relative;
+    width: 1442px;
+    height: 118px;
+    top: -1px;
+    left: -1px;
+    background-color: #fffdf8f8;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #000000;
+  } */
+  
+  .bnh-l-default .logo {
+    position: absolute;
+    top: 30px;
+    left: 96px;
+    font-family: 'DFVN TAN - WALTZING MATHILDE', serif;
+    font-weight: 400;
+    color: #374375;
+    font-size: 35px;
+    letter-spacing: -0.35px;
+    line-height: 35px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .bnh-l-default .cart-button {
+    position: absolute;
+    width: 126px;
+    height: 48px;
+    top: 25px;
+    right: 357px;
+    background-color: #374375;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .bnh-l-default .spham {
+    height: 23px;
+    top: 12px;
+    left: 25px;
+    font-family: "NEWSREADERTEXT-SEMIBOLD", serif;
+    font-weight: 400;
+    color: #ffffdd;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .bnh-l-default .aboutus {
+    position: absolute;
+    height: 23px;
+    top: 36px;
+    right: 511px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+   .bnh-l-default .login {
+        position: absolute;
+        height: 23px;
+        top: 36px;
+        right: 96px;
+        font-family: "NEWSREADERTEXT-REGULAR", serif;
+        font-weight: 400;
+        color: #000000;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 23.4px;
+        white-space: nowrap;
+        border: none;
+        background: none;
+        display: none;
+    }
+  .bnh-l-default .text-wrapper-8 {
+    position: absolute;
+    height: 18px;
+    top: 3px;
+    left: 8px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 18.2px;
+    white-space: nowrap;
+  }
+  
+  .bnh-l-default .group {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top: 20px;
+    right: 96px;
+    background-color: #ffebeb;
+    border-radius: 32px;
+    background-image: url(../image/User_icon.png);
+    background-size: 100% 100%;
+    border: none;
+  }
+  .bnh-l-default .text-wrapper-7 {
+    position: absolute;
+    height: 23px;
+    top: 35px;
+    right: 246px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .bnh-l-default .soluonggio {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 22px;
+    right: 220px;
+    background-color: #ffebeb;
+    border-radius: 13px;
+  }
+
+    .bnh-l-default .login {
+        position: absolute;
+        height: 23px;
+        top: 36px;
+        right: 96px;
+        font-family: "NEWSREADERTEXT-REGULAR", serif;
+        font-weight: 400;
+        color: #000000;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 23.4px;
+        white-space: nowrap;
+        border: none;
+        background: none;
+        display: none;
+    }
+
+    .bnh-l-default .text-wrapper-8 {
+        position: absolute;
+        height: 18px;
+        top: 3px;
+        left: 8px;
+        font-family: "Inter-Bold", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 18.2px;
+        white-space: nowrap;
+    }
+
+    .bnh-l-default .group {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        top: 20px;
+        right: 96px;
+        background-color: #ffebeb;
+        border-radius: 32px;
+        background-image: url(../image/User_icon.png);
+        background-size: 100% 100%;
+        border: none;
+    }
+    .bnh-l-default .products { /* Phần chứa các sản phẩm */
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap; /* Đảm bảo các phần tử tự xuống dòng khi hết chỗ */
+        justify-content: flex-start; /* Căn chỉnh nội dung bên trái */
+        padding: 20px;
+        margin-top: 400px; /* Khoảng cách với phần phía trên */
+        margin-left: 100px;
+        padding-bottom: 100px;
+    }
+
+    .bnh-l-default .frame { /* khung chứa từng sản phẩm */
+        display: flex;
+        flex-wrap: wrap; /* Các sản phẩm tự động xuống dòng */
+        gap: 50px; /* Khoảng cách giữa các sản phẩm */
+        justify-content: flex-start; /* Căn chỉnh sản phẩm theo chiều ngang từ trái sang phải */
+    }
+
+    .bnh-l-default .div-2 { /* nội dung 1 sản phẩm */
+    position: relative;
+    width: 393px;
+    height: 500px;
+    background-color: #fafaf5;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+
+  .bnh-l-default .div-2:hover {
+    transform: scale(1.1); /* Phóng to 1.2 lần khi hover */
+    }
+
+    .bnh-l-default .product-name {
+        font-family: 'NEWSREADERTEXT-LIGHTITALIC', serif;
+        font-weight: 300;
+        font-style: italic;
+        color: #000000;
+        font-size: 40px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 52.0px;
+        white-space: nowrap
+    }
+    .bnh-l-default .product-price {
+        font-family: "Inter-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #000000;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0;
+        white-space: nowrap;
+        margin: 0 auto; /* Căn giữa tự động */
+        margin-top: -30px;
+    }
+    .bnh-l-default .image-container {
+        width: 100%;
+        display: flex;
+        padding-top: 20px;
+    }
+    .bnh-l-default .product-image {
+        width: 230px;
+        height: 260px;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+.bnh-l-default .text-wrapper-9 {
+    position: absolute;
+    top: 330px;
+    width: 100%;
+    font-family: 'NEWSREADERTEXT-LIGHTITALIC', serif;
+    font-weight: 300;
+    font-style: italic;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 52.0px;
+    white-space: nowrap;
+}
+  
+  .bnh-l-default .text-wrapper-10 {
+    position: absolute;
+    top: -22px;
+    left: 240px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 20px;
+    text-align: centers;
+    letter-spacing: 0;
+    line-height: 26.0px;
+    white-space: nowrap;
+  }
+  
+  .bnh-l-default .input-field-2 {
+    position: absolute;
+    width: 125px;
+    height: 40px;
+    top: 416px;
+    left: 132px;
+    background-color: #374375;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #0000000f;
+  }
+  
+  .bnh-l-default .text-wrapper-11 {
+    position: absolute;
+    top: 23%;
+    left: 25px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #fffdf8;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20.8px;
+    white-space: nowrap;
+  }
+  
+  .bnh-l-default .pinkguava {
+    position: absolute;
+    width: 230px;
+    height: 247px;
+    top: 53px;
+    left: 83px;
+  }
+  
+  .bnh-l-default .text-wrapper-12 {
+    top: 25px;
+    left: 240px;
+    position: absolute;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 20px;
+    text-align: right;
+    letter-spacing: 0;
+    line-height: 26.0px;
+    white-space: nowrap;
+  }
+  
+  .bnh-l-default .berry {
+    position: absolute;
+    width: 220px;
+    height: 250px;
+    top: 53px;
+    left: 85px;
+  }
+  
+  .bnh-l-default .text-wrapper-13 {
+    position: absolute;
+    top: 330px;
+    width: 100%;
+    text-align: center;
+    font-family: 'NEWSREADERTEXT-LIGHTITALIC', serif;
+    font-weight: 300;
+    font-style: italic;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 52.0px;
+    white-space: nowrap;
+  }
+  
+  .bnh-l-default .text-wrapper-14 {
+    top: 25px;
+    left: 240px;
+    position: absolute;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 20px;
+    text-align: right;
+    letter-spacing: 0;
+    line-height: 26.0px;
+    white-space: nowrap;
+  }
+  
+  .bnh-l-default .overlap-group-3 {
+    position: absolute;
+    width: 285px;
+    height: 285px;
+    top: 53px;
+    left: 84px;
+  }
+  
+  .bnh-l-default .strawberry {
+    position: absolute;
+    width: 225px;
+    height: 263px;
+    top: 53px;
+    left: 85px;
+  }
+  
+  .bnh-l-default .text-wrapper-15 {
+    top: 25px;
+    left: 240px;
+    position: absolute;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 20px;
+    text-align: right;
+    letter-spacing: 0;
+    line-height: 26.0px;
+    white-space: nowrap;
+  }
+  
+  .bnh-l-default .text-wrapper-16 {
+    position: absolute;
+    top: 330px;
+    width: 100%;
+    text-align: center;
+    font-family: 'NEWSREADERTEXT-LIGHTITALIC', serif;
+    font-weight: 300;
+    font-style: italic;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 52.0px;
+    white-space: nowrap;
+  }
+
+    .bnh-l-default .footer-ngi-dng {
+        position: absolute;
+        width: 100%;
+        height: 210px;
+        left: 0;
+        background-color: #ffebeb;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-color: #000000;
+        margin-top: auto; /* Đảm bảo footer luôn nằm ở dưới cùng */
+        padding: 20px; /* Tùy chỉnh padding cho footer */
+        text-align: center; /* Căn giữa nội dung footer */
+        box-sizing: border-box;
+    }
+  
+  .bnh-l-default .text-wrapper-17 {
+    position: absolute;
+    top: 49px;
+    left: 96px;
+    font-family: 'DFVN TAN - WALTZING MATHILDE', serif;
+    font-weight: 400;
+    color: #374375;
+    font-size: 50px;
+    letter-spacing: -0.55px;
+    line-height: 55px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .bnh-l-default .frame-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    position: absolute;
+    top: 20px;
+    left: 700px;
+  }
+  
+  .bnh-l-default .flexcontainer {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    position: relative;
+  }
+  
+  .bnh-l-default .text-i {
+    position: relative;
+    align-self: stretch;
+    font-family: "NEWSREADERTEXT-MEDIUM", serif;
+    font-weight: 500;
+    color: #000000;
+    font-size: 25px;
+    letter-spacing: -0.25px;
+    line-height: 25px;
+    margin: 8px;
+  }
+  
+  .bnh-l-default .span {
+    font-weight: 500;
+    letter-spacing: -0.06px;
+  }
+  
+  .bnh-l-default .text-wrapper-18 {
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-size: 20px;
+    letter-spacing: -0.04px;
+    line-height: 20px;
+  }
+  
+  .bnh-l-default .frame-3 {
+    position: absolute;
+    width: 144px;
+    height: 160px;
+    top: 19px;
+    left: 1194px;
+  }
+  
+  .bnh-l-default .text-wrapper-19 {
+    position: absolute;
+    top: 10px;
+    left: 31px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.20px;
+    line-height: 20px;
+    text-decoration: underline;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .bnh-l-default .text-wrapper-20 {
+    top: 65px;
+    left: 38px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: -0.20px;
+    line-height: 20px;
+    text-decoration: underline;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .bnh-l-default .text-wrapper-21 {
+    position: absolute;
+    top: 120px;
+    left: 43px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.20px;
+    line-height: 20px;
+    text-decoration: underline;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .bnh-l-default .p {
+    position: absolute;
+    top: 105px;
+    left: 96px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 25px;
+    letter-spacing: -0.25px;
+    line-height: 25px;
+    white-space: nowrap;
+  }
+  

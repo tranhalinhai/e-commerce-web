@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - User</title>
+  <link rel="stylesheet" href="/stylesheets/admin-user.css">
+</head>
+<body>
+  <div class="admin-panel">
+    <div class="main-section">
+      <header class="top-header">
+        <div class="admin-badge">ADMIN</div>
+      </header>
+
+      <div class="content-wrapper">
+        <div class="layout-container">
+
+          <nav class="sidebar">
+            <div class="navigation-bar">
+              <div class="brand-logo">Jeunesse.</div>
+
+              <div class="function">
+              <button class="nav-item" onclick="location.href='/admin'">
+                <img src="/image/icon_product.png" class="nav-icon" alt="Products icon" />
+                <span class="nav-text">Sản phẩm</span>
+              </button>
+
+              <button class="nav-item" onclick="location.href='/admin/orders'">
+                <img src="/image/icon_order.png" class="nav-icon" alt="Orders icon" />
+                <span class="nav-text">Đơn hàng</span>
+              </button>
+
+              <button class="nav-item" onclick="location.href='/admin/client'">
+                <img src="/image/icon_customer.png" class="nav-icon" alt="Customers icon" />
+                <span class="nav-text">Khách hàng</span>
+              </button>
+
+              <button class="nav-item active" onclick="location.href='/admin/user'">
+                <img src="/image/icon_user.png" class="nav-icon" alt="Customers icon" />
+                <span class="nav-text">Người dùng</span>
+              </button>
+
+              <button class="nav-item" id="logout">
+                <img src="/image/icon_logout.png" class="nav-icon" alt="Logout icon" />
+                <span class="nav-text">Đăng xuất</span>
+              </button>
+
+            </div>
+            </div>
+          </nav>
+
+          <main class="main-content">
+            <section class="product-section">
+              <div class="section-header">
+                <h1 class="section-title">Người dùng</h1>
+                <button class="btn-add-product">Thêm nhân viên</button>
+              </div>
+              <div class="order-container">
+                <div class="order-wrapper">
+                  
+                  <div class="order-header">
+                    <div class="order-row">
+                      <div class="order-cell">Họ tên</div>
+                      <div class="order-cell">Số điện thoại</div>
+                      <div class="order-cell">Địa chỉ</div>
+                      <div class="order-cell"></div>
+                    </div>
+                  </div>
+                   
+                  
+                  <div class="order-item" id="user-list">
+
+                  </div>
+
+                  </div>
+
+                </div>
+            </section>
+          </main>
+
+        </div>
+      </div>
+
+      <div class="popup-edit">
+        <div class="popup-overlay">
+          <div class="frame">
+            <div class="name2">
+              <div class="title2">Họ và tên</div>
+              <div class="khung2"><input type="name" class="text_infor2" id="name"></input></div>
+            </div>
+
+            <div class="phone2">
+              <div class="title2">Số điện thoại</div>
+              <div class="khung2"><input type="username" class="text_infor2" id="username"></input></div>
+            </div>
+
+            <div class="address2">
+              <div class="title2">Địa chỉ</div>
+              <div class="khung2">
+                <input type="address" class="text_infor2" id="address"></input>
+              </div>
+            </div>
+
+
+
+            <div class="button-group">
+              <button class="btn-save">Lưu</button>
+              <button class="btn-cancel">Hủy bỏ</button>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="popup-delete">
+          <div class="popup-overlay2">
+            <div class="frame2">
+              <div class="popup-title">Bạn có chắc chắn muốn xóa?</div>
+              <div class="button-group2">
+                <button class="btn-save" id="delete-confirm">Xóa</button>
+                <button class="btn-cancel" id="delete-cancel">Hủy bỏ</button>
+              </div>
+            </div>
+              
+            </div>
+          </div>
+
+        <div class="popup-add">
+          <div class="popup-overlay3">
+            <div class="frame3">
+
+              <div class="name3">
+                <div class="title3">Họ và tên</div>
+                <div class="khung3"><input class="text_infor3" id="addname"></input></div>
+              </div>
+
+              <div class="phone3">
+                <div class="title3">Số điện thoại</div>
+                <div class="khung3"><input class="text_infor3" id="addusername"></input></div>
+              </div>
+
+              <div class="address3">
+                <div class="title3">Địa chỉ</div>
+                <div class="khung3">
+                  <input class="text_infor3" id="addaddress"></input>
+                </div>
+              </div>
+
+              <div class="pass">
+                <div class="title2">Mật khẩu</div>
+                <div class="khung2">
+                  <input type="pass" class="text_infor2" id="addpass"></input>
+                </div>
+                </div>
+
+              <div class="button-group3">
+                <button class="btn-save3" id="btnSaveAdd">Thêm</button>
+                <button class="btn-cancel3" id="btnCancelAdd">Hủy bỏ</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const userList = document.getElementById('user-list');
+    const popup = document.querySelector('.popup-edit');
+    const popupDelete = document.querySelector('.popup-delete'); // Add for delete popup
+    const btnCancel = document.querySelector('.btn-cancel');
+    const btnSave = document.querySelector('.btn-save');
+    const btnDeleteConfirm = document.getElementById('delete-confirm');  // Confirmation button
+    const btnDeleteCancel = document.getElementById('delete-cancel');   // Cancellation button
+    let userIdToDelete; // Store the ID of the user to be deleted
+
+    function closePopup() {
+      popup.style.display = 'none';
+    }
+
+    function closeDeletePopup() {
+      popupDelete.style.display = 'none';
+    }
+
+    function fetchUsers() {
+      fetch('/auth/get/user')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          userList.innerHTML = ''; // Clear existing users
+          data.forEach(user => {
+            const userItem = document.createElement('div');
+            userItem.className = 'order-row';
+            userItem.innerHTML = `
+              <div class="order-cell name">${user.name}</div>
+              <div class="order-cell username">${user.username}</div>
+              <div class="order-cell address">${user.address}</div>
+              <div class="order-cell">
+                <div class="button-wrap">
+                  <div class="icon-button">
+                    <button class="edit-btn" data-user-id="${user._id}">
+                      <img src="/image/icon_edit_user.png" />
+                    </button>
+                    <button class="delete-btn" data-user-id="${user._id}">
+                      <img src="/image/icon_delete_user.png" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            `;
+            userList.appendChild(userItem);
+
+            const editBtn = userItem.querySelector('.edit-btn');
+
+            editBtn.addEventListener('click', (event) => {
+
+              // Populate the popup with user data
+              document.getElementById('name').value = user.name;
+              document.getElementById('username').value = user.username;
+              document.getElementById('address').value = user.address;
+
+              console.log('Edit button clicked, User ID:', user._id);
+              popup.style.display = 'block';
+
+
+              btnSave.onclick = () => { // Use onclick for immediate access to user
+                const updatedName = document.getElementById('name').value;
+                const updatedUsername = document.getElementById('username').value;
+                 const updatedAddress = document.getElementById('address').value;
+
+                fetch(`/auth/user/${user._id}`, {
+                  method: 'PUT',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    name: updatedName,
+                    username: updatedUsername,
+                    address: updatedAddress,
+                     id: user._id, // Include the user ID in the update request.
+
+                  })
+                })
+                .then(response => response.json())
+                .then(data => {
+                console.log('Response from server:', data);
+                  if (data.message === 'Cập nhật thông tin thành công!') {
+                    userItem.querySelector('.name').textContent = updatedName;
+                    userItem.querySelector('.username').textContent = updatedUsername;
+                    userItem.querySelector('.address').textContent = updatedAddress;
+                    closePopup();
+                     fetchUsers(); // Refresh the user list
+
+                  } else {
+                    alert('Có lỗi xảy ra: ' + data.message);
+                  }
+                })
+                .catch(error => console.error('Lỗi update profile', error));
+              };
+            });
+
+
+
+            const deleteBtn = userItem.querySelector('.delete-btn');
+            deleteBtn.addEventListener('click', () => {
+              userIdToDelete = user._id; // Store the user ID
+              popupDelete.style.display = 'block';
+
+            });
+          });
+        })
+        .catch(error => console.error("Error fetching user data:", error));
+    }
+
+    btnCancel.addEventListener('click', closePopup);
+    btnDeleteCancel.addEventListener('click', closeDeletePopup);
+
+    btnDeleteConfirm.addEventListener('click', () => {
+       fetch(`/auth/deleteuser/${userIdToDelete}`, {  // Corrected endpoint
+          method: 'DELETE'
+        })
+        .then(response => {
+          if(response.ok) {
+            closeDeletePopup();
+            fetchUsers(); // Refresh user list
+          } else {
+            console.error("Failed to delete user:", response.status);
+             alert("Xoá người dùng thất bại!"); // Alert user or show an error message on the screen
+          }
+        })
+
+        .catch(error => console.error('Delete user error:', error));
+
+
+    });
+
+     fetchUsers(); // Call fetchUsers initially to load users
+  });
+
+   document.getElementById('logout').addEventListener('click', function() {
+    fetch('/auth/logout')
+        .then(response => {
+            if (response.ok) {
+                window.location.href = '/';  // Điều hướng về trang chủ nếu đăng xuất thành công
+            } else {
+                console.error('Đăng xuất thất bại!');
+            }
+        })
+        .catch(error => {
+            console.error('Error during logout:', error);
+        });
+});
+
+  const popupAdd = document.querySelector('.popup-add');
+  const btnAddProduct = document.querySelector('.btn-add-product'); // Lấy nút "Thêm nhân viên"
+  const btnSaveAdd = document.getElementById('btnSaveAdd');
+  const btnCancelAdd = document.getElementById('btnCancelAdd');
+
+  btnAddProduct.addEventListener('click', () => {
+    popupAdd.style.display = 'block';
+  });
+
+  btnCancelAdd.addEventListener('click', () => {
+    popupAdd.style.display = 'none';
+  });
+
+  btnSaveAdd.addEventListener('click', () => {
+    const newName = document.getElementById('addname').value;
+    const newUsername = document.getElementById('addusername').value;
+    const newAddress = document.getElementById('addaddress').value;
+    const newPass = document.getElementById('addpass').value;
+    fetch('/auth/adduser', {  // Gửi request POST đến /adduser
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: newName,
+        username: newUsername,
+        address: newAddress,
+        password: newPass
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.message === 'Thêm người dùng thành công') {
+        alert('Thêm người dùng thành công!');
+        popupAdd.style.display = 'none';
+        fetchUsers(); // Refresh the user list
+        // Clear the input fields after adding a user
+        document.getElementById('addname').value = '';
+        document.getElementById('addusername').value = '';
+        document.getElementById('addaddress').value = '';
+        document.getElementById('pass').value = '';
+      } else {
+        alert('Thêm người dùng thất bại: ' + data.error);
+      }
+    })
+    .catch(error => {
+      console.error('Lỗi khi thêm người dùng:', error);
+      alert('Đã xảy ra lỗi. Vui lòng thử lại sau.');
+    });
+  });
+
+</script>
+</body>
+</html>

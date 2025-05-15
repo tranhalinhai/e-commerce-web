@@ -1,0 +1,719 @@
+@font-face {
+  font-family: "Newsreader-Regular";
+  src: url("/fonts/NewsreaderText-Regular.woff2") format("woff2"),
+       url("/fonts/NewsreaderText-Regular.woff") format("woff");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Newsreader-Medium";
+  src: url("/fonts/NewsreaderText-Medium.woff2") format("woff2"),
+       url("/fonts/NewsreaderText-Medium.woff") format("woff");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Newsreader-Italic";
+  src: url("/fonts/NewsreaderText-Italic.woff2") format("woff2"),
+       url("/fonts/NewsreaderText-Italic.woff") format("woff");
+  font-weight: 400; /* Regular*/
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Newsreader-LightItalic";
+  src: url("/fonts/NewsreaderText-LightItalic.woff2") format("woff2"),
+       url("/fonts/NewsreaderText-LightItalic.woff") format("woff");
+  font-weight: 300; /* Light */
+  font-style: italic;
+}    
+
+@font-face {
+  font-family: "DFVN TAN - WALTZING MATHILDE-Regular";
+  src: url("/fonts/DFVN-TANWALTZINGMATHILDE-DISPLAY.woff2") format("woff2"),
+       url("/fonts/DFVN-TANWALTZINGMATHILDE-DISPLAY.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.v {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .v .v-jeunesse {
+    width: 100%;
+    height: 2000px;
+    position: absolute;
+    margin: 0;
+  }
+  
+  .v .overlap {
+    position: absolute;
+    width: 100%;
+    height: 3820px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: -2836px;
+    background: #FFFDF8;
+    margin: 0;
+  }
+  
+  .v .pinkbanner {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top: 95px;
+    left: 0;
+    background: #FFEBEB;
+    border: #000000;
+    border-width: 1px 1px;
+    border-style: solid;
+    border-color: #000000;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .v .crafted-with-passion {
+    position: absolute;
+    width: 1020px;
+    height: 144px;
+    top: 56%;
+    font-family: "Newsreader-Regular";
+    font-weight: 400;
+    color: #374375;
+    font-size: 3.1vw;
+    text-align: center;
+    letter-spacing: -1.20px;
+    line-height: 120%;
+    margin-top: 0;
+    margin-bottom: 0;
+    left: 50%;              /* Đưa nội dung sang ngang 50% khung */
+    transform: translate(-50%, -50%); /* Căn giữa hoàn toàn */
+  }
+  
+  .v .text-wrapper {
+    letter-spacing: -0.72px;
+  }
+  
+  .v .span {
+    font-family: "Newsreader-Italic";
+    font-style: italic;
+    letter-spacing: -0.72px;
+  }
+  
+  .v .frame {
+    position: absolute;
+    width: 1262px;
+    height: 3178px;
+    top: 347px;               /* Đưa nội dung xuống 50% khung */
+    left: 50%;              /* Đưa nội dung sang ngang 50% khung */
+    transform: translate(-50%, 0);
+  }
+  
+  .v .flexcontainer {
+    display: flex;
+    gap: 0px;
+    position: absolute;
+    width: 495px;
+    height: 391px;
+    top: 61px;
+    left: 4px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+  
+  .v .text {
+    position: relative;
+    align-self: stretch;
+    font-family: "Newsreader-Regular";
+    font-weight: 400;
+    color: #000000;
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: -0.52px;
+    line-height: 38px;
+    margin: 0;
+  }
+  
+  .v .text-wrapper-2 {
+    letter-spacing: -0.14px;
+  }
+  
+  .v .div {
+    position: absolute;
+    width: 786px;
+    height: 636px;
+    top: 0;
+    left: 506px;
+  }
+  
+  .v .rectangle {
+    width: 714px;
+    height: 513px;
+    top: 0;
+    left: 33px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .v .text-wrapper-3 {
+    position: absolute;
+    width: 679px;
+    top: 443px;
+    left: 4px ;
+    -webkit-text-stroke: 2px #fffdf8;
+    font-family: "Inter-Black", sans-serif;
+    font-weight: 900;
+    color: #374375;
+    font-size: 85px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .v .text-wrapper-4 {
+    position: absolute;
+    width: 608px;
+    top: 526px;
+    left: 178px;
+    -webkit-text-stroke: 1.5px #374375;
+    font-family: "Inter-Black", sans-serif;
+    font-weight: 900;
+    color: transparent;
+    font-size: 90px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .v .img {
+    width: 476px;
+    height: 687px;
+    top: 1283px;
+    left: 777px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .v .rectangle-2 {
+    width: 703px;
+    height: 648px;
+    top: 704px;
+    left: 4px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .v .group {
+    position: absolute;
+    width: 480px;
+    height: 515px;
+    top: 704px;
+    left: 777px;
+  }
+  
+  .v .overlap-group-2 {
+    position: relative;
+    width: 476px;
+    height: 515px;
+    background-color: #fafaf5;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: #c4c4c4;
+  }
+  
+  .v .NGUY-n-LI-u-t-i-s-CH {
+    position: absolute;
+    width: 374px;
+    top: 38px;
+    left: 49px;
+    font-family: "Newsreader-Italic";
+    font-weight: 400;
+    font-style: italic;
+    color: #000000;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 130%;
+  }
+  
+  .v .flexcontainer-2 {
+    display: flex;
+    gap: 0;
+    position: absolute;
+    width: 428px;
+    height: 294px;
+    top: 191px;
+    left: 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+  
+  .v .span-wrapper {
+    font-family: "Newsreader-Regular";
+    text-align: center;
+    letter-spacing: -0.50px;
+    line-height: 38px;
+    position: relative;
+    align-self: stretch;
+    font-weight: 400;
+    color: #000000;
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  .v .text-wrapper-5 {
+    letter-spacing: -0.12px;
+    line-height: 38px;
+  }
+  
+  .v .overlap-wrapper {
+    position: absolute;
+    width: 480px;
+    height: 525px;
+    top: 2034px;
+    left: 777px;
+  }
+  
+  .v .overlap-2 {
+    position: relative;
+    width: 476px;
+    height: 525px;
+    background-color: #fafaf5;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: #c4c4c4;
+  }
+  
+  .v .CH-t-l-NG-NH-CAO {
+    position: absolute;
+    width: 374px;
+    top: 40px;
+    left: 49px;
+    font-family: "Newsreader-Italic";
+    font-weight: 400;
+    font-style: italic;
+    color: #000000;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 65.0px;
+  }
+  
+  .v .flexcontainer-3 {
+    display: flex;
+    gap: 0px;
+    position: absolute;
+    width: 430px;
+    height: 285px;
+    top: 199px;
+    left: 21px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .v .overlap-group-wrapper {
+    position: absolute;
+    width: 707px;
+    height: 422px;
+    top: 1416px;
+    left: 4px;
+  }
+  
+  .v .overlap-3 {
+    position: relative;
+    width: 703px;
+    height: 422px;
+    background-color: #fafaf5;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: #c4c4c4;
+  }
+  
+  .v .text-wrapper-6 {
+    position: absolute;
+    width: 506px;
+    top: 38px;
+    left: 97px;
+    font-family: "Newsreader-Italic";
+    font-weight: 400;
+    font-style: italic;
+    color: #000000;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 65.0px;
+    white-space: nowrap;
+  }
+  
+  .v .flexcontainer-4 {
+    display: flex;
+    gap: 0px;
+    position: absolute;
+    width: 681px;
+    height: 243px;
+    top: 141px;
+    left: 9px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .v .div-wrapper {
+    position: absolute;
+    width: 712px;
+    height: 376px;
+    top: 2802px;
+    left: 0;
+  }
+  
+  .v .overlap-4 {
+    position: relative;
+    width: 708px;
+    height: 376px;
+    background-color: #fafaf5;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: #c4c4c4;
+  }
+  
+  .v .text-wrapper-7 {
+    position: absolute;
+    width: 687px;
+    top: 42px;
+    left: 8px;
+    font-family: "Newsreader-Italic";
+    font-weight: 400;
+    font-style: italic;
+    color: #000000;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 65.0px;
+    white-space: nowrap;
+  }
+  
+  .v .flexcontainer-5 {
+    display: flex;
+    gap: 0px;
+    position: absolute;
+    width: 685px;
+    height: 195px;
+    top: 141px;
+    left: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+  
+  .v .rectangle-3 {
+    width: 704px;
+    height: 836px;
+    top: 1902px;
+    left: 4px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .v .rectangle-4 {
+    width: 476px;
+    height: 555px;
+    top: 2623px;
+    left: 777px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .v .header {
+    position: absolute;
+    width: 100%;
+    height: 116px;
+    top: 0px;
+    left: 0;
+  }
+  
+  .v .jeunesse-header {
+    top: 30px;
+    left: 96px;
+    font-size: 35px;
+    letter-spacing: -0.35px;
+    line-height: 35px;
+    position: absolute;
+    font-family: "DFVN TAN - WALTZING MATHILDE-Regular", serif;
+    font-weight: 400;
+    color: #374375;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .v .buttonshape-vejeunesse {
+    position: absolute;
+    width: 126px;
+    height: 48px;
+    top: 26px;
+    right: 499px;
+    background-color: #374375;
+    border-radius: 4px;
+  }
+  
+  .v .button-vejeunesse {
+    position: absolute;
+    height: 23px;
+    top: 12px;
+    left: 18px;
+    right: 17px;
+    bottom: 12px;
+    font-family: "Newsreader-Regular";
+    font-weight: 400;
+    color: #ffffdd;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+  }
+  
+  .v .button-sanpham {
+    position: absolute;
+    height: 23px;
+    top: 36px;
+    right: 379px;
+    font-family: "Newsreader-Regular", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+    .v .login {
+    position: absolute;
+    height: 23px;
+    top: 36px;
+    right: 96px;
+    font-family: "NEWSREADERTEXT-REGULAR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+}
+  .v .button-giohang {
+    position: absolute;
+    height: 23px;
+    top: 36px;
+    right: 246px;
+    font-family: "Newsreader-Regular", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+
+    .v .hinhtron-giohang {
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        top: 22px;
+        right: 220px;
+        background-color: #ffebeb;
+        border-radius: 13px;
+    }
+  
+  .v .text-wrapper-12 {
+    position: absolute;
+    height: 18px;
+    top: 3px;
+    left: 9px;
+    font-family: "Inter-Bold", sans-serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 18.2px;
+    white-space: nowrap;
+  }
+
+    .v .button-user {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        top: 15px;
+        right: 109px;
+        background-color: #ffebeb;
+        border-radius: 32px;
+        background-image: url(/image/Mask\ group.png);
+        background-size: 100% 100%;
+        border: none;
+        display: none;
+    }
+  
+  .v .footer-ngi-dng {
+    position: absolute;
+    width: 100%;
+    height: 210px;
+    top: 3610px;
+    left: 0;
+    background-color: #ffebeb;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #000000;
+  }
+  
+  .v .footer-jeunesse {
+    top: 55px;
+    left: 102px;
+    font-size: 50px;
+    letter-spacing: -0.55px;
+    line-height: 55px;
+    position: absolute;
+    font-family: "DFVN TAN - WALTZING MATHILDE-Regular", serif;
+    font-weight: 400;
+    color: #374375;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .v .frame-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    top: 39px;
+    left: 700px
+  }
+  
+  .v .flexcontainer-i {
+    display: inline-flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .v .text-i {
+    font-family: "Newsreader-Medium", Helvetica;
+    letter-spacing: -0.25px;
+    line-height: 25px;
+    position: relative;
+    align-self: stretch;
+    font-weight: 500;
+    color: #000000;
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  .v .text-wrapper-14 {
+    font-weight: 500;
+    letter-spacing: -0.06px;
+  }
+  
+  .v .text-wrapper-15 {
+    font-family: "Newsreader-Regular", Helvetica;
+    font-size: 20px;
+    letter-spacing: -0.04px;
+    line-height: 20px;
+  }
+  
+  .v .frame-3 {
+    position: absolute;
+    width: 144px;
+    height: 160px;
+    top: 39px;
+    left: 1200px;
+  }
+  
+  .v .footer-aboutus {
+    position: absolute;
+    top: -1px;
+    left: 25px;
+    font-family: "Newsreader-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.20px;
+    line-height: 20px;
+    text-decoration: underline;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .v .footer-sanpham {
+    position: absolute;
+    top: 54px;
+    left: 32px;
+    font-family: "Newsreader-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.20px;
+    line-height: 20px;
+    text-decoration: underline;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .v .footer-giohang {
+    position: absolute;
+    top: 114px;
+    left: 35px;
+    font-family: "Newsreader-Regular";
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.20px;
+    line-height: 20px;
+    text-decoration: underline;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+  
+  .v .p {
+    position: absolute;
+    top: 135px;
+    left: 96px;
+    font-family: "Newsreader-Regular";
+    font-weight: 400;
+    color: #000000;
+    font-size: 25px;
+    letter-spacing: -0.25px;
+    line-height: 25px;
+    white-space: nowrap;
+    margin: 0;
+  }
+  

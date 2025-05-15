@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="/stylesheets/Entremet.css" />
+  </head>
+  <body>
+    <div class="bnh-l-default">
+      <div class="overlap">
+
+        <div class="page-heading">
+          <div class="overlap-group">
+            <div class="Heading1">Entremet</div>
+            <div class="Heading2">Sản phẩm</div>
+            <div class="rectangle"></div>
+          </div>
+        </div>
+
+        <button class="phanloai1"><div class="text-wrapper-2">Entremet</div></button>
+        <button class="phanloai2"><div class="text-wrapper-3">Bánh lẻ</div></button>
+
+        <div class="header-user">
+          <div class="overlap-2">
+            <button class="logo">Jeunesse.</button>
+            <button class="cart-button"><div class="spham">Sản phẩm</div></button>
+            <button class="aboutus">Về Jeunesse</button>
+            <button class="text-wrapper-7">Giỏ hàng</button>
+            <button class="login">Đăng nhập</button>
+            <div class="soluonggio"><div class="text-wrapper-8">0</div></div>
+            <button class="group"></button>
+          </div>
+        </div>
+
+        <div class="frame">
+          <div class="div-2">
+            <div class="text-wrapper-9">Roll in Love</div>
+            <button class="input-field-2"><div class="text-wrapper-11">Xem thêm</div></button>
+            <img class="rollinlove" src="/image/roll in love.png" />
+            <div class="text-wrapper-12">435.000 VND</div>
+          </div>
+          <div class="div-2">
+            <button class="input-field-2"><div class="text-wrapper-11">Xem thêm</div></button>
+            <img class="allyours" src="/image/all yours.png" />
+            <div class="text-wrapper-13">All Yours</div>
+            <div class="text-wrapper-14">450.000 VND</div>
+          </div>
+          <div class="div-2">
+            <button class="input-field-2"><div class="text-wrapper-11">Xem thêm</div></button>
+              <img class="hearttoheart" src="/image/heart to heart.png" />
+              <div class="text-wrapper-15">465.000 VND</div>
+            <div class="text-wrapper-16">Heart to Heart</div>
+          </div>
+        </div>
+
+        <div class="footer-ngi-dng">
+          <button class="text-wrapper-17">Jeunesse.</button>
+          <div class="frame-2">
+            <div class="flexcontainer">
+              <p class="text-i">
+                <span class="span">Hotline<br /></span>
+              </p>
+              <p class="text-i"><span class="text-wrapper-18">(+84) 824048293</span></p>
+            </div>
+            <div class="flexcontainer">
+              <p class="text-i">
+                <span class="span">Location<br /></span>
+              </p>
+              <p class="text-i"><span class="text-wrapper-18">166 Cầu Giấy, Hà Nội </span></p>
+            </div>
+          </div>
+          <div class="frame-3">
+            <button class="text-wrapper-19">Về Jeunesse</button>
+            <button class="text-wrapper-20">Sản phẩm</button>
+            <button class="text-wrapper-21">Giỏ hàng</button>
+          </div>
+          <p class="p">© 2024 Jeunesse All Rights Reserved.</p>
+        </div>
+        
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Lấy tất cả các button trên trang
+        const buttons = document.querySelectorAll('button');
+
+        // Định nghĩa đường dẫn tương ứng cho từng button
+        const buttonRoutes = {
+          'Jeunesse.': '/',
+          'Sản phẩm': '/products/banhle',
+          'Về Jeunesse': '/about',
+          'Giỏ hàng': '/cart',
+          'Bánh lẻ': '/products/banhle',
+        };
+
+        // Thêm sự kiện click cho từng button
+        buttons.forEach(button => {
+          button.addEventListener('click', function() {
+            const buttonText = button.textContent.trim();
+            if (buttonRoutes[buttonText]) {
+              window.location.href = buttonRoutes[buttonText];
+            }
+          });
+        });
+      });
+      fetch('/auth/check-login')
+            .then(response => response.json())
+            .then(data => {
+                if (data.loggedIn) {
+                    // Nếu đã đăng nhập, hiển thị nút Profile và Đăng xuất, ẩn nút Đăng nhập
+                    document.querySelector('.group').style.display = 'block';
+                    document.querySelector('.login').style.display = 'none';
+                } else {
+                    // Nếu chưa đăng nhập, hiển thị nút Đăng nhập
+                    document.querySelector('.login').style.display = 'block';
+                    document.querySelector('.group').style.display = 'none';
+                }
+            })
+            .catch(error => {
+                console.error('Error checking login status:', error);
+            });
+
+        // Xử lý sự kiện khi người dùng click vào "Đăng nhập"
+        document.querySelector('.login').addEventListener('click', function() {
+            window.location.href = '/login'; // Chuyển hướng đến trang đăng nhập
+        });
+
+        // Xử lý sự kiện khi người dùng click vào "Profile"
+        document.querySelector('.button-user').addEventListener('click', function() {
+            window.location.href = '/profile'; // Chuyển hướng đến trang profile
+        });
+    </script>
+  </body>
+</html>

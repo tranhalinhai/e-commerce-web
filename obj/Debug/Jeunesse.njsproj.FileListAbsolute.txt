@@ -1,0 +1,3 @@
+D:\21CDP1-TMDT\Jeunesse\obj\Debug\Jeunesse.njsproj.AssemblyReference.cache
+D:\21CDP1-TMDT\Jeunesse\obj\Debug\Jeunesse.njsproj.CoreCompileInputs.cache
+D:\21CDP1-TMDT\Jeunesse\bin\Microsoft.NodejsTools.WebRole.dll

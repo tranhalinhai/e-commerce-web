@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Client</title>
+  <link rel="stylesheet" href="/stylesheets/admin-client.css">
+</head>
+<body>
+  <div class="admin-panel">
+    <div class="main-section">
+      <header class="top-header">
+        <div class="admin-badge">ADMIN</div>
+      </header>
+
+      <div class="content-wrapper">
+        <div class="layout-container">
+
+          <nav class="sidebar">
+            <div class="navigation-bar">
+              <div class="brand-logo">Jeunesse.</div>
+
+              <div class="function">
+              <button class="nav-item" onclick="location.href='/admin'">
+                <img src="/image/icon_product.png" class="nav-icon" alt="Products icon" />
+                <span class="nav-text">Sản phẩm</span>
+              </button>
+
+              <button class="nav-item" onclick="location.href='/admin/orders'">
+                <img src="/image/icon_order.png" class="nav-icon" alt="Orders icon" />
+                <span class="nav-text">Đơn hàng</span>
+              </button>
+
+              <button class="nav-item active" onclick="location.href='/admin/client'">
+                <img src="/image/icon_customer.png" class="nav-icon" alt="Customers icon" />
+                <span class="nav-text">Khách hàng</span>
+              </button>
+
+              <button class="nav-item" onclick="location.href='/admin/user'">
+                <img src="/image/icon_user.png" class="nav-icon" alt="Customers icon" />
+                <span class="nav-text">Người dùng</span>
+              </button>
+
+              <button class="nav-item" id="logout">
+                <img src="/image/icon_logout.png" class="nav-icon" alt="Logout icon" />
+                <span class="nav-text">Đăng xuất</span>
+              </button>
+
+            </div>
+            </div>
+          </nav>
+
+          <main class="main-content">
+            <section class="product-section">
+              <div class="section-header">
+                <h1 class="section-title">Khách hàng</h1>
+              </div>
+              <div class="order-container">
+                <div class="order-wrapper">
+                  
+                  <div class="order-header">
+                    <div class="order-row">
+                      <div class="order-cell">Họ tên</div>
+                      <div class="order-cell">Số điện thoại</div>
+                      <div class="order-cell">Địa chỉ</div>
+                      <div class="order-cell">Doanh thu</div>
+                      <div class="order-cell">Đơn hàng</div>
+                    </div>
+                  </div>
+                   
+                  <div class="box-infor" id="user-list">
+
+                  </div>
+                  </div>
+
+                </div>
+
+            </section>
+          </main>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const userList = document.getElementById('user-list');
+
+   function fetchUsers() {
+      fetch('/auth/get/client')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          userList.innerHTML = ''; // Clear existing users
+          data.forEach(user => {
+            const userItem = document.createElement('div');
+            userItem.className = 'order-item';
+            userItem.innerHTML = `
+            <div class = "order-row">
+              <div class="order-cell name">${user.name}</div>
+              <div class="order-cell username">${user.username}</div>
+              <div class="order-cell address">${user.address}</div>
+              <div class="order-cell">${user.totalRevenue || 0}</div>
+              <div class="order-cell">${user.orderCount || 0}</div>
+              </div>
+              </div>
+            `;
+            userList.appendChild(userItem);
+  });
+  });
+  }
+  fetchUsers();
+
+
+  });
+
+ document.getElementById('logout').addEventListener('click', function() {
+    fetch('/auth/logout')
+        .then(response => {
+            if (response.ok) {
+                window.location.href = '/';  // Điều hướng về trang chủ nếu đăng xuất thành công
+            } else {
+                console.error('Đăng xuất thất bại!');
+            }
+        })
+        .catch(error => {
+            console.error('Error during logout:', error);
+        });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,517 @@
+ @font-face {
+  font-family: "Newsreader-Regular";
+  src: url("/fonts/NewsreaderText-Regular.woff2") format("woff2"),
+       url("/fonts/NewsreaderText-Regular.woff") format("woff");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Newsreader-Medium";
+  src: url("/fonts/NewsreaderText-Medium.woff2") format("woff2"),
+       url("/fonts/NewsreaderText-Medium.woff") format("woff");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Newsreader-Italic";
+  src: url("/fonts/NewsreaderText-Italic.woff2") format("woff2"),
+       url("/fonts/NewsreaderText-Italic.woff") format("woff");
+  font-weight: 400; /* Regular*/
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Newsreader-LightItalic";
+  src: url("/fonts/NewsreaderText-LightItalic.woff2") format("woff2"),
+       url("/fonts/NewsreaderText-LightItalic.woff") format("woff");
+  font-weight: 300; /* Light */
+  font-style: italic;
+}    
+
+@font-face {
+  font-family: "DFVN TAN - WALTZING MATHILDE-Regular";
+  src: url("/fonts/DFVN-TANWALTZINGMATHILDE-DISPLAY.woff2") format("woff2"),
+       url("/fonts/DFVN-TANWALTZINGMATHILDE-DISPLAY.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000; 
+  text-decoration: none;
+}
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+img, video, iframe {
+  height: auto;
+}
+
+.login-container {
+      background-color: #FFEBEB;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+    box-sizing: border-box;
+    
+    }
+    
+    .main-section {
+      background-color: rgba(255, 253, 248, 1);
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+      flex-direction: column;
+      position: absolute;
+      height: 1500px;
+    }
+    
+    .header {
+      height: 95px;
+      background-color: none;
+      border: none;
+      border-width: 1px 0;
+      z-index: 10;
+      display: flex;
+      width: 100%;
+      gap: 0px;
+      justify-content: space-between;
+      padding: 21.5px 102px;
+    } 
+    
+    .brand-name {
+      color: rgba(55, 67, 117, 1);
+      letter-spacing: -0.35px;
+      margin: auto 0;
+      font-family: "DFVN TAN - WALTZING MATHILDE";
+      font-size: 35px;
+      top: 0px;
+      left: 166px;
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 62px;
+      color: #000000;
+      text-align: center;
+      font-family: "Newsreader-Regular";
+      text-decoration: none;
+      font-size: 18px;
+    }
+    
+    .login-btn {
+      font-family: "Newsreader-Regular";
+      font-size: 18px;
+      border-radius: 4px;
+      background-color: rgba(55, 67, 117, 1);
+      color: rgba(255, 255, 221, 1);
+      font-weight: 600;
+      padding: 20px;
+      border: none; 
+      box-shadow: none; 
+      outline: none; 
+      
+    }
+    
+    .hero-text {
+      width: 100%;
+      height: 160px;
+      background-color: rgba(255, 235, 235, 1);
+      border: 1px solid rgba(0, 0, 0, 1);
+      border-width: 1px 0;
+      color: rgba(55, 67, 117, 1);
+      text-align: center;
+      letter-spacing: -1.9px;
+      padding: 5px 70px 9px;
+      font-family: "Newsreader-Regular";
+      font-size: 3.1vw;
+      font-weight: 100;
+      line-height: 68px;
+  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng chiều cao */
+    }
+    
+    .italic-text {
+      font-style: italic;
+      color: rgba(55, 67, 117, 1);
+    }
+    
+    .content-wrapper {
+      align-self: center;
+      margin-top: 15px;
+      width: 100%;
+      max-width: 1073px;
+    }
+    
+    .content-grid {
+      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .image-column {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 25%;
+    }
+    
+    .image-stack {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+    }
+    
+    .hero-image {
+      aspect-ratio: 1.14;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      z-index: 3;
+    }
+    
+    .secondary-image {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 240px;
+      margin-top: 385px;
+      margin-left: 50px;
+      max-width: 100%;
+      z-index: 3;
+    }
+    .third-image{
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 845px;
+      margin-top: -450px;
+      margin-left: 500px;
+      z-index: 1;
+      
+      
+    }
+    
+    .form-column {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 75%;
+      margin-left: 20px;
+    }
+    
+    .form-container {
+      border-radius: 40px;
+      background-color: #374375;
+      display: flex;
+      margin-top: -1100px;
+      padding-bottom: 55px;
+      flex-direction: column;
+      align-items: start;
+      font-size: 16px;
+      font-weight: 400;
+      width: 100%;
+      margin-left: 180px;
+      z-index: 2;
+      
+    }
+    
+    .form-inner {
+      border-radius: 40px;
+      background-color:#FFEBEB;
+      z-index: 10;
+      display: flex;
+      margin-top: -55px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 92px 80px;
+      width: 750px;
+      margin-left: -35px;
+    }
+    
+    .form-content {
+      display: flex;
+      margin-left: 17px;
+      width: 509px;
+      max-width: 100%;
+      flex-direction: column;
+    }
+    
+    .form-title {
+      color: rgba(0, 0, 0, 1);
+      text-align: right;
+      align-self: center;
+      font-family: "Newsreader-Regular";
+      font-weight: 400;
+      font-size: 40px;
+    }
+    
+    .input-group {
+      display: flex;
+      margin-top: 37px;
+      flex-direction: column;
+      font-weight: 500;
+      justify-content: start;
+    }
+    
+    .input-label {
+      color: rgba(0, 0, 0, 1);
+      font-family: "Newsreader-Regular";
+    }
+    
+    .input-field {
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+      background-color: #fff;
+      display: flex;
+      margin-top: 8px;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      font-family: Inter, sans-serif;
+      color: #828282;
+      justify-content: center;
+      padding: 12px 29px;
+    }
+    
+    .submit-btn {
+      border-radius: 4px;
+      background-color: rgba(55, 67, 117, 1);
+      align-self: center;
+      margin-top: 67px;
+      color: rgba(255, 255, 255, 1);
+      text-align: center;
+      padding: 13px 21px;
+      font-family:"Newsreader-Regular";
+      font-size: 18px;
+      border: none; 
+      box-shadow: none; 
+      outline: none; 
+      width: auto;
+    }
+    
+    .signup-prompt {
+      align-self: center;
+      display: flex;
+      margin-top: 66px;
+      width: 333px;
+      max-width: 100%;
+      gap: 10px;
+      text-align: center;
+      font-family:"Newsreader-Regular";
+      font-size: 18px;
+    }
+    
+    .signup-text {
+      color: rgba(0, 0, 0, 1);
+      flex-grow: 1;
+      margin: auto 0;
+      white-space: nowrap; 
+    }
+    
+    .signup-btn {
+        white-space: nowrap; 
+      border-radius: 4px;
+      background-color: rgba(55, 67, 117, 1);
+      color: rgba(255, 255, 255, 1);
+      padding: 13px 12px;
+      border: none; 
+      box-shadow: none; 
+      outline: none; 
+      font-family:"Newsreader-Regular";
+      font-size: 18px;
+    
+    }
+    
+    .footer {
+      height: 210px;
+      background-color: rgba(255, 235, 235, 1);
+      border: 1px solid rgba(0, 0, 0, 1);
+      border-width: 1px 0;
+      display: flex;
+      margin-top: -100px;
+      align-items: start;
+      gap: 20px;
+      font-weight: 400;
+      line-height: 1;
+      justify-content: flex-start;
+      padding: 39px 96px;
+    }
+    
+    .footer-brand {
+      display: flex;
+      margin-top: 11px;
+      margin-left: 1px;
+      flex-direction: column;
+    }
+    
+    .footer-logo {
+      color: rgba(55, 67, 117, 1);
+      letter-spacing: -0.55px;
+      align-self: start;
+      font-family: "DFVN TAN - WALTZING MATHILDE", sans-serif;
+      font-size: 50px;
+    }
+    
+    .footer-copyright {
+      color: rgba(0, 0, 0, 1);
+      letter-spacing: -0.25px;
+      margin-top: 31px;
+      font-family: "Newsreader-Regular";
+      font-size: 25px;
+    }
+    
+    .footer-contact {
+      align-self: stretch;
+      margin-left: 220px;
+      display: flex;
+      flex-direction: column;
+      color: rgba(0, 0, 0, 1);
+      letter-spacing: -0.2px;
+      justify-content: start;
+      font-family: "Newsreader-Regular";
+      font-size: 20px;
+      gap: 0px;
+      line-height: 1.8;
+      margin-top: -20px;
+    }
+    
+    .footer-location {
+      margin-top: 5px;
+    }
+
+    .text-wrapper-8 {
+      font-size: 25px;
+      font-family: "NEWSREADERTEXT-MEDIUM", serif;
+    }
+    
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgba(0, 0, 0, 1);
+      text-align: center;
+      letter-spacing: -0.2px;
+      font-family: "Newsreader-Regular";
+      font-size: 20px;
+      text-decoration: underline;
+      margin-left: 340px;
+      margin-top: -10px;
+    }
+    
+    .footer-link {
+      margin-top: 33px;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .login-container {
+        padding-right: 20px;
+      }
+      
+      .main-section {
+        max-width: 100%;
+      }
+      
+      .header {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .nav-links {
+        max-width: 100%;
+        color: #000; 
+        text-decoration: none; 
+      }
+      
+      .hero-text {
+        max-width: 100%;
+        font-size: 40px;
+        line-height: 53px;
+        padding: 0 20px;
+      }
+      
+      .content-wrapper {
+        max-width: 100%;
+      }
+      
+      .content-grid {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      
+      .image-column {
+        width: 100%;
+      }
+      
+      .secondary-image {
+        margin-top: 40px;
+      }
+      
+      .form-column {
+        width: 100%;
+      }
+      
+      .form-container {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+      
+      .form-inner {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .submit-btn {
+        padding-left: 20px;
+        margin-top: 40px;
+      }
+      
+      .signup-prompt {
+        margin-top: 40px;
+      }
+      
+      .footer {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .footer-logo {
+        font-size: 40px;
+      }
+    
+      
+      .footer-location,
+      .footer-link {
+        margin-top: 40px;
+      }
+    }
+
+    

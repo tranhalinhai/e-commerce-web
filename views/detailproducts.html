@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChiTietSanPham</title>
+    <link rel="stylesheet" href="/stylesheets/ChiTietBerryFruit.css" />
+</head>
+<body>
+<div class="product-detail">
+  <div class="main-section">
+    <header class="header">
+    <div class="brand">Jeunesse.</div>
+    <nav class="navigation">
+      <a href="/about" class="nav-link">Về Jeunesse</a>
+      <a href="/products/banhle" class="nav-button">Sản phẩm</a>
+      <a href="/cart" class="nav-link">Giỏ hàng</a>
+      <div class="soluonggio"><div class="text-wrapper-8">0</div></div>
+      <a href="/login" class="login">Đăng nhập</a>
+      <a href="/profile" class="group"></a>
+    </nav>
+  </header>
+
+  <div class="page-banner">
+    <h1 class="page-title">Chi Tiết Sản Phẩm</h1>
+  </div>
+
+  <nav class="breadcrumb">
+    <div class="breadcrumb-links">
+      <a href="/" class="breadcrumb-item active">Jeunesse</a>
+      <a href="/products/banhle" class="breadcrumb-item" id="breadcrumb-item">Bánh lẻ</a>
+    </div>
+    <span class="breadcrumb-current" id="breadcrumb-current"></span>
+  </nav>
+
+  <main class="product-content">
+    <div class="product-grid">
+      <div class="product-image-container">
+        <div class="slider" id="product-image-slider">
+
+        </div>
+
+      </div>
+
+      <div class="product-info">
+        <div class="product-details" >
+          <div class="product-header">
+            <h2 class="product-name" id="product-name"> </h2>
+            <span class="product-category" id="product-category"></span>
+          </div>
+
+          <h3 class="product-flavor" id="product-flavor"></h3>
+
+          <form class="product-form">
+            <div class="quantity-controls">
+              <button type="button" id="decrease-btn" class="quantity-btn decrease" aria-label="Decrease quantity">
+                <img src="/image/Tru.png" alt="Decrease quantity" class="icon-minus"/>
+              </button>
+              <input type="number" value="0" id="quantity-input" class="quantity-input" aria-label="Product quantity"/>
+              <button type="button" id="increase-btn" class="quantity-btn increase" aria-label="Increase quantity">
+                <img src="/image/Cong.png" alt="Increase quantity" class="icon-plus"/>
+              </button>
+              <button type="submit" id="add-to-cart-btn" class="add-to-cart">
+                <span class= "add">Thêm vào giỏ hàng</span>
+                <span class="price" id="product-price"></span>
+                <span class="currency">VND</span>
+              </button>
+            </div>
+          </form>
+
+          <p class="product-description" id="product-description">
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <div class="footer-logo">Jeunesse.</div>
+      <div class="footer-copyright">© 2024 Jeunesse All Rights Reserved.</div>
+    </div>
+
+    <div class="footer-contact">
+      <div>
+        <strong>Hotline</strong>
+        <div>(+84) 824048293</div>
+      </div>
+      <div class="footer-location">
+        <strong>Location</strong>
+        <div>166 Cầu Giấy, Hà Nội</div>
+      </div>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="/about" class="footer-link">Về Jeunesse</a>
+      <a href="/products/banhle" class="footer-link">Sản phẩm</a>
+      <a href="/cart" class="footer-link">Giỏ hàng</a>
+    </nav>
+  </footer>
+  </div>
+</div>
+<script>
+const slider = document.querySelector('.slider');
+const images = document.querySelectorAll('.product-image');
+const dots = document.querySelectorAll('.dot');
+
+    // lấy chi tiết sản phẩm
+   document.addEventListener('DOMContentLoaded', () => {
+    const productId = window.location.pathname.split('/').pop(); // Lấy ID từ URL path
+    if (!productId) {
+        alert('Không tìm thấy ID sản phẩm.');
+        return;
+    }
+     const fetchCart = () => {
+      return new Promise((resolve, reject) => {
+        fetch('/cart/get-cart')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(cart => {
+            resolve(cart);
+          })
+          .catch(error => {
+            console.error('Error fetching cart:', error);
+            reject(error);
+          });
+    });
+  };
+// Hàm cập nhật số lượng sản phẩm trong giỏ hàng (number-count và text-wrapper-6)
+    const updateCartCount = (cart) => {
+      const cartCountElement = document.querySelector('.number-count'); // number-count trong cart.html
+      const productsCartCountElement = document.querySelector('.text-wrapper-8'); // text-wrapper-6 trong homepage.html
+
+      let totalQuantity = 0;
+      cart.forEach(product => {
+        totalQuantity += product.quantity;
+      });
+
+      // Cập nhật cả hai phần tử nếu chúng tồn tại
+      if (cartCountElement) {
+        cartCountElement.textContent = totalQuantity;
+      }
+      if (productsCartCountElement) {
+        productsCartCountElement.textContent = totalQuantity;
+      }
+    };
+
+    // Hàm khởi tạo trang chủ
+    const initProducts = async () => {
+      try {
+        const cart = await fetchCart();
+        updateCartCount(cart);
+      } catch (error) {
+        console.error('Error initializing products:', error);
+      }
+    };
+    // Gọi hàm khởi tạo khi trang tải xong
+    initProducts();
+
+// check login
+fetch('/auth/check-login')
+            .then(response => response.json())
+            .then(data => {
+                if (data.loggedIn) {
+                    // Nếu đã đăng nhập, hiển thị nút Profile và Đăng xuất, ẩn nút Đăng nhập
+                    document.querySelector('.group').style.display = 'block';
+                    document.querySelector('.login').style.display = 'none';
+                } else {
+                    // Nếu chưa đăng nhập, hiển thị nút Đăng nhập
+                    document.querySelector('.soluonggio').style.display = 'none';
+                    document.querySelector('.login').style.display = 'block';
+                    document.querySelector('.group').style.display = 'none';
+
+                }
+            })
+            .catch(error => {
+                console.error('Error checking login status:', error);
+            });
+
+
+    // Gọi API để lấy thông tin chi tiết sản phẩm
+    fetch(`/products/detail-product/${productId}`)
+        .then(response => response.json())
+        .then(product => {
+            if (!product || product.error) {
+                alert(product.error || 'Không tìm thấy sản phẩm.');
+                return;
+            }
+
+                   // Cập nhật nội dung vào các phần tử trong giao diện
+        document.getElementById('product-name').textContent = product.name;
+
+        // Thay đổi product-category từ "banhle" thành "Bánh lẻ" hoặc "entremet" thành "Entremet"
+        let category = product.category;
+        if (category === 'banhle') {
+            category = 'Bánh lẻ';
+        } else if (category === 'entremet') {
+            category = 'Entremet';
+        }
+        productStock = product.stock;
+        // Cập nhật phần tử breadcrumb-item với giá trị category
+        document.getElementById('breadcrumb-item').textContent = category;
+
+        // Cập nhật các thông tin khác
+        document.getElementById('product-category').textContent = category;
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-price').textContent = product.price;
+        document.getElementById('product-flavor').textContent = product.flavor;
+        document.getElementById('breadcrumb-current').textContent = product.name;
+
+            // Thêm hình ảnh sản phẩm
+            const imageSlider = document.getElementById('product-image-slider');
+            imageSlider.innerHTML = `
+                <img src="${product.image_url}" alt="${product.name}" class="product-image">
+            `;
+        })
+        .catch(error => {
+            console.error('Lỗi khi tải sản phẩm:', error);
+            alert('Đã xảy ra lỗi. Vui lòng thử lại sau.');
+        });
+
+        // nút ấn số lượng
+         const decreaseButton = document.querySelector('.quantity-btn.decrease');
+    const increaseButton = document.querySelector('.quantity-btn.increase');
+    const quantityInput = document.querySelector('.quantity-input');
+
+    // Sự kiện giảm số lượng
+    decreaseButton.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value, 10); // Chuyển giá trị thành số nguyên
+        if (!isNaN(currentValue) && currentValue > 0) { // Kiểm tra giá trị không âm
+            quantityInput.value = currentValue - 1;
+        }
+    });
+
+    // Sự kiện tăng số lượng
+    increaseButton.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value, 10); // Chuyển giá trị thành số nguyên
+        if (!isNaN(currentValue)) {
+            quantityInput.value = currentValue + 1;
+        }
+    });
+
+  // xử lý thêm giỏ hàng
+  const handleAddToCart = (event) => {
+  event.preventDefault(); // Ngăn chặn hành vi mặc định của form (nếu có)
+
+  const productId = window.location.pathname.split('/').pop();
+  const quantity = parseInt(document.getElementById('quantity-input').value, 10);
+
+  // Kiểm tra số lượng hợp lệ
+  if (quantity <= 0 || isNaN(quantity)) {
+    alert('Vui lòng nhập số lượng lớn hơn 0.');
+    return;
+  }
+// Kiểm tra số lượng tồn kho
+    if (quantity > productStock) {
+      alert('Số lượng sản phẩm vượt quá số lượng tồn kho!');
+      return;
+    }
+
+  // Gửi yêu cầu POST đến server để thêm sản phẩm vào giỏ hàng
+  fetch('/cart/add-to-cart', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      id: productId,
+      quantity: quantity,
+    }),
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Xử lý phản hồi từ server
+    if (data.success) {
+      alert('Sản phẩm đã được thêm vào giỏ hàng!');
+      // Cập nhật số lượng sản phẩm trong giỏ hàng (nếu có hiển thị)
+        updateCartCount(cart);
+    } else {
+      alert(data.message || 'Có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng.');
+    }
+  })
+  .catch(error => {
+    console.error('Error adding product to cart:', error);
+  });
+
+};
+
+const addToCartButton = document.getElementById('add-to-cart-btn');
+  addToCartButton.addEventListener('click', handleAddToCart);
+});
+
+
+</script>
+</body>
+</html>
